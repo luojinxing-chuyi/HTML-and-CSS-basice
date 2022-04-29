@@ -1,0 +1,516 @@
+0
+00:00:00,000 --> 00:00:02,865
+Hello, everyone. Today, I'd like to give you
+
+1
+00:00:02,865 --> 00:00:06,165
+a brief overview of a site called CodePen.
+
+2
+00:00:06,165 --> 00:00:10,560
+I'm already at the site here in my browser at codepen.io,
+
+3
+00:00:10,560 --> 00:00:12,340
+so you should browse there, too.
+
+4
+00:00:12,340 --> 00:00:13,860
+And here I am at the landing
+
+5
+00:00:13,860 --> 00:00:15,165
+page and I haven't logged in,
+
+6
+00:00:15,165 --> 00:00:16,910
+I don't have an account.
+
+7
+00:00:16,910 --> 00:00:19,890
+What I'm going to show you now is just a very brief
+
+8
+00:00:19,890 --> 00:00:22,765
+overview of what the site can be used for.
+
+9
+00:00:22,765 --> 00:00:27,275
+A "Pen" in this site is kind of like a Code snippet.
+
+10
+00:00:27,275 --> 00:00:28,850
+It's code you can write,
+
+11
+00:00:28,850 --> 00:00:31,050
+or you can also explore Pens that
+
+12
+00:00:31,050 --> 00:00:35,520
+the community has put up on the site for you to consume.
+
+13
+00:00:35,520 --> 00:00:36,840
+Let's start there, let's have a look at
+
+14
+00:00:36,840 --> 00:00:38,730
+what a Pen might look like.
+
+15
+00:00:38,730 --> 00:00:40,650
+To do that, I'm going over here on
+
+16
+00:00:40,650 --> 00:00:43,088
+the top right to the "Search" button,
+
+17
+00:00:43,088 --> 00:00:45,990
+and I get a nice big Search text box.
+
+18
+00:00:45,990 --> 00:00:48,240
+And if I just type in a term that I'm
+
+19
+00:00:48,240 --> 00:00:50,505
+interested in, for example, "Button",
+
+20
+00:00:50,505 --> 00:00:52,650
+and I just wait a brief second,
+
+21
+00:00:52,650 --> 00:00:58,345
+you'll see that that search returns 936,000 Pens.
+
+22
+00:00:58,345 --> 00:01:01,110
+So these are pieces of code that other people have
+
+23
+00:01:01,110 --> 00:01:04,764
+shared that contain something to do with Buttons,
+
+24
+00:01:04,764 --> 00:01:06,098
+the key word "Button".
+
+25
+00:01:06,098 --> 00:01:08,970
+And so, this is the list that you'll get back and you can
+
+26
+00:01:08,970 --> 00:01:13,030
+explore and do a lot of configuration on the search.
+
+27
+00:01:13,030 --> 00:01:15,105
+To see the code behind one of these,
+
+28
+00:01:15,105 --> 00:01:18,225
+you would click on the Tile that has been returned.
+
+29
+00:01:18,225 --> 00:01:19,426
+And I'll do it,
+
+30
+00:01:19,426 --> 00:01:20,663
+I'll click on this one.
+
+31
+00:01:20,663 --> 00:01:23,100
+And you can see an "Editor" opens up,
+
+32
+00:01:23,100 --> 00:01:24,750
+and it has a HTML Pane, A CSS Pane,
+
+33
+00:01:24,750 --> 00:01:27,015
+a JavaScript Pane,
+
+34
+00:01:27,015 --> 00:01:29,513
+and an Output Pane. This is just an example.
+
+35
+00:01:29,513 --> 00:01:31,200
+We won't go into the code in this example.
+
+36
+00:01:31,200 --> 00:01:35,340
+But you can see that this is a live preview of what's
+
+37
+00:01:35,340 --> 00:01:36,570
+being shown here from
+
+38
+00:01:36,570 --> 00:01:39,685
+the code out down here below in the Output window.
+
+39
+00:01:39,685 --> 00:01:43,395
+So let's go back. That was just an example of a Pen
+
+40
+00:01:43,395 --> 00:01:45,268
+that someone else has created and
+
+41
+00:01:45,268 --> 00:01:47,830
+they've decided to share it publicly.
+
+42
+00:01:47,830 --> 00:01:50,145
+Why don't we try and create our first Pen?
+
+43
+00:01:50,145 --> 00:01:51,990
+To do that, we're going to come
+
+44
+00:01:51,990 --> 00:01:54,485
+over to the "Create" button here.
+
+45
+00:01:54,485 --> 00:01:56,220
+Click on "New Pen". And you'll
+
+46
+00:01:56,220 --> 00:01:57,765
+notice I still haven't logged in.
+
+47
+00:01:57,765 --> 00:02:01,030
+I'm just using the site as a public visitor.
+
+48
+00:02:01,030 --> 00:02:05,295
+So I click on "New Pen" and an empty editor opens up.
+
+49
+00:02:05,295 --> 00:02:09,600
+You can see the three panes HTML, CSS and JavaScript.
+
+50
+00:02:09,600 --> 00:02:12,570
+Nice big output panel here down in the bottom.
+
+51
+00:02:12,570 --> 00:02:14,150
+Don't like this view?
+
+52
+00:02:14,150 --> 00:02:15,610
+Go ahead and "Change view",
+
+53
+00:02:15,610 --> 00:02:18,840
+and you can reconfigure it to have editors on the left,
+
+54
+00:02:18,840 --> 00:02:20,825
+the editors on the right, et cetera.
+
+55
+00:02:20,825 --> 00:02:23,205
+Now, I'll just stick to the "Default view".
+
+56
+00:02:23,205 --> 00:02:26,625
+Also, only going to code some HTML, so here,
+
+57
+00:02:26,625 --> 00:02:28,400
+I'm going to "Maximize the
+
+58
+00:02:28,400 --> 00:02:30,530
+HTML editor" which slides the others
+
+59
+00:02:30,530 --> 00:02:34,510
+out of view of a nice lot of space here to work with.
+
+60
+00:02:34,510 --> 00:02:37,450
+To save some time, let's just paste in some HTML.
+
+61
+00:02:37,450 --> 00:02:41,630
+What you see here is that the preview is live, as in,
+
+62
+00:02:41,630 --> 00:02:43,670
+when I make a change in my code,
+
+63
+00:02:43,670 --> 00:02:47,045
+it shows up in the output practically instantaneously,
+
+64
+00:02:47,045 --> 00:02:48,770
+which is a really great feature.
+
+65
+00:02:48,770 --> 00:02:50,585
+Let's change the code to watch it in action.
+
+66
+00:02:50,585 --> 00:02:53,365
+So, I'm going to change my code "Hello CodePen!"
+
+67
+00:02:53,365 --> 00:02:56,435
+I'm going to wrap it in a header, H1 header,
+
+68
+00:02:56,435 --> 00:02:58,145
+and we should see that text
+
+69
+00:02:58,145 --> 00:03:00,855
+get larger in the output panel.
+
+70
+00:03:00,855 --> 00:03:05,186
+So I put in my tag,
+
+71
+00:03:05,186 --> 00:03:07,030
+and you can see
+
+72
+00:03:07,030 --> 00:03:09,700
+that it's actually expanded which is great.
+
+73
+00:03:09,700 --> 00:03:13,600
+The other nifty little features that you can use here:
+
+74
+00:03:13,600 --> 00:03:16,390
+if you get HTML into a state you're not happy
+
+75
+00:03:16,390 --> 00:03:18,813
+with how it looks on the screen,
+
+76
+00:03:18,813 --> 00:03:20,915
+you can say "Tidy HTML".
+
+77
+00:03:20,915 --> 00:03:23,275
+And we'll try to indent a little bit better
+
+78
+00:03:23,275 --> 00:03:26,280
+and spread it out so that it's more readable.
+
+79
+00:03:26,280 --> 00:03:28,380
+Even go as far as going into the
+
+80
+00:03:28,380 --> 00:03:30,840
+"Settings" and under "Behavior",
+
+81
+00:03:30,840 --> 00:03:32,610
+use "Tabs" over "Spaces".
+
+82
+00:03:32,610 --> 00:03:34,740
+So that's a nice feature.
+
+83
+00:03:34,740 --> 00:03:37,200
+So that's the code editing part of CodePen.
+
+84
+00:03:37,200 --> 00:03:40,245
+And I encourage you, if you don't want to download
+
+85
+00:03:40,245 --> 00:03:43,488
+a tool or other editors,
+
+86
+00:03:43,488 --> 00:03:46,020
+you can browse here for free and write
+
+87
+00:03:46,020 --> 00:03:49,320
+some code and see it appear in the Output window.
+
+88
+00:03:49,320 --> 00:03:51,814
+Take other people's code and play with it.
+
+89
+00:03:51,814 --> 00:03:55,260
+Explore with their cool creations
+
+90
+00:03:55,260 --> 00:03:58,230
+and try that stuff out as well.
+
+91
+00:03:58,230 --> 00:04:00,855
+Another reason I wanted to introduce CodePen is,
+
+92
+00:04:00,855 --> 00:04:03,210
+because if you look at our course,
+
+93
+00:04:03,210 --> 00:04:07,095
+you may come across this editor here in line,
+
+94
+00:04:07,095 --> 00:04:09,520
+inside the content that we've created.
+
+95
+00:04:09,520 --> 00:04:12,085
+It's an embedded CodePen editor.
+
+96
+00:04:12,085 --> 00:04:14,630
+In this example, it shows you two panes,
+
+97
+00:04:14,630 --> 00:04:16,800
+the "HTML" code and the "Result".
+
+98
+00:04:16,800 --> 00:04:18,480
+Switch off the "Result"and just show
+
+99
+00:04:18,480 --> 00:04:21,255
+the "HTML" by clicking on the "Result" button.
+
+100
+00:04:21,255 --> 00:04:24,780
+Vice versa. I can also edit inline here.
+
+101
+00:04:24,780 --> 00:04:27,385
+So for example, if I go into this paragraph
+
+102
+00:04:27,385 --> 00:04:30,600
+in code and I say something like "Hi!",
+
+103
+00:04:30,600 --> 00:04:33,420
+that will refresh, on the right hand side,
+
+104
+00:04:33,420 --> 00:04:35,500
+the actual output, which is interesting.
+
+105
+00:04:35,500 --> 00:04:39,025
+I'll just ignore that DOCTYPE warning for the moment.
+
+106
+00:04:39,025 --> 00:04:41,680
+That's not really important right now.
+
+107
+00:04:41,680 --> 00:04:43,050
+This is a live editing experience
+
+108
+00:04:43,050 --> 00:04:44,580
+embedded into our course,
+
+109
+00:04:44,580 --> 00:04:49,583
+but you can go over to CodePen which is where we've been,
+
+110
+00:04:49,583 --> 00:04:53,125
+and you can navigate to the actual Pen that was created.
+
+111
+00:04:53,125 --> 00:04:56,625
+And here, you can see that in the CodePen site.
+
+112
+00:04:56,625 --> 00:04:59,300
+And you get yourself an account on CodePen.
+
+113
+00:04:59,300 --> 00:05:01,180
+You're able to do stuff like just fork this,
+
+114
+00:05:01,180 --> 00:05:03,750
+which is effectively copying
+
+115
+00:05:03,750 --> 00:05:05,700
+this actual Pen into
+
+116
+00:05:05,700 --> 00:05:07,635
+your own account so you can play with it,
+
+117
+00:05:07,635 --> 00:05:10,140
+use it, and so on, and so forth.
+
+118
+00:05:10,140 --> 00:05:11,310
+That's the round tripping. I just
+
+119
+00:05:11,310 --> 00:05:12,495
+wanted to make sure you see.
+
+120
+00:05:12,495 --> 00:05:16,110
+When you come across these integers inside our course,
+
+121
+00:05:16,110 --> 00:05:17,760
+you'll know that that's really
+
+122
+00:05:17,760 --> 00:05:20,646
+a CodePen editor inside the content,
+
+123
+00:05:20,646 --> 00:05:23,415
+that you can then go and use the CodePen site,
+
+124
+00:05:23,415 --> 00:05:27,600
+or use it directly inside the content itself.
+
+125
+00:05:27,600 --> 00:05:29,640
+So that's it. A very quick look at
+
+126
+00:05:29,640 --> 00:05:31,650
+the popular online editor and
+
+127
+00:05:31,650 --> 00:05:34,855
+front-end code playground called CodePen.
+
+128
+00:05:34,855 --> 00:05:37,000
+Until next time, happy coding.
+
