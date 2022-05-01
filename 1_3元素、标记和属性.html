@@ -22,13 +22,13 @@
             <hr>
         </header>
         <main>
-            <section>
-                <article>
+            <section class="head-word">
+                <article class="h2">
                     <h2>我的第一个网页：元素、标记和属性</h2>
                 </article>
             </section>
             <section>
-                <article>
+                <article class="h3">
                     <h3>1.3.1将“M”放入HTML</h3>
                 </article>
                 <article>
@@ -59,7 +59,7 @@
                 </article>
             </section>
             <section>
-                <article>
+                <article class="h3">
                     <h3>1.3.2编程“你好HTML”</h3>
                     <p>您可以使用在线编辑器或可以安装在机器上的编辑器（如Visual Studio代码）来构建和编辑HTML页面。</p>
                 </article>
@@ -76,7 +76,185 @@
                     <video src="videos/using-JSBin.mp4" type="video/mp4" controls></video>
                     <!--中文字幕 src=videos\using-JSBin.srt-->
                 </figure>
+            </section>
+            <section>
+                <article class="h3">
+                    <h3>1.3.3元素</h3>
+                </article>
+                <article>
+                    <p>如果你坐在一家咖啡馆里，旁边坐着一桌Web开发人员，你可能会经常听到三个词：“标签”、“属性”和“元素”（有时也会听到“DOM元素”，同样的词更精确、更冗长）。</p>
+                    <p>“元素”是片段本身，即段落是元素，标题是元素，甚至正文也是元素。大多数元素可以包含其他元素，因为body元素将包含header元素、段落元素，实际上几乎是DOM的所有可见元素。</p>
+                    <p>考虑上图。它只包含一个“html”元素。事实证明，它包含了html文件的全部内容。如果你点击“html”节点，你会发现它包含两个组件，一个头部和一个身体。点击每一个按钮将显示各自的内容。这种结构就是我们计算机科学家所说的“树”。任何给定元素（除了最外层的“html”元素）都完全包含在另一个元素中，称为“父”元素。毫不奇怪，给定元素包含的元素是其“子”元素。是的，共同父母的孩子通常被称为“兄弟姐妹”。</p>
+                    <p>因此，在上面的示例中，顶层元素是html元素，它只包含两个元素，head和body。head元素包含title元素，body元素包含h1和p元素。在一个更典型的例子中，身体会容纳更多的孩子，但就我们的目的而言，这就足够了。</p>
+                    <p>这可能是一幅很棒的图片，但我们如何在文本文件中表示这样的结构呢？这就是“标签”的用武之地。</p>
 
+                </article>
+            </section>
+            <section>
+                <article class="h3">
+                    <h3>1.3.4标签</h3>
+                </article>
+                <article>
+                    <p>“标签”是我们用来组织文本文件（只是一个长字符串）的东西，它代表组成html文档的元素树。标签不是元素本身，而是用来告诉计算机元素开始和结束的文本位。当你“标记”一个文档时，你通常不希望那些不属于文本的额外注释呈现给读者。HTML借用了另一种语言SGML的技术，为计算机提供了一种简单的方法来确定哪些部分是“标记”，哪些部分是内容。</p>
+                    <p>通过使用“&lt;”和“&gt;”作为括号，HTML可以指示标记的开始和结束，即“&lt;”的存在告诉浏览器“下一位是标记，请注意”。</p>
+                    <p>无论该标记（或“打开标记”）做什么，它都适用于标记后面的内容。除非您希望它成为文档的整个剩余部分，否则您需要指示何时停止使用该标记并执行其他操作，因此再次使用“&lt;”和“&gt;”。由于元素通常嵌套在其他元素中，因此浏览器需要能够区分当前标记的结尾或新标记（表示嵌套元素）的开头。这是通过在“&lt;”后面加一个“/”来完成的，表示它是一个“结束标记”。要表示段落的开头和结尾（由单个字母“p”表示），您可以这样结束：</p>
+                    <pre>&lt;p&gt;这是一个段落。&lt;/p&gt;</pre>
+                    <p>浏览器看到字母“&lt;p&gt;”并决定“一个新段落开始了，我最好开始一个新的行，也许缩进它”。然后，当它看到“&lt;/p&gt;”时，它知道它正在处理的段落已经完成，所以它应该在继续下一个段落之前，在那里打断这一行。</p>
+                    <p>例如，“<em>”标记用于需要强调的元素。“<”和“>”表示这是一个标记，中间的“一小段文本”告诉我们它是什么类型的标记。为了完整地描述元素，它需要一个打开和关闭标记，标记之间的所有内容都是元素的内容：</p>
+                    <figure>
+                        <img src="images/tags.png" alt="标签示意图">
+                        <figcaption>标签示意图</figcaption>
+                    </figure>
+                    <p>大多数标签都有打开和关闭版本，但也有一些奇怪的版本。稍后我们将了解更多关于这些的信息，但我们通常将这些奇怪的标签称为“自动关闭”标签。通常，这些标记表示完全由其属性描述的元素，因此不需要其他内容。如果你看到这样的情况：</p>
+                    <pre> &lt;img src="images/tags.png" alt="标签示意图"&gt;</pre>
+                    <p>... 然后你应该知道，open标记末尾的斜杠是close标记的一种简写，所以你不会看到这个元素现在已经完成的任何其他迹象。还有一些标签在结尾甚至不使用“/”，它们根本没有任何关闭标签。这是因为该标记需要的所有信息都在“属性”中声明。</p>
+                </article>
+            </section>
+            <section>
+                <article class="h3">
+                    <h3>1.3.4知识检查</h3>
+                </article>
+                <article class="Knowledge-check">
+                    <span>这些元素的正确嵌套方式是什么？</span>
+                    <br>
+                    <input type="radio" name="check" id="choice1" value="choice1">
+                    <label for="choice1">“p”在“body”内,在“html”内</label>
+                    <br>
+                    <input type="radio" name="check" id="choice2" value="choice2">
+                    <label for="choice2">“html”在“body”内，在“p”内</label>
+                    <br>
+                    <input type="radio" name="check" id="choice3" value="choice3">
+                    <label for="choice">“p”在“body”内在“head”内</label>       
+                </article>
+            </section>
+            <section>
+                <article class="h3">
+                    <h3>1.3.5评论</h3>
+                </article>
+                <article>
+                    <p>计算机很擅长阅读计算机语言，但对人类来说并不总是那么容易。评论是一种添加一些主要针对人类读者的文本的方式。</p>
+                    <p>我使用的每一种编程语言都有一些表示注释的方式。HTML5也不例外。如果你想在你的文件中添加一些你想让浏览器完全忽略的东西，有一个特殊的标签（不足为奇地称为“注释标签”）：</p>
+                    <pre>&lt;!--这是评论--&gt;</pre>
+                    <p>HTML注释标记以&lt;！--以--&gt;结尾，这意味着当计算机正在读取HTML文件时，如果它看到&lt;！--它会忽略它所看到的一切，直到遇到--&gt;。没有打开或关闭标签，只有一个评论标签。与HTML5中的大多数其他东西不同，注释不能嵌套。如果你试着这样做，比如：</p>
+                    <pre>&lt;!-- 开始评论&lt;!--嵌套在内部的注释--&gt;这是在嵌套注释之后--&gt;</pre>
+                    <p>然后，计算机将看到注释标签的开头，并开始忽略所有内容，直到它看到--&gt;，包括第二个&lt;！--。一旦它看到--&gt;，它就假定注释已经完成，并返回到以HTML代码和内容的形式处理它所看到的所有内容，即使作者可能有意将其作为注释。</p>
+                    <p>与大多数其他标记一样，它可以跨越源文件的多行。当你有很多话要说时，这真的很方便：</p>
+                    <pre>
+                        &lt;!--
+                        If you want some good advice,
+                        Neither a borrower nor a lender be,
+                        For loan oft loses both itself and friend,
+                        And borrowing dulls the edge of husbandry.
+                        --&gt;</pre>
+                    <p>注释也常用于开发中，以屏蔽代码位，无论是用于测试还是将未完成的工作留在文件中：</p>
+                    <pre> 
+                        &lt;!-- 不确定我是否想要这个措辞：
+                        &lt;p&gt;87年前，一群人开创了一个新的国家&lt;/p&gt;
+                        --&gt;</pre>           
+                </article>
+            </section>
+            <section>
+                <article class="h3">
+                    <h3>1.3.6属性</h3>
+                </article>
+                <article>
+                    <p>我们将在后面介绍有关属性的大部分内容，但让我们简要介绍一下这个想法。基本上，网页上的给定元素可以通过任意数量的唯一或公共属性来区分。您可以使用id属性唯一地标识它，或者通过设置class属性将其与其他元素的类分组。</p>
+                    <p>HTML中的属性写在开始标记中，如下所示：</p>
+                    <pre>
+                        &lt;p id="paragraph-1" class="regular-paragraphs"&gt;叫我玛丽&lt;/p&gt;
+                    </pre>
+                    <p>上述段落有一个唯一标识符“paragraph-1”，是“regular-paragraphs”类别的一部分。引号中的字母对浏览器没有意义，它们只需要保持一致。它们实际上是字符串（由字符组成），我们很快就会了解到，这意味着如果你想在这门课上有另一个段落，它必须说“常规段落”，而不是“常规”或“常规段落”或任何其他变体。</p>
+                    <p>同样，计算机不在乎我们在这些字符串中输入什么（除了一些限制），这意味着我们可以使用它们向人类开发人员传达意义。我可以很容易地说id='x'和class='y'，但任何人看到这一点都不会知道x和y的意义是什么。 <strong> 最佳做法是为这些东西命名，以提高清晰度、一致性和简洁性。</strong></p>
+                    <p>但更多关于属性的信息将在下一个模块中介绍。</p>
+                </article>
+            </section>
+            <section>
+                <article class="h3">
+                    <h3>1.3.7 现在一起</h3>
+                </article>
+                <article>
+                    <p>理解HTML或任何计算机语言的一个关键是确保避免歧义，因为计算机通常不擅长判断调用。例如，您可以简化HTML，这样每当看到<p>标记时，就可以开始一个新段落，而不需要关闭标记。这可能在大多数情况下都有效，但这会阻止您将一个元素嵌套在另一个元素中，因为浏览器不知道您是要嵌套新元素还是要嵌套后续元素。</p>
+                    <p>人类设计师可能能够从上下文中看出你的意思，并且知道错误会发生，所以选择她认为最适合这种情况的。另一方面，浏览器很难完成这样的任务，因此使用与打开标记匹配的关闭标记可以让事情变得绝对清晰。</p>
+                    <div class="example">
+                        <pre>
+                            <strong>我们希望的效果：</strong>
+                            &lt;p&gt;
+                            The old lady pulled her spectacles down and looked over them about the room; then she put them up and looked out under them.
+
+                            There was a slight noise behind her
+                            and she turned just in time to seize a
+                            small boy by the slack of his roundabout
+                            and arrest his flight.
+                            &lt;/p&gt;
+                        </pre>
+                        <p><strong>浏览器实际呈现的结果：</strong><br>
+                            The old lady pulled her spectacles down and looked over them about the room; then she put them up and looked out under them.
+
+                            There was a slight noise behind her
+                            and she turned just in time to seize a
+                            small boy by the slack of his roundabout
+                            and arrest his flight.</p>
+                        <p>人类读者可以很容易地察觉到两段文字的意图，而作者可能只是忘记了终止其中一段而开始另一段。另一方面，浏览器只能看到一个段落和相应的布局。</p>
+                    </div>
+                    <p>另一方面，您可能会认为，由于浏览器总是确切地知道它使用的是什么标记（eiditic memory），因此可以提供一种“通用关闭标记”，它不指定关闭的类型。它将知道关闭当前标签。虽然这在技术上是正确的，但是在那里有一个关闭标签对于阅读代码的人来说是很方便的。close标记使您更容易记住要关闭的标记。我们人类在试图记住这种细节时会感到困惑。</p>
+                    <p>但也有其他模糊之处需要考虑。例如，当浏览器接收到一个文件时，它可能知道它正在接收一个HTML文件，但它不知道使用了哪个版本的HTML（这很重要）。</p>
+                    <p>这就是为什么在任何HTML文件中，您首先需要一个标签来告诉您它是什么类型的HTML文件：</p>
+                    <div class="example">
+                        <pre>&lt;!DOCTYPE html &gt;</pre>
+                    </div>
+                    <p>换句话说，浏览器看到的第一件事就是声明“这是一个HTML5文件，以防你感到疑惑”。把这个放在每个文件的顶部似乎很乏味，但相信我，以前情况更糟。你可能注意到它没有说“！DOCTYPE HTML5”，只是说html。</p>
+                    <p>HTML5可以做到这一点，因为之前的所有版本都要冗长得多。例如，在HTML 4.01页面的顶部，您可能有如下内容：</p>
+                    <div class="example">
+                        <pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</pre>
+                    </div>
+                    <p>我们不需要详细说明为什么以及这意味着什么，只需要感谢HTML5放弃了它。</p>
+                </article>
+                <article class="h4">
+                    <h4>HTML中的所有内容</h4>
+                </article>
+                <article>
+                    <p>它可能看起来有些多余，但下一位使用<HTML>标记告诉浏览器实际HTML代码的起始位置：</p>
+                        <div class="example">
+                            <pre>
+                                &lt;html&gt;</pre>
+                        </div>
+                        <p>几乎每个HTML文档都有两个部分。正文是页面的主要内容，包含文本、图像、表格等。头先于身体（在上面？）。在这里，你可以把关于文档的信息放在正文中，也就是“元”信息。页面使用的字符集类型、浏览器可以在哪里找到样式提示以及页面的标题（可能与用户阅读的标题不同）都会出现在&lt;head&gt;。如果你一直在关注，你应该能够创建一个非常基本的html文件，格式正确，没有任何内容。提示，对于你要写的文档的开头：</p>
+                        <div class="example">
+                            <pre>
+                                &lt;head&gt;
+
+                                &lt;/head&gt;
+                            </pre>
+                        </div>
+                        <p>您可能还记得我们在上述示例中使用的段落标记<p>。尝试在新文档的正文中插入一段。你应该得到这样的结果：</p>
+                        <div class="example">
+                            <pre>
+                                &lt;!DOCTYPE html&gt;
+                                &lt;html&gt;
+                                    &lt;head&gt;
+                                    &lt;/head>&gt;
+                                    &lt;body&gt;
+                                          &lt;p&gt;
+                                           As my English teacher used to say, 'One sentence does not a paragraph make'!
+                                          &lt;/p&gt;
+                                    &lt;/body&gt;
+                                 &lt;/html>&gt;
+                            </pre>
+                        </div>
+                </article>
+            </section>
+            <section>
+                <article class="h3">
+                    <h3>1.3.8将它们放在一起</h3>
+                </article>
+                <article>
+                    <figure><!--中文字幕:src="videos\1_3_8 Putting it all together.srt"-->
+                        <span>Live coding video: putting it all together</span>
+                        <video src="videos/1_3_8 Putting it all together.mp4" controls>
+                            <figcaption>Live coding video: putting it all together</figcaption>
+                        </video>
+                    </figure>
+                </article>
             </section>
             
 
