@@ -22,7 +22,191 @@
             <hr>
         </header>
         <main>
-
+            <section>
+                <article class="head-word">
+                    <h2>我的第一个网页：字符编码</h2>
+                </article>
+            </section>
+            <section>
+                <article class="h3">
+                    <h3>1.4.1字符编码</h3>
+                </article>
+                <article>
+                    <p>字符可以是组成单词和语言的任何字母、数字或符号。英语字母和数字“a-z”、“A-Z”、“0-9”都被视为字符。其他字符示例包括拉丁字母á或汉字請 或者德瓦纳加里的角色ह. 字符集是书写系统中字符（字母和符号）的集合。</p>
+                    <p>每个字符都分配了一个称为代码点的特定数字。这些代码点以字节（计算机内存中的数据单位）的形式存储在计算机内存中。在技术术语中，我们说字符是使用一个或多个字节编码的。</p>
+                    <p>基本上，所有的字符都存储在计算机语言中，字符编码是一本很棒的字典，它将帮助我们把这种计算机语言解码成我们能理解的东西。在技术术语中，它被用作将代码点映射到字节以存储在计算机内存中的参考；然后，当您在HTML中使用字符时，字节将被读回代码点，并使用字符编码作为参考。</p>
+                    <p>字符编码的示例包括：</p>
+                    <ul>
+                        <li>ASCII：包含英文字母、字符和一组有限的符号和标点符号</li>
+                        <li>Windows-1252（拉丁文1）：支持256个不同代码点的Windows字符集</li>
+                        <li>ISO-8859-6：包含基于阿拉伯语脚本的字母和符号</li>
+                        <li>Unicode：包含世界上大多数现存语言和脚本的字符</li>
+                    </ul>
+                    <p>使用HTML编码时，必须指定希望页面使用的编码。不提供编码或错误的编码与提供错误的字典进行解码非常相似。它可能会错误地显示文本，或导致搜索引擎无法正确读取数据。HTML中的字符编码声明对于处理用户在表单中输入的不熟悉字符、脚本生成的URL等也很重要。</p>
+                    <p>您应该始终在网页中使用Unicode字符编码UTF-8，并避免使用上述ASCII、Windows-1252和ISO-8859-6等“传统”编码。也不要使用UTF-16 Unicode编码。</p>
+                    <p>您应该始终在网页中使用Unicode字符编码UTF-8，并避免使用上述ASCII、Windows-1252和ISO-8859-6等“传统”编码。也不要使用UTF-16 Unicode编码。</p>
+                    <p>在这里阅读字符集和编码的介绍。</p>
+                </article>
+            </section>
+            <section>
+                <article class="h3">
+                    <h3>1.4.2&lt;meta&gt;标签</h3>
+                </article>
+                <article>
+                    <p>在HTML页面中使用带有charset属性的&lt;meta&gt;标记，向浏览器指示将在页面中使用的字符编码。</p>
+                    <div class="example">
+                        <pre>
+                            &lt;meta charset="UTF-8"&gt; </pre>
+                    </div>
+                    <p>或者，还可以使用http-equiv和内容属性。</p>
+                    <div class="example">
+                        <pre>
+                            &lt;meta http-equiv="content-Type" content="text-html" charset="utf-8"&gt;</pre>
+                    </div>
+                    <p>我们建议使用第一个，因为它不那么复杂。您还应该始终使用“utf-8”。</p>
+                </article>
+                <article class="h4">
+                    <h4>放在哪里？</h4>
+                </article>
+                <article>
+                    <p>元声明属于<head>元素，应该在页面的前1024字节内指定。所以代码中越早提到它越好。</p>
+                    <p>W3C建议将其放置在打开<head>标签之后：</p>
+                    <div class="example">
+                        <pre>
+                            &lt;!DOCTYPE thml&gt;
+                            &lt;html lang="en"&gt;
+                                &lt;head&gt;
+                                    &lt;meta charset="utf-8"&gt;
+                                &lt;/head&gt;
+                            &lt;/html&gt;
+                        </pre>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <article class="h3">
+                    <h3>1.4.2知识测验</h3>
+                </article>
+                <article class="knowledge-check"><!--双选未设置-->
+                    <p></p>
+                    <input type="radio" name="check" id="answer-1" value="answer-1">
+                    <label for="answer-1">帮助将页面从一种语言翻译成另一种语言</label>
+                    <br>
+                    <input type="radio" name="check" id="answer-2" value="answer-2">
+                    <label for="answer-2">就像字典一样，帮助将代码点翻译成可以存储在内存中的字节。</label>
+                    <br>
+                    <input type="radio" name="check" id="answer-3" value="answer-3">
+                    <label for="answer-3">将字节解码为代码点</label>
+                    <br>
+                    <input type="radio" name="check" id="answer-4" value="answer-4">
+                    <label for="answer-4">支持搜索引擎正确处理HTML文档</label>
+                </article>
+            </section>
+            <section>
+                <article class="h3">
+                    <h3>1.4.3HTML字符引用</h3>
+                </article>
+                <article class="h4">
+                    <h4>为什么我们需要角色参照</h4>
+                </article>
+                <article>
+                    <p>在我们了解什么是HTML字符引用之前，让我们先看看对它们的需求是如何产生的。</p>
+                    <p>在HTML中尝试以下代码：</p>
+                    <div class="example">
+                        <pre>
+                            &lt;p&gt;欢迎来到“HTML5和CSS基础”。我们将学习的第一个标记是&lt;html&gt;标记。&lt;/p&gt;
+                        </pre>
+                            <span>HTML</span>
+                            <pre>
+                                &lt;DOCTYPE html&gt;
+                                &lt;html lang="en"&gt;
+                                 &lt;head&gt;
+                                    &lt;meta charset="utf-8"&gt;
+                                    &lt;title&gt;welcome&lt;title&gt;
+                                 &lt;/head&gt;
+                                 &lt;body&gt;
+                                    &lt;p&gt;欢迎来到“HTML5和CSS基础”。我们将学习的第一个标记是&lt;html&gt;标记。&lt;/p&gt;
+                                    &lt;/body&gt;
+                                &lt;/html&gt;
+                            </pre>
+                            <span>显示结果</span>
+                            <p>欢迎来到“HTML5和CSS基础”。我们将学习的第一个标记是<html>标记。</p>
+                    </div>
+                    <p>您是否注意到输出中缺少<html>标记？在本例中，您的浏览器将其与实际标记混淆，尽管它本应作为文本作为句子的一部分。</p>
+                    <p>由于这种混淆，HTML保留了某些字符。如果想在HTML中使用这些字符，需要使用字符引用来显示它们。</p>
+                </article>
+                <article class="h4">
+                    <p>如何使用字符引用</p>
+                </article>
+                <article>
+                    <p>所有HTML字符引用都可以使用名称或数字编写。</p>
+                    <p>如果要在源代码中使用命名字符引用，请使用一个符号“&”，后跟名称和分号。姓名区分大小写。例如，以下表示不间断空间：</p>
+                    <p><strong>&amp;nbsp;</strong></p> 
+                    <p>有两种类型的数字字符引用：使用十进制数的数字字符引用和使用十六进制数的数字字符引用。在每种情况下，数字都代表Unicode中字符的代码点编号。</p>
+                    <p>如果您使用的是十进制数，请使用符号“&”，后跟符号“#”，然后是十进制数和分号。</p>
+                    <p><strong>&amp;#160;</strong></p>
+                    <p>如果您使用的是十六进制数，请使用符号“&”，后跟符号“#x”，然后是十六进制数和分号。</p>
+                    <p><strong>&amp;#x00A0;</strong></p>
+                </article>
+            </section>
+            <section>
+                <article class="h3">
+                    <h3>1.4.3知识测验</h3>
+                </article>
+                <article class="knowledge-check">
+                    <p>下面代码的输出是什么？</p>
+                    <pre> &amp;lt;h1&amp;gt;This is a heading &amp;amp; it is the &amp;quot;biggest&amp;quot; one in this page&amp;gt;/h1&amp;lt; </pre>
+                    <input type="text">
+                </article>
+            </section>
+            <section>
+                <article class="h3">
+                    <h3>1.4.4 特殊算符</h3>
+                </article>
+                <article>
+                    <p><strong> 保护用于HTML语法的字符</strong></p>
+                    <p>下表中列出的五个特殊字符应始终作为字符引用写入，如果您希望它们在读者查看时出现在页面上：</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>符号</th>
+                                <th>实体名称</th>
+                                <th>实体号</th>
+                                <th>使用方法</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>小于'<'</td>
+                                <td>&amp;lt;</td>
+                                <td>&amp;#60;</td>
+                                <td>Div tag:&amp;lt;div&gt;</td>
+                            </tr>
+                            <tr>
+                                <td>大于号'>'</td>
+                                <td>&amp;gt;</td>
+                                <td>&amp;#62;</td>
+                                <td>Div tag:&amp;lt;div&amp;gt;</td>
+                            </tr>
+                            <tr>
+                                <td>非中断空间-不会创建新行的空间</td>
+                                <td>&amp;nbsp;</td>
+                                <td>&amp;#160;</td>
+                                <td>如果添加多个空间，浏览器将删除除一个以外的所有空间。因此，必须使用该实体在HTML页面中添加多个空格。</td>
+                            </tr>
+                            <tr>
+                                <td>引用号："</td>
+                                <td>&amp;quot;</td>
+                                <td>&amp;#34;</td>
+                                <td>显示代码 as:&lt;a href=&amp;quot;#time&amp;quot;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>我们不希望浏览器将这些特殊字符作为HTML代码处理。相反，您希望将其显示给用户。因此，如果您希望在浏览器中显示：</p>
+                    <pre>&lt;img src=&quot;images/test.png&quot; alt=&quot;test image&quot;&gt</pre>
+                    <p>您必须在HTML代码中这样编写：</p>
+                    <pre>&amp;lt;img src=&amp;quot;images/test.png&amp;quot; alt=&amp;quot;test image&amp;quot;&amp;gt;</pre>
+            </section>
         </main>
         <footer>
 
