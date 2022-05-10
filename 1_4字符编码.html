@@ -151,7 +151,7 @@
             </section>
             <section>
                 <article class="h3">
-                    <h3>1.4.3知识测验</h3>
+                    <h3>1.4.4知识测验</h3>
                 </article>
                 <article class="knowledge-check">
                     <p>下面代码的输出是什么？</p>
@@ -206,6 +206,31 @@
                     <pre>&lt;img src=&quot;images/test.png&quot; alt=&quot;test image&quot;&gt</pre>
                     <p>您必须在HTML代码中这样编写：</p>
                     <pre>&amp;lt;img src=&amp;quot;images/test.png&amp;quot; alt=&amp;quot;test image&amp;quot;&amp;gt;</pre>
+            </section>
+            <section>
+                <article class="h3">
+                    <h3>1.4.5其他字符的字符引用</h3>
+                </article>
+                <article>
+                    <p>也可以使用字符引用来表示页面中的其他字符。如果无法键入字符本身，或者无法通过查看字符来判断字符是什么（例如，不间断空格或不可见的格式字符），这将非常有用。</p>
+                    <p>HTML中有几个类别的预定义命名字符引用，包括：</p>
+                    <ul>
+                        <li>货币符号</li>
+                        <li>版权、商标和注册符号</li>
+                        <li>常用标点</li>
+                        <li>箭头；箭号</li>
+                        <li>数学符号</li>
+                        <li>希腊字母</li>
+                    </ul>
+                    <p>检查HTML中可用的命名字符引用列表。</p>
+                    <p>任何Unicode字符都可以使用数字字符引用来表示。</p>
+                    <p>除了用于HTML语法的字符（如前一单元所述），通常不需要使用字符引用来表示字符。所有浏览器在内部都使用Unicode构建，这意味着它们能够处理Unicode定义的所有可能字符。因此，版权、货币符号、数学和箭头等符号的最佳实践是直接将它们输入源代码。</p>
+                    <p>您可以直接在代码中执行此操作：这是©2015。违反规定将被处以€400的罚款</p>
+                    <pre>&lt;p&gt;这是©2015。违反规定将被处以€400的罚款&lt;/p&gt;</pre>
+                    <p>不需要复制&copy；欧元；HTML字符参考，如果您能够键入字符本身。</p>
+                    <p>如果您想阅读有关何时使用字符引用以及何时不使用字符引用的更多信息，请参阅在标记和CSS中使用字符转义。</p>
+                    
+                </article>
             </section>
         </main>
         <footer>
