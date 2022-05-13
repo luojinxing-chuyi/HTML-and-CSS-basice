@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>2.2HTML属性</title>
+    </head>
+    <body>
+        <header>
+            <h1>THML与CSS基础/属性、图像和链接</h1>
+            <h2>HTML属性</h2>
+                <ul>
+                    <li><a href="2_0章节目录.html" target="_blank">2.0章节目录</a></li>
+                    <li><a href="2_1导言.html" target="_blank">2.1本章导言</a></li>
+                    <li><a href="2_2属性.html" >2.2HTML属性</a></li>
+                    <li><a href="2_3语义.html" target="_blank">2.3HTML语义</a></li>
+                    <li><a href="2_4图像.html" target="_blank">2.4HTML图像</a></li>
+                    <li><a href="2_5超链接.html" target="_blank">2.5HTML超链接</a></li>
+                    <li><a href="2_6练习模块.html" target="_blank">2.6练习模块</a></li>
+                    </ul>
+            <hr>
+        </header>
+        <main>         
+         <section><!--HTML属性简介-->
+                <article class="h3">
+                    <h3>2.2.1HTML属性简介</h3>
+                </article>
+                <article class="h3-article">
+                    <p>我们在前面的模块中了解了一些属性。让我们通过示例更深入地了解它。</p>
+                    <p>以下是一份有序列表：</p>
+                    <div class="example-box">
+                        <pre>&lt;ol&gt; <br>    &lt;li&gt;Lights&lt;/li&gt;<br>    &lt;li&gt;Camera&lt;/li&gt;<br>    &lt;li&gt;Action&lt;/li&gt;<br>&lt;/ol&gt;</pre>
+                    </div>
+                    <p>输出：</p>
+                    <div class="example-box">
+                        <ol>
+                            <li>Lights</li>
+                            <li>Camera</li>
+                            <li>Action</li>
+                        </ol>
+                    </div>
+                    <p>如果我们希望一个有序列表以数字5开头，而不是以数字1开头（默认情况下是这样），那么让我们这样编码：</p>
+                    <div class="example-box">
+                    <pre>&lt;ol start="5"&gt;<br>   &lt;li&gt;Lights&lt;/li&gt;<br>   &lt;li&gt;Camera&lt;/li&gt;<br>   &lt;li&gt;Action&lt;/li&gt;<br>&lt;/ol&gt;   </pre>
+                    </div>
+                    <p>输出：</p>
+                    <div class="example-box">
+                    <ol start="5">
+                        <li>Lights</li>
+                        <li>Camera</li>
+                        <li>Action</li>
+                    </ol>
+                    </div>
+                    <p>在这里，使用start属性，我们让列表以5开头，而不是1。</p>
+                    <p>像start一样，我们有许多有用的属性可以影响元素。属性是HTML的重要组成部分。标签和属性构成了语言。</p>
+                    <article><!--语法-->
+                        <h4>语法</h4>
+                        <p>在标记中使用属性来进一步定义标记：</p>
+                        <ul>
+                            <li>它在应用于的开始标记内使用，并应添加在标记名称的空格后：&lt;ol start="5"&gt;。start属性在&lt;ol&gt;标记中使用。</li>
+                            <li>start=“5”<br>
+                                属性名称、等号、开始引号、属性值、结束引号。</li>
+                            <li>属性名称=值：start=“5”<br>
+                                 属性名称：起始<br>
+                                 值：任意正整数</li>
+                            <li>名称-值对的唯一例外是，如果属性是“布尔属性”。这些属性只有两种类型的值——true或false。但是，不是为其值写“true”或“false”，而是添加属性名称以指示true，省略它以指示false。一个例子是有序列表中的“reversed”属性。添加此属性表示列表顺序应该颠倒（降序）。<br>
+                            &lt;ol reversed&gt; &lt;/ol&gt;</li>
+                            <li>标记可以有多个属性：<br>
+                                &lt;ol start="5"&gt;br&lt;/ol&gt;<br>
+                                &lt;ol id="cinema" class="attribute-list" start="5"&gt;&lt;/ol&gt;<br>
+                                &lt;ol start="5" class="attribute-list"&gt;&lt;/ol&gt;</li>                               
+                        </ul>
+                        <p>请看下面的两个例子。</p>
+                        <div class="example-article">
+                            <h4>示例一：id属性</h4>
+                            <p>假设您的HTML页面中有两个段落：</p>
+                            <div class="example-box">
+                               <pre><ol><li>&lt;p&gt;我是第一段，我想使用红色文字&lt;/p&gt;</li><li>&lt;p&gt;我是第二段，我想使用蓝色文字&lt;/p&gt;</li></ol></pre>
+                            </div>
+                            <p>你的任务是使第一段的文本颜色为红色，另一段为蓝色。我们该怎么做？您可以通过CSS向HTML文档添加样式。</p>
+                            <p>CSS是一种样式表语言，您可以在其中为HTML文档添加任何与演示文稿相关的信息。在这种情况下，您必须在样式表中编写代码，告知它需要分别更改文本颜色。</p>
+                            <p>但是为了识别每个段落，我们需要先给每个段落起一个名字，这样我们就可以指导我们的样式表使X红色和Y蓝色。我们给每个元素赋予的唯一名称称为id。这与您唯一的学校或企业id非常相似。你公司的其他人都不会有和你相同的身份证。id是一个属性。它应该是元素所独有的；我们知道多个拥有相同身份证的人会造成很多混乱。</p>
+                            <div class="example-box">
+                                <pre><ol><li>&lt;p id="para1"&gt;我是第一段，我想使用红色文字&lt;/p&gt;</li><li>&lt;p id="para2"&gt;我是第二段，我想使用蓝色文字&lt;/p&gt;</li></ol></pre>
+                            </div>
+                            <p>在这里，我们可以使用CSS分别设置para1和para2的样式。id属性通过给每个段落一个id来帮助我们做到这一点。</p>
+                            <h4>示例二：class属性</h4>
+                            <p>类也是一个类似的属性。和id一样，class也是一个非常有用的属性，您将经常使用它。假设你是一本书的作者。你喜欢诗歌，你想在新书中至少写20首。为它们添加ID：“poem1”、“poem2”、“poem3”。</p>
+                            <p>你想让你的诗看起来不同于其他文本。灰色文本颜色，斜体和粗体。这样地：</p>
+                            <div class="example-box">
+                                <p>行动，呼吸，飞翔，漂浮，<br>
+                                在你付出的同时获得一切，<br>
+                                在遥远的土地上漫步，<br>
+                                旅行就是生活。<br>
+                                -安徒生
+                                </p>
+                            </div>
+                            <p>所以所有的诗都有相同的要求。</p>
+                            <p>如果使用id属性，可以指示样式表以特定的方式为每首诗设置样式。它看起来像（我们将在下一章中学习如何写出正确的风格，所以现在我们将用英语表达它）-</p>
+                            <div class="example-box">
+                                <p>'Make poem1's text color grey, italic and bold'<br>
+                                'Make poem2's text color grey, italic and bold'<br>
+                                'Make poem3's text color grey, italic and bold'</p>
+                            </div>
+                            <p>你能想象一下，如果你必须让你的样式表对不同的诗歌ID做20次同样的事情，它会有多重复吗？HTML让它变得更简单。我们使用class属性。让我们把这类诗命名为“诗”。 </p>
+                            <div class="example-box">
+                                <pre><ol><li>&lt;p id="poem1" class="poetry"&gt;To move, to breathe, to fly, to float...&lt;/p&gt;</li><li>&lt;p id="poem2" class="poetry"&gt;Roses are red, violets are blue...&lt;/p&gt;</li></ol></pre>
+                            </div>
+                            <p>所以现在，你需要在样式表中做的就是指示它将所有属于“诗歌”类别的元素都变成灰色、斜体和粗体。</p>
+                        </div>
+                    </article>
+                </article>
+            </section>
+            <section><!--2.2.2全局和非全局属性-->
+                <article class="h3"><!--2.2.2全局和非全局属性-->
+                    <h3>2.2.2全局和非全局属性</h3>
+                </article>
+                <article class="h3-article">
+                    <p>现在您已经看到了一些属性示例：start、id和class。所有HTML元素都有属性。</p>
+                    <p>有两种属性：</p>
+                    <ul>
+                        <li>全局属性</li>
+                        <li>非全局属性</li>
+                    </ul>
+                    <article><!--全局属性-->
+                        <h4>全局属性</h4>
+                        <p>全局属性可以应用于所有标记。它们是共同的属性。全局属性的例子有id和class。还有更多的全局属性。这里<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes" target="_blank">是所有全局属性及其接受值的列表。</a></p>
+                        <p>因此，id和class等属性可以应用于任何HTML标记。</p>
+                        <div class="example-box">
+                            <pre>&lt;p id="para1" class="poetry" lang="en"&gt;全局属性lang将语言代码作为值。英语的代码是“en”。&lt;/p&gt;<br>&lt;html lang="fr"&gt;&lt;/html&gt; - language属性告诉浏览器此文档的内容将使用法语。<br>&lt;ul id="intro-list"&gt;&lt;/ul&gt;<br>&lt;pre class="html-code"&gt;&lt;/pre&gt;</pre>
+                    </div>
+                    </article>
+                    <article><!--非全局属性-->
+                        <h4>非全局属性</h4>
+                        <p>非全局属性是应用于标记的特定实例的属性。它可以应用于一个或多个标记。</p>
+                        <p>例如，start是&lt;ol&gt;标记的一个属性，不能应用于&lt;p&gt;或&lt;h1&gt;标记，因为它只适用于有序列表&lt;ol&gt;。另一个特定于&lt;ol&gt;标记的属性是reversed，这是我们在上一单元中学习的布尔属性示例。非全局属性宽度可以应用于多个标记，例如&lt;img&gt;、&lt;input&gt;和&lt;video&gt;。</p>
+                        <p>布尔属性没有reversed：</p>
+                        <div class="example-box">
+                            <pre>&lt;ol&gt;<br>    &lt;li&gt;HTML5&lt;/li&gt;<br>    &lt;li&gt;CSS&lt;/li&gt;<br>    &lt;li&gt;JavaScript&lt;/li&gt;<br>&lt;/ol&gt;
+                        </pre>
+                        </div>
+                        <p>输出：</p>
+                        <div class="example-box">
+                            <ol>
+                                <li>HTML5</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                             </ol>
+                        </div>
+                        <p>布尔属性有:reversed：</p>
+                        <div class="example-box">
+                            <pre>&lt;ol reversed&gt;<br>    &lt;li&gt;HTML5&lt;/li&gt;<br>    &lt;li&gt;CSS&lt;/li&gt;<br>    &lt;li&gt;JavaScript&lt;/li&gt;<br>&lt;/ol&gt;</pre>
+                        </div>
+                        <p>输出：</p>
+                        <div class="example-box">
+                            <ol reversed>
+                                <li>HTML5</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                             </ol>
+                        </div>
+                        <p>有序列表有自己的特定属性，所有全局属性也可以应用于它们。</p>
+                    </article>
+                    <article><!--更多属性-->
+                        <h4>更多属性</h4>
+                        <p>我们将很快了解的图像&lt;img&gt;和超链接&lt;a&gt;元素本身有许多非全局属性。</p>
+                        <p>&lt;img&gt;:src,target,etc.</p>
+                        <p>&lt;a&gt;:href,target,download,etc</p>
+                        <p>除了常见的全局属性，如果您想了解任何元素支持的非全局属性，可以访问 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank"> Mozilla开发者网络（MDN）</a>上的HTML属性参考。</p>
+                        <p> <strong> 重要提示：</strong>在整个课程中，我们鼓励您使用MDN属性参考来探索您所了解或希望在网页中使用的元素的非全局属性。在MDN属性引用列表中，可以单击元素的超链接名称，以导航到其页面，该页面列出了该元素支持的属性。</p>
+                        <p> <strong> 尝试以下方法：</strong>导航到 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank"> MDN的HTML属性引用</a>，找出可以应用静音和只读属性的元素。</p>
+                        <p> <strong> 试试这个：</strong>导航到同一个<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank"> HTML属性引用</a>，找出可以应用于&lt;li&gt;标记的非全局属性。搜索&lt;li&gt;元素，然后单击它：它将带您进入列表标签的页面，该页面指定了适用的属性。</p>
+                    </article>
+                </article>
+            </section>
+            <section><!--2.2.3全局属性：示例-->
+                <article class="h3">
+                    <h3>2.2.3全局属性：示例</h3>
+                </article>
+                <article class="h3-article">
+                    <article class="h4"><!--全局属性：id-->
+                        <h4>全局属性：id</h4>
+                        <p>正如我们在上一单元中看到的，这里是所有 <a href="https://html.spec.whatwg.org/multipage/dom.html#global-attributes"> 全局属性及其接受值的列表</a>。为了理解属性，我们考虑了一个使用id和类的示例。我们将在这里深入研究它，并讨论另一个全局属性：标题。</p>
+                        <p>id属性为元素提供一个唯一标识符。在HTML文档中，该ID值只能在一个元素中使用。</p>
+                        <p>id属性的命名规则：</p>
+                        <ul>
+                            <li>必须至少有一个字符</li>
+                            <li>不应包含任何空格</li>
+                            <li>值区分大小写。这意味着“QuestioN”和“question”不一样。这并不意味着您可以定义两个只因大小写不同的不同ID，例如“myid”和“MyId”。它们是不同的，所以是合法的，但这样做会让人非常困惑！</li>
+                        </ul>
+                        <pre><ol><li>&lt;p id="question-about-html"&gt;一个特定的“id”值可以在HTML文档中使用多少次？&lt;/p&gt;</li><li>&lt;p id="html-answer"&gt;一次&lt;/p&gt;</li></ol></pre>
+                        <p>id主要用于：</p>
+                        <ol>
+                            <li>设计元素的样式。可以通过引用“id”为样式表中的 元素指定所需的样式。<br>
+                              使用CSS，您可以指定代码，为“question-about-html”（例如：紫色文本，居中对齐）和“html-answer”（例如：绿色文本）提供不同的样式</li>
+                              <li>指定链接目标。我们将在本节后面学习超链接。您可以使用HTML页面的“id”链接到该部分。您应该在“id”值前面加上一个数字符号——“#id-value”<br>
+                                <pre><ol><li>&lt;a href="#introduction"&gt;1.1 介绍&lt;/a&gt; &lt;!-- 这是一个超链接元素，我们将在本模块后面学习 --&gt;</li><li>&lt;p id="introduction"&gt;这一段是对网页的介绍&lt;/p&gt;</li></ol></pre>
+                            </li>
+                            <li>在JavaScript中,“id”可以用来操作html元素。用元素的“id”，可以编写JavaScript代码，使其执行作，即更改段落标记中的文本。</li> 
+                        </ol>
+                    </article>
+                    <article class="h4"><!--全局元素：class-->
+                        <h4>全局元素：class</h4>
+                        <p>class属性虽然与id类似，但将同一类中的一组元素分组。它的名称-值对是class=“classname”。与元素唯一的id不同，相同的类名可以分配给多个元素。</p>
+                        <p>例如：</p>
+                        <div class="example-box">
+                            <pre><ol><li>&lt;p class="question"&gt;你叫什么名字？&lt;/p&gt;</li><li>&lt;p class="question"&gt;你喜欢HTML5吗？&lt;/p&gt;</li></ol></pre>
+                        </div>
+                        <p>以上两段都归为“问题”一类。一个元素可以有一个或多个类名。如果我们还希望第二个问题位于“html”类下，因为这是一个与html相关的问题，您可以通过用空格分隔来添加两个类名：</p>
+                        <div class="example-box">
+                            <pre><ol><li>&lt;p class="question html"&gt;你喜欢HTML5吗？ &lt;/p&gt;</li></ol></pre>
+                        </div>   
+                        <p>class属性的命名规则：</p>
+                        <ul>
+                            <li>必须以字母（a-z或A-Z）开头</li>
+                            <li>第一个字母后面可以是字母、数字、连字符或下划线</li>
+                            <li>值区分大小写</li>
+                        </ul>
+                        <p>类主要用于：</p>
+                        <ol>
+                            <li>设计你的元素。可以为样式表中属于该类的所有元素指定所需的样式。<br>
+                            <div class="example-box">
+                                <pre><ol><li>&lt;p class="question"&gt;Who are you?&lt;/p&gt;</li><li>&lt;p class="answer"&gt;I am the author&lt;/p&gt;</li><li>&lt;p class="question html"&gt;Do you like HTML5?&lt;/p&gt;</li><li>&lt;p class="answer"&gt;Yes&lt;/p&gt;</li></ol></pre>
+                            </div>
+                            <p>在CSS中，您可以包含代码来设置类的样式，例如告诉它：</p>
+                            <ul>
+                                <li >'question' class: text color is black and text is bold</li>
+                                <li>'answer' class: text color is green</li>
+                                <li>'question-html' class: text color is red</li>
+                            </ul>
+                            <p>上面的代码将如下所示：</p>
+                            <style >
+                                .question{
+                                    color: black;
+                                    font-weight: bold;
+                                }
+                                .answer{
+                                    color: green;
+                                }
+                                .question-html{
+                                    color: red;
+                                }
+                            </style>
+                            <div class="example-box">
+                                <p class="question">Who are you?</p>
+                                <p class="answer">I am the author</p>
+                                <p class="question-html">Do you like HTML5?</p>
+                                <p class="answer">Yes</p>
+                            </div>
+                            <p>“你喜欢HTML5吗？”question具有应用于它的'question'和'html'类的样式。</p>
+                            </li>
+                            <li>在JavaScript中，类还可以用来操作同一类的html元素。</li>
+                        </ol>
+                    </article>
+                    <article class="h4"><!--全局元素：lang-->
+                        <h4>全局元素：lang</h4>
+                        <p>lang属性表示它所附加到的元素中文本的语言。识别内容的语言变得越来越重要，因为浏览器根据内容的语言来调整样式和用户体验的其他方面。</p>
+                        <p>例如，如果你用日语创建页面，浏览器将自动应用一种字体，为字符生成日语形状，而不是中文形状——但前提是你告诉它你的内容是日语。</p>
+                        <p>各种呈现方面还需要了解内容的语言：例如，CSS将根据声明的语言为断行、断字和文本转换的内容设置不同的样式。其他功能，如拼写检查和面向视觉障碍人群的语音浏览器，也会根据内容所使用的语言而有所不同。有关详细信息，请参见 <a href="https://www.w3.org/International/questions/qa-lang-why" target="_blank"> 为什么使用language属性？</a></p>
+                        <p>lang属性的值必须是由 <a href="https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry" target="_blank"> IANA语言</a>子标记注册表中定义的一个或多个子标记组成的语言标记。多个子标签由连字符分隔。（不要使用ISO语言和国家列表！这些列表已经是IANA注册的子集。）您可能会发现使用  <a href="https://r12a.github.io/app-subtags/" target="_blank"> 非官方语言的子标签查找工具</a>查找子标签更容易。</p>
+                        <p>您应该始终在&lt;html&gt;标记中声明页面的语言。还可以通过将lang属性附加到包含页面内容的元素来声明页面内容的语言。</p>
+                        <p>For example:</p>
+                        <div class="example-box">
+                            <pre><ol><li>&lt;html lang="en-GB"&gt;...&lt;/html&gt;</li><li>&lt;p&gt;在法语中，您会说&lt;span lang="fr"&gt;On voit souvent des chats sur le Web.&lt;/span&gt;</p></li></ol></pre>
+                        </div>
+                        <p>示例二输出：</p>
+                        <div class="example-box">
+                            <p>在法语中，您会说<span lang="fr">On voit souvent des chats sur le Web.</span></p>
+                        </div>
+                        <p>上面的第一个示例显示了如何使用区域子标记（GB）限定语言（英语）以指定英国英语。这种区别对于拼写检查源代码很有用。您还可以添加其他子标签，例如脚本和变体标签，以进一步优化语言。然而，黄金法则是始终保持lang值尽可能短，并且只有在有充分理由时才使用额外的子标签（例如，日语只使用ja，而不是ja-JP）。有关更多信息，请参阅 <a href="https://www.w3.org/International/questions/qa-html-language-declarations" target="_blank"> 用HTML声明语言的文章。</a></p>
+                        <p>第二个示例显示了如何在文档中指定语言的更改。这将有助于语音浏览器正确发音法语单词“chats”，在英语中意思是“cats”，而不是“chats”。</p>
+                        <h3>全局元素：title</h3>
+                        <p>试试这个：把光标放在单词上，然后放在下面的图片上。不要点击它，把光标放在那里就行了。</p> 
+                        <p>示例:</p>
+                        <div class="example-box">
+                            <pre>&lt;abbr title="National Aeronautics and Space Administration"&gt;NASA&lt;/abbr&gt;<br>&lt;img src="images/nasa.jpg" alt="nasa" title="nasa"&gt;</pre>
+                        </div>
+                        <p>输出：</p>
+                        <div class="example-box">
+                            <abbr title="National Aeronautics and Space Administration">NASA</abbr><br>
+                            <img src="images/nasa.jpg" alt="nasa" title="nasa">
+                        </div>
+                        <p>你看到那两条“秘密”信息了吗？当指针停留在元素上时出现的消息称为工具提示。无论是段落、标题、图像还是任何元素，title属性都用于提供有关它的附加信息。详细说明缩写或添加一些上下文是非常有用的。对于图像，您应该使用alt属性，因为不能保证title属性会呈现给辅助技术用户。标题可以是任何文本值。</p>
+                    </article>
+                </article>
+            </section>
+        </main>
+    </body>
+    <footer>
+
+    </footer>
+</html>        
