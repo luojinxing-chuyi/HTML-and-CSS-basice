@@ -126,10 +126,197 @@
                         <p>在这种情况下，应该使用以下哪些标签？</p>
                         <p>[...] 你得马上离开。你的办公室被窃听了！[…]</p>
                         <input type="text">
-
                     </article>
                 </article>
             </section> 
+            <section><!--2.3.2语义元素导论-->
+                <article class="h3"><!--2.3.2语义元素导论-->
+                    <h3>2.3.2语义元素导论</h3>
+                </article>
+                <article class="h3-article">
+                   <p>HTML语义是一种HTML，它关注网页中信息的含义，而不是其表示或外观。</p>
+                   <article class="h4"><!--什么是语义元素？-->
+                       <h4>什么是语义元素？</h4>
+                       <p>如果要添加段落，可以使用段落标记。如果要添加标题，可以使用标题标签[h1]-[h6]，要添加图像，可以使用图像标签（我们将在本模块后面了解这一点）。所有这些标记及其id和类属性都是语义的，因为它们表明了标记中内容的用途[i] 而且[b]对内容没有任何建议，这就是为什么它们被认为语义不够，最初被弃用的原因。</p>
+                   </article>
+                   <article class="h4"><!--使用正确的标签-->
+                       <h4>使用正确的标签</h4>
+                       <p>从语义HTML的角度来看，使用正确的标记很重要。你应该使用[blockquote]来包装引号，而不是使用段落标记，然后将其样式设置为引号。你应该使用[em]来强调内容的一部分，而不仅仅是将文本斜体化。出于演示目的，可以使用CSS实现同样的效果。事物的外观与它的含义关系不大。这就是为什么在HTML中，我们将内容和样式分开。</p>
+                   </article>
+                   <article class="h4"><!--为什么它很重要？-->
+                       <h4>为什么它很重要？</h4>
+                       <p>语义元素对开发者和浏览器都是有益的。它们传递了更多关于HTML文档内容和结构的信息。语义HTML中有一个名为header的标记。当你看到像[h1]或[h2]这样的标题时，你知道这可能是一个新的小节或主题的开始。任何编程语言都欢迎交流。</p>
+                       <p>对于能够更好地理解标记结构的开发人员来说，这种额外的交流非常有用（当您在一年后回到代码中，或者将其传递给同事时，这将对您和他们有很大帮助！）。对于浏览器，它可以更好地区分不同类型的数据，从而在不同的设备中更好地显示内容。辅助技术，如屏幕阅读器，将根据语义阅读内容并传达有关内容的信息，例如，识别标题并以不同的语调阅读。</p>
+                       <p>自成立以来，W3C一直在努力使HTML尽可能具有语义。HTML5带来了一系列新的语义元素。</p>
+                   </article>
+                   <article class="h4"><!--网页结构-->
+                       <h4>网页结构</h4>
+                       <p>让我们看看一个典型的网页结构，它由以以下名称命名的块组成：header, nav, article, section, aside and footer(页眉、导航、文章、节、旁白和页脚。)</p>
+                       <img src="images/2_3_2wangyejiegou.jpg" alt="网页结构">
+                       <p>HTML5中特别引入了[article]、[section]、[header]、[nav]和[footer]等标签来定义网页结构。这些新的语义元素赋予网页的不同部分以意义。当你进行搜索时，搜索引擎会自动处理数以百万计的HTML页面进行扫描，并为你提供最合适的内容。</p>
+                       <p>每一部分都是指本文件的一部分：</p>
+                       <ul>
+                           <li> <strong>header</strong>可以是整个文档或单个章节的起点。它通常包含引言。</li>
+                           <li><strong>nav</strong>指的是导航。它可以包含一组导航链接，比如一本书的目录。</li>
+                           <li><strong>section</strong>是指文档中的节。例如，一份关于植物的文件可以在多年生植物、一年生植物、土壤类型等标题下包含几个部分。</li>
+                           <li><strong>aside</strong>是指与主要内容不同的内容。例如，在一篇关于意大利翁布里亚地区一位年轻建筑师的文章中。旁边可能是一个小边栏，上面有关于翁布里亚的信息，比如地理细节和人口。</li>
+                           <li><strong>article</strong>这篇文章指的是独立的内容。如果一篇文章是从文档中提取出来的，那么它本身就应该是有意义的。文章、博客帖子、常见问题（FAQ）都是独立内容的例子。</li>
+                           <li><strong>footer</strong>包含典型的页脚信息，如创作、版权和联系信息。</li>
+                       </ul>
+                       <p>这些语义元素的使用改进了文档的自动化处理。当它扫描一个[nav]标签时，它自动知道它包含与页面导航相关的内容，或者一个标题指示介绍性内容。它提供了跨多个网页的结构和一致的行为，为浏览器提供了更简单、更直接的信息，使他们的生活更轻松。它还提高了网页的可访问性。辅助技术依靠文档的结构向用户呈现信息。如果屏幕阅读器能够正确确定文档的结构，那么它可以更无缝地读取文档，避免不相关的信息或重复内容。</p>
+                       <p>我们可以将上图中的元素应用于以下简单网页：</p>
+                       <div>
+                       <pre><ol>
+                            <li>[!DOCTYPE html]</li>
+                            <li>[html]</li>
+                            <li>  [head]</li>
+                            <li>    [meta charset="UTF-8"]</li>
+                            <li>    [title]语义元素导论[/title]</li>
+                            <li>  [/head]</li>                         
+                            <li>  [body]</li>
+                            <li>    [header]</li>
+                            <li>        [h2]使用标记验证程序。[/h2]</li>
+                            <li>    [/header]</li>
+                            <li>    [nav][!--您将在本章后面了解[a]标记--]</li>
+                            <li>        [a href=""]什么是标记验证器，它做什么？[/a][br /]</li>
+                            <li>        [a href=""]为什么要验证？[/a][br /]</li>
+                            <li>        [a href=""]如何使用标记验证程序？[/a][br /]</li>
+                            <li>        [a href=""]有很多错误信息吗？不要惊慌。[/a][br /]</li>
+                            <li>    [/nav]</li>
+                            <li>    [section]</li>
+                            <li>        [h3]什么是标记验证器，它做什么？[/h3]</li>
+                            <li>        [p][a href="https://validator.w3.org/docs/help.html#validation_basics"]Markup Validator[/a]是一个免费的工具和服务，用于验证标记：换句话说，它检查以HTML等格式编写的Web文档的语法。[/p]</li>
+                            <li>    [/section]</li>
+                            <li>    [section]</li>
+                            <li>        [h3]为什么要验证？[/h3]</li>
+                            <li>        [p] 计算机编程的一条重要格言是：“生产的东西要保守，接受的东西要自由。”[br]
+                                        浏览器遵循这条准则的后半部分，接受网页并尝试显示它们，即使它们不是合法的HTML。问题是，不同的浏览器（甚至同一浏览器的不同版本）会对同一非法构造做出不同的猜测。。。[/p]</li>
+                            <li>    [/section]</li>
+                            <li>    [article]</li>
+                            <li>        [h3]如何使用标记验证程序？[/h3]</li>
+                            <li>        [p]最有可能的情况是，您希望使用在线标记验证服务。使用此服务验证网页的简单方法是将其地址粘贴到[a href="https://validator.w3.org/#uri"]文本区[/a]上[a href="https://validator.w3.org/""]验证程序主页[/a]，然后按“检查”按钮。[/p]</li>
+                            <li>    [/article]</li>
+                            <li>    [aside]</li>
+                            <li>        [h3]有很多错误信息吗？不要惊慌。[/h3]</li>
+                            <li>        [p] 不要惊慌。验证器是否抱怨您的DOCTYPE声明（或缺少声明）？确保您的文档具有语法正确的DOCTYPE声明，如DOCTYPE部分所述，并确保它正确标识您正在使用的HTML类型。然后再次通过验证程序运行它；如果幸运的话，你应该少犯很多错误。如果这没有帮助，那么您可能正在经历级联故障。。。[/p]</li>
+                            <li>    [/aside]</li>
+                            <li>    [footer]</li>
+                            <li>        [p]作者：W3C[/p]</li>
+                            <li>        [p]欲了解更多信息，请访问[a href="https://validator.w3.org/docs/help.html"]此页[/a].[/p]</li>
+                            <li>    [/footer]</li>
+                            <li>  [/body]</li>
+                                                     
+                            <li>[/html]</li></ol></pre>                       
+                        </div>
+                       <p>输出：</p>
+                       <div class="example-box">
+                        <!DOCTYPE html>
+                        <html>
+
+                        <head>
+                          <meta charset="UTF-8">
+                          <title>语义元素导论</title>
+                        </head>
+                         
+                        <body>
+                        <header>
+                          <h2>使用标记验证程序。</h2>
+                        </header>
+                        <nav>
+                        <!--您将在本章后面了解<a>标记-->
+                          <a href="">什么是标记验证器，它做什么？</a><br />
+                          <a href="">为什么要验证？</a><br />
+                          <a href="">如何使用标记验证程序？</a><br />
+                          <a href="">有很多错误信息吗？不要惊慌。</a><br />
+                        </nav>
+                        <section>
+                          <h3>什么是标记验证器，它做什么？</h3>
+                          <p><a href="https://validator.w3.org/docs/help.html#validation_basics">Markup Validator</a>是一个免费的工具和服务，用于验证标记：换句话说，它检查以HTML等格式编写的Web文档的语法。</p>
+                        </section>
+                        <section>
+                          <h3>为什么要验证？</h3>
+                          <p> 计算机编程的一条重要格言是：“生产的东西要保守，接受的东西要自由。”<br>
+                            浏览器遵循这条准则的后半部分，接受网页并尝试显示它们，即使它们不是合法的HTML。问题是，不同的浏览器（甚至同一浏览器的不同版本）会对同一非法构造做出不同的猜测。。。</p>
+                        </section>
+                        <article>
+                          <h3>如何使用标记验证程序？</h3>
+                          <p>最有可能的情况是，您希望使用在线标记验证服务。使用此服务验证网页的简单方法是将其地址粘贴到<a href="https://validator.w3.org/#uri">文本区</a>上<a href="https://validator.w3.org/"">验证程序主页</a>，然后按“检查”按钮。</p>
+                        </article>
+                        <aside>
+                          <h3>有很多错误信息吗？不要惊慌。</h3>
+                          <p> 不要惊慌。验证器是否抱怨您的DOCTYPE声明（或缺少声明）？确保您的文档具有语法正确的DOCTYPE声明，如DOCTYPE部分所述，并确保它正确标识您正在使用的HTML类型。然后再次通过验证程序运行它；如果幸运的话，你应该少犯很多错误。
+                            如果这没有帮助，那么您可能正在经历级联故障。。。</p>
+                        </aside>
+                        <footer>
+                          <p>作者：W3C</p>
+                          <p>欲了解更多信息，请访问<a href="https://validator.w3.org/docs/help.html">此页</a>.</p>
+                        </footer>
+                        </body>
+                        </html>
+                       </div>
+                   </article>
+                   <article class="h4">
+                       <h4>知识测验</h4>
+                       <fieldset><!--字段集-->
+                            <legend>为什么要在网页中使用语义元素</legend>
+                            <input type="radio" id="select2-3-2-1" name="check2-3-2" value="selesct2-3-2-1">
+                            <label for="select2-3-2-1">它为网页提供了意义和结构，并改进了文档的自动化处理</label><br>
+                            <input type="radio" id="select2-3-2-2" name="check2-3-2" value="select2-3-2-2">
+                            <label for="select2-3-2-2">用户最终会用完“id”值，语义元素会解决这个问题</label><br>
+                            <input type="radio" id="select2-3-2-3" name="check2-3-2" value="select2-3-2-3">
+                            <label for="select3-2-3-3">它使网页的样式设置更容易</label><br>
+                            <input type="radio" id="select2-3-2-4" name="check2-3-2" value="select2-3-2-4">
+                            <label for="select2-3-2-4">它将极大地改善文档的视觉结构</label>
+                       </fieldset>
+                   </article>
+                </article>
+            </section>
+            <section><!--HTML5语义元素-->
+                <article class="h3">
+                    <h3>HTML5语义元素</h3>
+                </article>
+                <article class="h3-article">
+                    <p>我们将在下一单元中详细阐述选定的语义元素。</p>
+                    <table>
+                        <tr>
+                            <th>语义元素</th>
+                            <th>描述</th>
+                            <th>示例</th>
+                        </tr>
+                        <tr>
+                            <td>[header]</td>
+                            <td>介绍整个页面或个别章节、文章、导航、旁白元素。通常包含站点名称、徽标和导航。不必在页面的开头。</td>
+                            <td>[header]<br>
+                                [h1]认真的重要性[/h1]<br>
+                                [h3]对真与美的追求[/h3]<br>
+                                [p]该剧由剧作家奥斯卡·王尔德于1895年创作[/p]<br>
+                                [/header]</td>
+                        </tr>
+                        <tr>
+                            <td>[footer]</td>
+                            <td>包括典型的页脚信息，如创作、版权、联系信息和页脚菜单。</td>
+                            <td>[footer]<br>
+                                [p]written by：oscar wilde[/p]<br>
+                                [p]联系信息：[a href=“mailto:oscar@wilde.com“]
+                                oscar@wilde.com[/a]。[/P]<br>
+                                [/footer]</td>
+                        </tr>
+                        <tr>
+                            <td>[nav]</td>
+                            <td>文档的导航链接。一个页面可以有多个<nav>元素，如目录、页眉水平导航和页脚导航。</td>
+                            <td>[nav][ol]<br>
+                                [li][a href="/act1/"]Act 1[/a][/li] <br>
+                                [li][a href="/act2/"]Act 2[/a][/li]<br>
+                                [li][a href="/act3/"]Act 3[/a][/li]<br>
+                                [/ol][/nav]</td>
+                        </tr>
+                        
+                    </table>
+
+
+                </article>
+
+            </section>
         </main>
         <footer>
         </footer>
