@@ -330,13 +330,154 @@
                         </tr>
                         <tr>
                             <td>[aside]</td>
-                            <td></td>
+                            <td>除了主要内容之外的次要内容，比如侧边栏。这些不被视为主页大纲的一部分。</td>
+                            <td>[p]阿尔杰农的公寓装修豪华而艺术[/p] <br>
+                                [aside] <br>
+                                [h3]阿尔杰农·蒙克里夫[/h3] <br>
+                                [p]住在伦敦时尚区的富有单身汉。他很幽默，完全不尊重社会[/p] <br>
+                            [/aside]</td>
                         </tr>
-                        
+                        <tr>
+                            <td>[details] <br>
+                                *见下面的例子</td>
+                            <td>提供用户可以显示或隐藏的附加信息的方法。默认情况下显示给用户的内容。其他内容是隐藏的，可以展开查看。</td>
+                            <td>[details]
+                                [summary]角色成员[/summary]
+                                [p]乔治·华盛顿饰演阿尔杰农·蒙克里夫[/p]
+                                [p]罗纳德·里根饰演约翰·沃辛[/p]
+                                [/details></td>
+                        </tr>
+                        <tr>
+                            <td>[figcaption] <br>
+                                *见下面的例子</td>
+                            <td>提供图像的标题（说明）。在<figure>中使用。</td>
+                            <td>[figure]
+                                [img src="img_cast.jpg" alt="认真的重要性"]
+                                [figcaption]图1-演员们在首映前的彩排中努力工作[/figcaption]
+                                [/figure]</td>
+                        </tr>
+                        <tr>
+                            <td>[figure]</td>
+                            <td>包含图像，可用于与图像的标题分组</td>
+                            <td>请参阅[figcaption]</figcaption></td>
+                        </tr>
+                        <tr>
+                            <td>[mark] <br>
+                                *见下面的例子</td>
+                            <td>定义要高亮显示的文本的一部分。可以理解类似银光笔效果。突出显示样式在CSS中指定。</td>
+                            <td><h4>车道：</h4> 
+                                <p>是的，先生。 [[mark]用托盘把三明治递给他的主人[/mark][/p]</td>
+                        </tr>
+                        <tr>
+                            <td>[summary]</td>
+                            <td>在[details]标签中使用。指定可见内容。其余详细内容由用户显示/隐藏。</td>
+                            <td>[details]
+                                [summary]Cast Members[/summary]
+                                [p]George Washington as Algernon Moncrieff[/p]
+                                [p]Ronald Reagan as John Worthing[/p]
+                                [/details]</td>
+                        </tr> 
                     </table>
+                    <article class="h4">
+                    <h4>[detaile]元素</h4>
+                    <p>[details]元素非常酷。它与[summary]标记嵌套，和其他一些内容一起使用。结果是，在摘要旁边显示一个披露三角形，而其他内容最初是隐藏的。通过单击三角形，其他内容将显示给用户。这不需要JavaScript，是获得强大且令人满意的功能的简单方法。</p>
+                    <p>下面我们看到了HTML，你可以自己试一试！请注意，[details]标记在大多数Web浏览器中都有效。</p>
+                    <div class="example-box">
+                        <pre><ol><li>[details]</li><li>   [summary]角色成员[/summary]</li><li>   [p]乔治·华盛顿饰演阿尔杰农·蒙克里夫[/p]</li><li>   [p]罗纳德·里根饰演约翰·沃辛[/p]</li><li>[/details]</li></ol></pre>
+                    </div>
+                    <p>输出：</p>
+                    <div>
+                        <details>
+                            <summary>角色成员</summary>
+                            <p>乔治·华盛顿饰演阿尔杰农·蒙克里夫</p>
+                            <p>罗纳德·里根饰演约翰·沃辛</p>
+                        </details>
+                    </div>
+                    <p>另请参见当前的浏览器支持（在<a href="https://caniuse.com/details" target="_blank">caniuse.com</a>上）。</p>
+                    </article>
+                    <article class="h4">
+                        <h4>[figcaption]元素</h4>
+                        <p>此元素用于提供图像的标题或解释（图）。虽然alt属性解释了辅助技术的图像，但可以使用<figcaption>为所有用户提供附加信息。</p>
+                        <div class="example-box">
+                            <pre><ol><li>[figure]</li><li>   [img src="images\2_3_3figcaption.jpg" alt="认真的重要性"]</li><li>   [figcaption]图1-演员们在首映前的彩排中努力工作[/figcaption]</li><li>[/figuer]</li></ol></pre>
+                        </div>
+                        <p>输出：</p>
+                        <div class="example-box">
+                            <figure>
+                                <img src="images/2_3_3figcaption.jpg" alt="认真的重要性">
+                                <figcaption>图1-演员们在首映前的彩排中努力工作</figcaption>
+                            </figure>
+                        </div>
+                    </article>
+                    <article class="h4">
+                        <h4>[mark]元素</h4>
+                        <p>此元素用于指定要突出显示的内容。</p>
+                        <div class="example-box">
+                            <pre><ol><li>[h3]车道：[/h3]</li><li>[p]是的，先生。【[mark]用托盘把三明治递给他的主人[/mark]】[/p]</li></ol></pre>
 
+                        </div>
+                        <p>输出：</p>
+                        <div class="example-box">
+                            <h3>车道：</h3>
+                            <p>是的，先生。【<mark>用托盘把三明治递给他的主人</mark>】</p>
+                        </div>
+                        <p>默认情况下，大多数浏览器都会将带有黄色背景的mark元素显示为黑色文本，但如果没有，则可以在CSS中指定样式。另请参见当前的浏览器支持（在 <a href="https://caniuse.com/mdn-html_elements_mark" target="_blank">caniuse.com</a>上）。</p>
+                    </article>
+                    <article class="h4">
+                        <h4>语义因素的影响</h4>
+                        <p>如果您有机会尝试上面讨论的语义元素的例子，您会注意到语义元素通常在视觉上不具有前景。只有少数语义元素，如[mark]、[em]、[strong]和[code]为文档提供了某种视觉变化。除了为其余的文档提供结构外，不要做任何事情。</p>
+                        <p>一个很好的例子是[aside]。[aside]元素用于除主内容之外的辅助内容，例如侧边栏，但它实际上不会在页面中创建侧边栏。侧边栏是一个用户界面（UI）元素，必须设置样式以实现侧边栏的外观。以下代码只会为文档创建结构，不会对其进行任何视觉更改：</p>
+                        <div class="example-box">
+                            <pre><ol><li>[article]</li><li>[header id="intro"]</li><li>   [h2]序言[/h2]</li><li>[/header]</li><li>   [p]HTML5 代表……[/p]</li><li>   [!--这是一个旁白的例子。该段还展示了标记元素--]</li><li>   [aside]</li><li>      [h4]PIA[h4]</li><li>       [p]API展台……[/p]</li><li>   [/aside]</li><li>[/article]</li></ol></pre>
+                        </div>
+                        <p>输出：</p>
+                        <div class="example-box">
+                          <article>
+                                <header id="intro">
+                                <h2>Introduction</h2>   
+                                </header>
+                                <p>HTML5 stands for ...</p>
+                                <!--This is an example of aside. The mark element has also been showcased in the paragraph -->
+                                <aside>
+                                <h4> API </h4>
+                                <p> API stands ... </p>
+                                </aside>
+                            </article>
+                        </div>
+                    </article>
+                    <article class="h4">
+                        <h4>鲜为人知的语义元素（可选）</h4>
+                        <p>注：本节是为好奇者提供的可选材料。</p>
+                        <p>我们将研究一些常用但鲜为人知的语义元素。</p>
+                        <table>
+                            <tr>
+                                <th>语义元素</th>
+                                <th>描述</th>
+                                <th>示例</th>
+                                <th>输出</th>
+                            </tr>
+                            <tr>
+                                <td>[code]</td>
+                                <td>用于在句子中表示简短的计算机代码。它以默认的单空格字体显示代码。</td>
+                                <td>[p]对于较大的代码段，应该使用[code]pre标记[/code][/p]</td>
+                                <td><p>对于较大的代码段，应该使用<code>pre标记</code></p></td>
+                            </tr>
+                            <tr>
+                                <td>[abbr]</td>
+                                <td>用来表示缩写的出现。</td>
+                                <td>[abbr title="Hypertext Markup Language"]HTML[/abbr]</td>
+                                <td><abbr title="Hypertext Markup Language">HTML</abbr></td>
+                            </tr>
+                            <tr>
+                                <td>[br]</td>
+                                <td>用于在HTML文档中引入换行符。</td>
+                                <td>[p]这里需要换行[br]这是第二行[/p]</td>
+                                <td><p>这里需要换行<br>这是第二行</p></td>
+                            </tr>
+                        </table>
 
-                </article>
+                    </article>
+             </article>
 
             </section>
         </main>
