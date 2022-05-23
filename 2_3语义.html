@@ -29,10 +29,10 @@
                     <p>让我们看看几个有趣的标签，它们作为这条规则的例外而存在，并最终在HTML5中得到了纠正。</p>
                     <div class="example-box">
                         <ol>
-                            <li>[p]这个文本是 [i]斜体的[/i]。 它使用“i”标签。[/p]</li>
-                            <li>[p]这个文本也是[em]斜体的[/em]. 。它使用“em”标签![/p]</li>
-                            <li>[p]这个文本以 [b]粗体显示[/b]。它使用“b”标签!</li>
-                            <li>[p]这个文本也是以[strong]粗体显示[/strong]。它使用“strong”标签!</p></li>
+                            <li>&lt;p&gt;这个文本是 &lt;i&gt;斜体的&lt;/i&gt;。 它使用“i”标签。&lt;/p&gt;</li>
+                            <li>&lt;p&gt;这个文本也是&lt;em&gt;斜体的&lt;/em&gt;. 。它使用“em”标签!&lt;/p&gt;</li>
+                            <li>&lt;p&gt;这个文本以 &lt;b&gt;粗体显示&lt;/b&gt;。它使用“b”标签!</li>
+                            <li>&lt;p&gt;这个文本也是以&lt;strong&gt;粗体显示&lt;/strong&gt;。它使用“strong”标签!</p></li>
                         </ol>
                     </div>
                     <p>输出：</p>
@@ -44,7 +44,7 @@
                         <li>This text is also in <strong>Bold</strong>. But it uses the strong tag!</li>
                         </ol>
                     </div>
-                    <p>两个标签在HTML中做同样的事情似乎是多余的。虽然[b]和[strong]，[i]和[em]在普通的网络浏览器中似乎没有什么不同，但它们之间有一个重要的区别。</p>
+                    <p>两个标签在HTML中做同样的事情似乎是多余的。虽然&lt;b&gt;和&lt;strong&gt;，&lt;i&gt;和&lt;em&gt;在普通的网络浏览器中似乎没有什么不同，但它们之间有一个重要的区别。</p>
                     <article class="h4"><!--样式标签与语义标签-->
                         <h4>样式标签与语义标签</h4>
                         <p>我们在上面看到的四个标签可以分为样式标签和语义标签。</p>
@@ -57,42 +57,42 @@
                                 <th>标签描述</th>
                             </tr>
                             <tr>
-                                <td>[b]</td>
+                                <td>&lt;b&gt;</td>
                                 <td>样式</td>
                                 <td>使文本加粗</td>
                             </tr>
                             <tr>
-                                <td>[i]</td>
+                                <td>&lt;i&gt;</td>
                                 <td>样式</td>
                                 <td>使文本倾斜</td>
                             </tr>
                             <tr>
-                                <td>[em]</td>
+                                <td>&lt;em&gt;</td>
                                 <td>语义</td>
                                 <td>强调文本<br>
                                     在浏览器中，文本默认为斜体</td>
                             </tr>
                             <tr>
-                                <td>[strong]</td>
+                                <td>&lt;strong&gt;</td>
                                 <td>语义</td>
                                 <td>重要文本<br>
                                     在浏览器中，文本默认为粗体</td>
                             </tr>
                         </table>
                     </article>
-                    <article class="h4"><!--[b]与[strong]-->
-                        <h4>[b]与[strong]</h4>
+                    <article class="h4"><!--&lt;b&gt;与&lt;strong&gt;-->
+                        <h4>&lt;b&gt;与&lt;strong&gt;</h4>
                         <p><strong>Bold</strong>是一种使字母更粗的样式，因此它在其他文本中脱颖而出。但它没有语义含义，例如对于语音浏览器、屏幕阅读器和其他类型的访问Web的方式。像Kindle Paperwhite这样的设备，文本呈现方式不同，可能不会选择粗体。</p>
-                        <p><strong>Strong</strong>指的是事物应该是怎样的。它在浏览器中看起来像粗体，但在大声朗读文本时可能意味着“紧急或严肃地说话”。从语义上讲，我们指示它比它所围绕的文本更强大，这与在[b]的情况下给出文本应该是什么样子的指示不同。它代表内容的重要性、严肃性或紧迫性。</p>
+                        <p><strong>Strong</strong>指的是事物应该是怎样的。它在浏览器中看起来像粗体，但在大声朗读文本时可能意味着“紧急或严肃地说话”。从语义上讲，我们指示它比它所围绕的文本更强大，这与在&lt;b&gt;的情况下给出文本应该是什么样子的指示不同。它代表内容的重要性、严肃性或紧迫性。</p>
                         <div class="example-box">
                             <ol>
-                            <li>[p]作为初级开发人员，您[strong]必须[/strong]提交您的工作以供代码审查！[/p]</li>
+                            <li>&lt;p&gt;作为初级开发人员，您&lt;strong&gt;必须&lt;/strong&gt;提交您的工作以供代码审查！&lt;/p&gt;</li>
                             </ol>
                         </div>
                         <p>在浏览器中，“必须”可以粗体显示。但是，当通过文本到语音程序大声阅读HTML文档时，可以用重要性或严肃性来表达。</p>
                     </article>
-                    <article class="h4"><!--[i]与[em]-->
-                        <h4>[i]与[em]</h4>
+                    <article class="h4"><!--&lt;i&gt;与&lt;em&gt;-->
+                        <h4>&lt;i&gt;与&lt;em&gt;</h4>
                         <p><strong>Italics</strong>使文本倾斜。我们通常将杂志、书籍、电视节目等的名称用斜体表示，就像加粗标记一样，因为它纯粹是为了表达目的，对于不能阅读文本的人来说，它毫无意义。</p>
                         <p><strong>Emphasis</strong>强调用于强调其内容的强调。你强调的句子中的单词可以改变整个意思。试着大声朗读下面的句子，着重强调强调的单词：“你”和“商店”。</p>
                         <p><em>你</em>得去商店。<br>
@@ -102,29 +102,29 @@
                     </article>
                     <article class="h4">
                         <h4>HTML5的变化</h4>
-                        <p>到目前为止，我们已经了解了这些标签在HTML4中是如何使用的。在本单元开始时，我们了解到内容和样式应该分开，样式应该隐藏在级联样式表中。那么，[i]和[b]这两个纯粹的风格元素是如何被切割的呢？</p>
+                        <p>到目前为止，我们已经了解了这些标签在HTML4中是如何使用的。在本单元开始时，我们了解到内容和样式应该分开，样式应该隐藏在级联样式表中。那么，&lt;i&gt;和&lt;b&gt;这两个纯粹的风格元素是如何被切割的呢？</p>
                         <p>它们最初被弃用，然而，在HTML5中，它们又被带回来了。这一次，具有语义意义。</p>
                         <table>
                             <tr>
-                                <td>[i]</td>
+                                <td>&lt;i&gt;</td>
                                 <td>除了斜体文本，它现在还用于不同语气或声音的文本，例如外来词、思想或技术术语。</td>
-                                <td>[p]This restaurant has a breakfast buffet and a four course [i lang="fr"]À la carte[/i] dinner.[/p]</td>
+                                <td>&lt;p&gt;This restaurant has a breakfast buffet and a four course &lt;i lang="fr"&gt;À la carte&lt;/i&gt; dinner.&lt;/p&gt;</td>
                             </tr>
                             <tr>
-                                <td>[b]</td>
+                                <td>&lt;b&gt;</td>
                                 <td>除了粗体文本，它现在还被用作一种文体补偿，例如文档中的关键字、产品名称或动作词，但不使它们变得重要。它也可以用作列表项中的标题。</td>
-                                <td>[p]The owner of this [b]rabbit[/b]and [b]hamster[/b] needs to step forward.[/p]</td>
+                                <td>&lt;p&gt;The owner of this &lt;b&gt;rabbit&lt;/b&gt;and &lt;b&gt;hamster&lt;/b&gt; needs to step forward.&lt;/p&gt;</td>
                             </tr>
                         </table>
-                        <p>从HTML5开始，[em]现在也用于发音不同的单词和句子。它不是用来表达重要性的。为此，您应该使用[strong]。</p>
-                        <p>您可以同时嵌套[em]和[strong]。两个[em]表示对内容的压力/强调程度高于一个[em]。</p>
-                        <p>你还应该记住，[b]和[i]可能无法为世界上的某些地区提供合适的造型。例如，汉字非常复杂，他们通常喜欢下划线而不是粗体，因为粗体字使阅读文本变得太困难。</p>
-                        <p>如果您确实使用[b]或[i]标记，HTML5规范建议您也使用类属性来标识标记的语义意图。这对于被翻译的页面尤其重要，因为样式不一定映射到不同文化中的相同语义类别。有关更多信息，请使用[b]和[i]元素阅读本文。</p>
+                        <p>从HTML5开始，&lt;em&gt;现在也用于发音不同的单词和句子。它不是用来表达重要性的。为此，您应该使用&lt;strong&gt;。</p>
+                        <p>您可以同时嵌套&lt;em&gt;和&lt;strong&gt;。两个&lt;em&gt;表示对内容的压力/强调程度高于一个&lt;em&gt;。</p>
+                        <p>你还应该记住，&lt;b&gt;和&lt;i&gt;可能无法为世界上的某些地区提供合适的造型。例如，汉字非常复杂，他们通常喜欢下划线而不是粗体，因为粗体字使阅读文本变得太困难。</p>
+                        <p>如果您确实使用&lt;b&gt;或&lt;i&gt;标记，HTML5规范建议您也使用类属性来标识标记的语义意图。这对于被翻译的页面尤其重要，因为样式不一定映射到不同文化中的相同语义类别。有关更多信息，请使用&lt;b&gt;和&lt;i&gt;元素阅读本文。</p>
                     </article>
                     <article class="h4">
                         <h4>知识测验</h4>
                         <p>在这种情况下，应该使用以下哪些标签？</p>
-                        <p>[...] 你得马上离开。你的办公室被窃听了！[…]</p>
+                        <p>&lt;...&gt; 你得马上离开。你的办公室被窃听了！&lt;…&gt;</p>
                         <input type="text">
                     </article>
                 </article>
@@ -137,15 +137,15 @@
                    <p>HTML语义是一种HTML，它关注网页中信息的含义，而不是其表示或外观。</p>
                    <article class="h4"><!--什么是语义元素？-->
                        <h4>什么是语义元素？</h4>
-                       <p>如果要添加段落，可以使用段落标记。如果要添加标题，可以使用标题标签[h1]-[h6]，要添加图像，可以使用图像标签（我们将在本模块后面了解这一点）。所有这些标记及其id和类属性都是语义的，因为它们表明了标记中内容的用途[i] 而且[b]对内容没有任何建议，这就是为什么它们被认为语义不够，最初被弃用的原因。</p>
+                       <p>如果要添加段落，可以使用段落标记。如果要添加标题，可以使用标题标签&lt;h1&gt;-&lt;h6&gt;，要添加图像，可以使用图像标签（我们将在本模块后面了解这一点）。所有这些标记及其id和类属性都是语义的，因为它们表明了标记中内容的用途&lt;i&gt; 而且&lt;b&gt;对内容没有任何建议，这就是为什么它们被认为语义不够，最初被弃用的原因。</p>
                    </article>
                    <article class="h4"><!--使用正确的标签-->
                        <h4>使用正确的标签</h4>
-                       <p>从语义HTML的角度来看，使用正确的标记很重要。你应该使用[blockquote]来包装引号，而不是使用段落标记，然后将其样式设置为引号。你应该使用[em]来强调内容的一部分，而不仅仅是将文本斜体化。出于演示目的，可以使用CSS实现同样的效果。事物的外观与它的含义关系不大。这就是为什么在HTML中，我们将内容和样式分开。</p>
+                       <p>从语义HTML的角度来看，使用正确的标记很重要。你应该使用&lt;blockquote&gt;来包装引号，而不是使用段落标记，然后将其样式设置为引号。你应该使用&lt;em&gt;来强调内容的一部分，而不仅仅是将文本斜体化。出于演示目的，可以使用CSS实现同样的效果。事物的外观与它的含义关系不大。这就是为什么在HTML中，我们将内容和样式分开。</p>
                    </article>
                    <article class="h4"><!--为什么它很重要？-->
                        <h4>为什么它很重要？</h4>
-                       <p>语义元素对开发者和浏览器都是有益的。它们传递了更多关于HTML文档内容和结构的信息。语义HTML中有一个名为header的标记。当你看到像[h1]或[h2]这样的标题时，你知道这可能是一个新的小节或主题的开始。任何编程语言都欢迎交流。</p>
+                       <p>语义元素对开发者和浏览器都是有益的。它们传递了更多关于HTML文档内容和结构的信息。语义HTML中有一个名为header的标记。当你看到像&lt;h1&gt;或&lt;h2&gt;这样的标题时，你知道这可能是一个新的小节或主题的开始。任何编程语言都欢迎交流。</p>
                        <p>对于能够更好地理解标记结构的开发人员来说，这种额外的交流非常有用（当您在一年后回到代码中，或者将其传递给同事时，这将对您和他们有很大帮助！）。对于浏览器，它可以更好地区分不同类型的数据，从而在不同的设备中更好地显示内容。辅助技术，如屏幕阅读器，将根据语义阅读内容并传达有关内容的信息，例如，识别标题并以不同的语调阅读。</p>
                        <p>自成立以来，W3C一直在努力使HTML尽可能具有语义。HTML5带来了一系列新的语义元素。</p>
                    </article>
@@ -153,7 +153,7 @@
                        <h4>网页结构</h4>
                        <p>让我们看看一个典型的网页结构，它由以以下名称命名的块组成：header, nav, article, section, aside and footer(页眉、导航、文章、节、旁白和页脚。)</p>
                        <img src="images/2_3_2wangyejiegou.jpg" alt="网页结构">
-                       <p>HTML5中特别引入了[article]、[section]、[header]、[nav]和[footer]等标签来定义网页结构。这些新的语义元素赋予网页的不同部分以意义。当你进行搜索时，搜索引擎会自动处理数以百万计的HTML页面进行扫描，并为你提供最合适的内容。</p>
+                       <p>HTML5中特别引入了&lt;article&gt;、&lt;section&gt;、&lt;header&gt;、&lt;nav&gt;和&lt;footer&gt;等标签来定义网页结构。这些新的语义元素赋予网页的不同部分以意义。当你进行搜索时，搜索引擎会自动处理数以百万计的HTML页面进行扫描，并为你提供最合适的内容。</p>
                        <p>每一部分都是指本文件的一部分：</p>
                        <ul>
                            <li> <strong>header</strong>可以是整个文档或单个章节的起点。它通常包含引言。</li>
@@ -163,50 +163,50 @@
                            <li><strong>article</strong>这篇文章指的是独立的内容。如果一篇文章是从文档中提取出来的，那么它本身就应该是有意义的。文章、博客帖子、常见问题（FAQ）都是独立内容的例子。</li>
                            <li><strong>footer</strong>包含典型的页脚信息，如创作、版权和联系信息。</li>
                        </ul>
-                       <p>这些语义元素的使用改进了文档的自动化处理。当它扫描一个[nav]标签时，它自动知道它包含与页面导航相关的内容，或者一个标题指示介绍性内容。它提供了跨多个网页的结构和一致的行为，为浏览器提供了更简单、更直接的信息，使他们的生活更轻松。它还提高了网页的可访问性。辅助技术依靠文档的结构向用户呈现信息。如果屏幕阅读器能够正确确定文档的结构，那么它可以更无缝地读取文档，避免不相关的信息或重复内容。</p>
+                       <p>这些语义元素的使用改进了文档的自动化处理。当它扫描一个&lt;nav&gt;标签时，它自动知道它包含与页面导航相关的内容，或者一个标题指示介绍性内容。它提供了跨多个网页的结构和一致的行为，为浏览器提供了更简单、更直接的信息，使他们的生活更轻松。它还提高了网页的可访问性。辅助技术依靠文档的结构向用户呈现信息。如果屏幕阅读器能够正确确定文档的结构，那么它可以更无缝地读取文档，避免不相关的信息或重复内容。</p>
                        <p>我们可以将上图中的元素应用于以下简单网页：</p>
                        <div>
                        <pre><ol>
-                            <li>[!DOCTYPE html]</li>
-                            <li>[html]</li>
-                            <li>  [head]</li>
-                            <li>    [meta charset="UTF-8"]</li>
-                            <li>    [title]语义元素导论[/title]</li>
-                            <li>  [/head]</li>                         
-                            <li>  [body]</li>
-                            <li>    [header]</li>
-                            <li>        [h2]使用标记验证程序。[/h2]</li>
-                            <li>    [/header]</li>
-                            <li>    [nav][!--您将在本章后面了解[a]标记--]</li>
-                            <li>        [a href=""]什么是标记验证器，它做什么？[/a][br /]</li>
-                            <li>        [a href=""]为什么要验证？[/a][br /]</li>
-                            <li>        [a href=""]如何使用标记验证程序？[/a][br /]</li>
-                            <li>        [a href=""]有很多错误信息吗？不要惊慌。[/a][br /]</li>
-                            <li>    [/nav]</li>
-                            <li>    [section]</li>
-                            <li>        [h3]什么是标记验证器，它做什么？[/h3]</li>
-                            <li>        [p][a href="https://validator.w3.org/docs/help.html#validation_basics"]Markup Validator[/a]是一个免费的工具和服务，用于验证标记：换句话说，它检查以HTML等格式编写的Web文档的语法。[/p]</li>
-                            <li>    [/section]</li>
-                            <li>    [section]</li>
-                            <li>        [h3]为什么要验证？[/h3]</li>
-                            <li>        [p] 计算机编程的一条重要格言是：“生产的东西要保守，接受的东西要自由。”[br]
-                                        浏览器遵循这条准则的后半部分，接受网页并尝试显示它们，即使它们不是合法的HTML。问题是，不同的浏览器（甚至同一浏览器的不同版本）会对同一非法构造做出不同的猜测。。。[/p]</li>
-                            <li>    [/section]</li>
-                            <li>    [article]</li>
-                            <li>        [h3]如何使用标记验证程序？[/h3]</li>
-                            <li>        [p]最有可能的情况是，您希望使用在线标记验证服务。使用此服务验证网页的简单方法是将其地址粘贴到[a href="https://validator.w3.org/#uri"]文本区[/a]上[a href="https://validator.w3.org/""]验证程序主页[/a]，然后按“检查”按钮。[/p]</li>
-                            <li>    [/article]</li>
-                            <li>    [aside]</li>
-                            <li>        [h3]有很多错误信息吗？不要惊慌。[/h3]</li>
-                            <li>        [p] 不要惊慌。验证器是否抱怨您的DOCTYPE声明（或缺少声明）？确保您的文档具有语法正确的DOCTYPE声明，如DOCTYPE部分所述，并确保它正确标识您正在使用的HTML类型。然后再次通过验证程序运行它；如果幸运的话，你应该少犯很多错误。如果这没有帮助，那么您可能正在经历级联故障。。。[/p]</li>
-                            <li>    [/aside]</li>
-                            <li>    [footer]</li>
-                            <li>        [p]作者：W3C[/p]</li>
-                            <li>        [p]欲了解更多信息，请访问[a href="https://validator.w3.org/docs/help.html"]此页[/a].[/p]</li>
-                            <li>    [/footer]</li>
-                            <li>  [/body]</li>
+                            <li>&lt;!DOCTYPE html&gt;</li>
+                            <li>&lt;html&gt;</li>
+                            <li>  &lt;head&gt;</li>
+                            <li>    &lt;meta charset="UTF-8"&gt;</li>
+                            <li>    &lt;title&gt;语义元素导论&lt;/title&gt;</li>
+                            <li>  &lt;/head&gt;</li>                         
+                            <li>  &lt;body&gt;</li>
+                            <li>    &lt;header&gt;</li>
+                            <li>        &lt;h2&gt;使用标记验证程序。&lt;/h2&gt;</li>
+                            <li>    &lt;/header&gt;</li>
+                            <li>    &lt;nav&gt;&lt;!--您将在本章后面了解&lt;a&gt;标记--&gt;</li>
+                            <li>        &lt;a href=""&gt;什么是标记验证器，它做什么？&lt;/a&gt;&lt;br /&gt;</li>
+                            <li>        &lt;a href=""&gt;为什么要验证？&lt;/a&gt;&lt;br /&gt;</li>
+                            <li>        &lt;a href=""&gt;如何使用标记验证程序？&lt;/a&gt;&lt;br /&gt;</li>
+                            <li>        &lt;a href=""&gt;有很多错误信息吗？不要惊慌。&lt;/a&gt;&lt;br /&gt;</li>
+                            <li>    &lt;/nav&gt;</li>
+                            <li>    &lt;section&gt;</li>
+                            <li>        &lt;h3&gt;什么是标记验证器，它做什么？&lt;/h3&gt;</li>
+                            <li>        &lt;p&gt;&lt;a href="https://validator.w3.org/docs/help.html#validation_basics"&gt;Markup Validator&lt;/a&gt;是一个免费的工具和服务，用于验证标记：换句话说，它检查以HTML等格式编写的Web文档的语法。&lt;/p&gt;</li>
+                            <li>    &lt;/section&gt;</li>
+                            <li>    &lt;section&gt;</li>
+                            <li>        &lt;h3&gt;为什么要验证？&lt;/h3&gt;</li>
+                            <li>        &lt;p&gt; 计算机编程的一条重要格言是：“生产的东西要保守，接受的东西要自由。”&lt;br&gt;
+                                        浏览器遵循这条准则的后半部分，接受网页并尝试显示它们，即使它们不是合法的HTML。问题是，不同的浏览器（甚至同一浏览器的不同版本）会对同一非法构造做出不同的猜测。。。&lt;/p&gt;</li>
+                            <li>    &lt;/section&gt;</li>
+                            <li>    &lt;article&gt;</li>
+                            <li>        &lt;h3&gt;如何使用标记验证程序？&lt;/h3&gt;</li>
+                            <li>        &lt;p&gt;最有可能的情况是，您希望使用在线标记验证服务。使用此服务验证网页的简单方法是将其地址粘贴到&lt;a href="https://validator.w3.org/#uri"&gt;文本区&lt;/a&gt;上&lt;a href="https://validator.w3.org/""&gt;验证程序主页&lt;/a&gt;，然后按“检查”按钮。&lt;/p&gt;</li>
+                            <li>    &lt;/article&gt;</li>
+                            <li>    &lt;aside&gt;</li>
+                            <li>        &lt;h3&gt;有很多错误信息吗？不要惊慌。&lt;/h3&gt;</li>
+                            <li>        &lt;p&gt; 不要惊慌。验证器是否抱怨您的DOCTYPE声明（或缺少声明）？确保您的文档具有语法正确的DOCTYPE声明，如DOCTYPE部分所述，并确保它正确标识您正在使用的HTML类型。然后再次通过验证程序运行它；如果幸运的话，你应该少犯很多错误。如果这没有帮助，那么您可能正在经历级联故障。。。&lt;/p&gt;</li>
+                            <li>    &lt;/aside&gt;</li>
+                            <li>    &lt;footer&gt;</li>
+                            <li>        &lt;p&gt;作者：W3C&lt;/p&gt;</li>
+                            <li>        &lt;p&gt;欲了解更多信息，请访问&lt;a href="https://validator.w3.org/docs/help.html"&gt;此页&lt;/a&gt;.&lt;/p&gt;</li>
+                            <li>    &lt;/footer&gt;</li>
+                            <li>  &lt;/body&gt;</li>
                                                      
-                            <li>[/html]</li></ol></pre>                       
+                            <li>&lt;/html&gt;</li></ol></pre>                       
                         </div>
                        <p>输出：</p>
                        <div class="example-box">
@@ -281,108 +281,108 @@
                         <th>示例</th>
                     </tr>
                     <tr>
-                        <td>[header]</td>
+                        <td>&lt;header&gt;</td>
                         <td>介绍整个页面或个别章节、文章、导航、旁白元素。通常包含站点名称、徽标和导航。不必在页面的开头。</td>
-                        <td>[header]<br>
-                            [h1]认真的重要性[/h1]<br>
-                            [h3]对真与美的追求[/h3]<br>
-                            [p]该剧由剧作家奥斯卡·王尔德于1895年创作[/p]<br>
-                             [/header]</td>
+                        <td>&lt;header&gt;<br>
+                            &lt;h1&gt;认真的重要性&lt;/h1&gt;<br>
+                            &lt;h3&gt;对真与美的追求&lt;/h3&gt;<br>
+                            &lt;p&gt;该剧由剧作家奥斯卡·王尔德于1895年创作&lt;/p&gt;<br>
+                             &lt;/header&gt;</td>
                     </tr>
                     <tr>
-                        <td>[footer]</td>
+                        <td>&lt;footer&gt;</td>
                         <td>包括典型的页脚信息，如创作、版权、联系信息和页脚菜单。</td>
-                        <td>[footer]<br>
-                            [p]written by：oscar wilde[/p]<br>
-                            [p]联系信息：[a href=“mailto:oscar@wilde.com“]
-                            oscar@wilde.com[/a]。[/P]<br>
-                            [/footer]</td>
+                        <td>&lt;footer&gt;<br>
+                            &lt;p&gt;written by：oscar wilde&lt;/p&gt;<br>
+                            &lt;p&gt;联系信息：&lt;a href=“mailto:oscar@wilde.com“&gt;
+                            oscar@wilde.com&lt;/a&gt;。&lt;/P&gt;<br>
+                            &lt;/footer&gt;</td>
                     </tr>
                     <tr>
-                        <td>[nav]</td>
+                        <td>&lt;nav&gt;</td>
                         <td>文档的导航链接。一个页面可以有多个<nav>元素，如目录、页眉水平导航和页脚导航。</td>
-                        <td>[nav][ol]<br>
-                            [li][a href="/act1/"]Act 1[/a][/li] <br>
-                            [li][a href="/act2/"]Act 2[/a][/li]<br>
-                            [li][a href="/act3/"]Act 3[/a][/li]<br>
-                            [/ol][/nav]</td>
+                        <td>&lt;nav&gt;&lt;ol&gt;<br>
+                            &lt;li&gt;&lt;a href="/act1/"&gt;Act 1&lt;/a&gt;&lt;/li&gt; <br>
+                            &lt;li&gt;&lt;a href="/act2/"&gt;Act 2&lt;/a&gt;&lt;/li&gt;<br>
+                            &lt;li&gt;&lt;a href="/act3/"&gt;Act 3&lt;/a&gt;&lt;/li&gt;<br>
+                            &lt;/ol&gt;&lt;/nav&gt;</td>
                     </tr>
                     <tr>
-                        <td>[section]</td>
+                        <td>&lt;section&gt;</td>
                         <td>定义文档中的章节，如章节、标题等，通常用于无法自行理解的内容。</td>
-                        <td>[section]<br>
-                            [h1]第一幕第一场[/h1] <br>
-                            [p]设置在半月街阿尔吉公寓的晨间[/p] <br>
-                            [/section]
+                        <td>&lt;section&gt;<br>
+                            &lt;h1&gt;第一幕第一场&lt;/h1&gt; <br>
+                            &lt;p&gt;设置在半月街阿尔吉公寓的晨间&lt;/p&gt; <br>
+                            &lt;/section&gt;
                         </td>
                     </tr>
                     <tr>
-                        <td>[article]</td>
+                        <td>&lt;article&gt;</td>
                         <td>定义独立的内容，这些内容在文档之外应该是有意义的，例如报纸文章、博客帖子等。</td>
-                        <td>[article] <br>
-                            [h1]一位博主对这篇精彩讽刺的分析[/h1] <br>
-                            [p]这部诙谐、有时有意识的戏剧是王尔德的游乐场，可以激发他的进步情绪[/p] 
-                            [/article]
+                        <td>&lt;article&gt; <br>
+                            &lt;h1&gt;一位博主对这篇精彩讽刺的分析&lt;/h1&gt; <br>
+                            &lt;p&gt;这部诙谐、有时有意识的戏剧是王尔德的游乐场，可以激发他的进步情绪&lt;/p&gt; 
+                            &lt;/article&gt;
                         </td>
                     </tr>
                     <tr>
-                        <td>[aside]</td>
+                        <td>&lt;aside&gt;</td>
                         <td>除了主要内容之外的次要内容，比如侧边栏。这些不被视为主页大纲的一部分。</td>
-                        <td>[p]阿尔杰农的公寓装修豪华而艺术[/p] <br>
-                            [aside] <br>
-                            [h3]阿尔杰农·蒙克里夫[/h3] <br>
-                            [p]住在伦敦时尚区的富有单身汉。他很幽默，完全不尊重社会[/p] <br>
-                        [/aside]</td>
+                        <td>&lt;p&gt;阿尔杰农的公寓装修豪华而艺术&lt;/p&gt; <br>
+                            &lt;aside&gt; <br>
+                            &lt;h3&gt;阿尔杰农·蒙克里夫&lt;/h3&gt; <br>
+                            &lt;p&gt;住在伦敦时尚区的富有单身汉。他很幽默，完全不尊重社会&lt;/p&gt; <br>
+                        &lt;/aside&gt;</td>
                     </tr>
                     <tr>
-                        <td>[details] <br>
+                        <td>&lt;details&gt; <br>
                                 *见下面的例子</td>
                         <td>提供用户可以显示或隐藏的附加信息的方法。默认情况下显示给用户的内容。其他内容是隐藏的，可以展开查看。</td>
-                        <td>[details]
-                            [summary]角色成员[/summary]
-                            [p]乔治·华盛顿饰演阿尔杰农·蒙克里夫[/p]
-                            [p]罗纳德·里根饰演约翰·沃辛[/p]
-                            [/details></td>
+                        <td>&lt;details&gt;
+                            &lt;summary&gt;角色成员&lt;/summary&gt;
+                            &lt;p&gt;乔治·华盛顿饰演阿尔杰农·蒙克里夫&lt;/p&gt;
+                            &lt;p&gt;罗纳德·里根饰演约翰·沃辛&lt;/p&gt;
+                            &lt;/details></td>
                     </tr>
                     <tr>
-                        <td>[figcaption] <br>
+                        <td>&lt;figcaption&gt; <br>
                             *见下面的例子</td>
                         <td>提供图像的标题（说明）。在<figure>中使用。</td>
-                        <td>[figure]
-                            [img src="img_cast.jpg" alt="认真的重要性"]
-                            [figcaption]图1-演员们在首映前的彩排中努力工作[/figcaption]
-                            [/figure]</td>
+                        <td>&lt;figure&gt;
+                            &lt;img src="img_cast.jpg" alt="认真的重要性"&gt;
+                            &lt;figcaption&gt;图1-演员们在首映前的彩排中努力工作&lt;/figcaption&gt;
+                            &lt;/figure&gt;</td>
                     </tr>
                     <tr>
-                        <td>[figure]</td>
+                        <td>&lt;figure&gt;</td>
                         <td>包含图像，可用于与图像的标题分组</td>
-                        <td>请参阅[figcaption]</figcaption></td>
+                        <td>请参阅&lt;figcaption&gt;</figcaption></td>
                     </tr>
                     <tr>
-                        <td>[mark] <br>
+                        <td>&lt;mark&gt; <br>
                             *见下面的例子</td>
                         <td>定义要高亮显示的文本的一部分。可以理解类似银光笔效果。突出显示样式在CSS中指定。</td>
                         <td><h4>车道：</h4> 
-                            <p>是的，先生。 [[mark]用托盘把三明治递给他的主人[/mark][/p]</td>
+                            <p>是的，先生。 &lt;&lt;mark&gt;用托盘把三明治递给他的主人&lt;/mark&gt;&lt;/p&gt;</td>
                     </tr>
                     <tr>
-                        <td>[summary]</td>
-                        <td>在[details]标签中使用。指定可见内容。其余详细内容由用户显示/隐藏。</td>
-                        <td>[details]
-                            [summary]Cast Members[/summary]
-                            [p]George Washington as Algernon Moncrieff[/p]
-                            [p]Ronald Reagan as John Worthing[/p]
-                            [/details]</td>
+                        <td>&lt;summary&gt;</td>
+                        <td>在&lt;details&gt;标签中使用。指定可见内容。其余详细内容由用户显示/隐藏。</td>
+                        <td>&lt;details&gt;
+                            &lt;summary&gt;Cast Members&lt;/summary&gt;
+                            &lt;p&gt;George Washington as Algernon Moncrieff&lt;/p&gt;
+                            &lt;p&gt;Ronald Reagan as John Worthing&lt;/p&gt;
+                            &lt;/details&gt;</td>
                     </tr> 
                 </table>
-                <section class="h4"><!--[detaile]元素-->
-                    <h4>[detaile]元素</h4>
-                    <p>[details]元素非常酷。它与[summary]标记嵌套，和其他一些内容一起使用。结果是，在摘要旁边显示一个披露三角形，而其他内容最初是隐藏的。通过单击三角形，其他内容将显示给用户。这不需要JavaScript，是获得强大且令人满意的功能的简单方法。</p>
-                    <p>下面我们看到了HTML，你可以自己试一试！请注意，[details]标记在大多数Web浏览器中都有效。</p>
+                <section class="h4"><!--&lt;detaile&gt;元素-->
+                    <h4>&lt;detaile&gt;元素</h4>
+                    <p>&lt;details&gt;元素非常酷。它与&lt;summary&gt;标记嵌套，和其他一些内容一起使用。结果是，在摘要旁边显示一个披露三角形，而其他内容最初是隐藏的。通过单击三角形，其他内容将显示给用户。这不需要JavaScript，是获得强大且令人满意的功能的简单方法。</p>
+                    <p>下面我们看到了HTML，你可以自己试一试！请注意，&lt;details&gt;标记在大多数Web浏览器中都有效。</p>
                     <div class="example-html">
                         <span class="example-button">HTML</span>
                         <fieldset>
-                        <pre><ol><li>[details]</li><li>   [summary]角色成员[/summary]</li><li>   [p]乔治·华盛顿饰演阿尔杰农·蒙克里夫[/p]</li><li>   [p]罗纳德·里根饰演约翰·沃辛[/p]</li><li>[/details]</li></ol></pre>
+                        <pre><ol><li>&lt;details&gt;</li><li>   &lt;summary&gt;角色成员&lt;/summary&gt;</li><li>   &lt;p&gt;乔治·华盛顿饰演阿尔杰农·蒙克里夫&lt;/p&gt;</li><li>   &lt;p&gt;罗纳德·里根饰演约翰·沃辛&lt;/p&gt;</li><li>&lt;/details&gt;</li></ol></pre>
                         </fieldset>
                     </div>
                     <div class="example-result">
@@ -397,13 +397,13 @@
                     </div>
                     <p>另请参见当前的浏览器支持（在<a href="https://caniuse.com/details" target="_blank">caniuse.com</a>上）。</p>
                 </section>
-                <section class="h4"><!--[figcaption]元素-->
-                    <h4>[figcaption]元素</h4>
+                <section class="h4"><!--&lt;figcaption&gt;元素-->
+                    <h4>&lt;figcaption&gt;元素</h4>
                     <p>此元素用于提供图像的标题或解释（图）。虽然alt属性解释了辅助技术的图像，但可以使用<figcaption>为所有用户提供附加信息。</p>
                         <div class="example-html">
                             <span class="example-button">HTML</span>
                             <fieldset>
-                                <pre><ol><li>[figure]</li><li>   [img src="images\2_3_3figcaption.jpg" alt="认真的重要性"]</li><li>   [figcaption]图1-演员们在首映前的彩排中努力工作[/figcaption]</li><li>[/figuer]</li></ol></pre>
+                                <pre><ol><li>&lt;figure&gt;</li><li>   &lt;img src="images\2_3_3figcaption.jpg" alt="认真的重要性"&gt;</li><li>   &lt;figcaption&gt;图1-演员们在首映前的彩排中努力工作&lt;/figcaption&gt;</li><li>&lt;/figuer&gt;</li></ol></pre>
                             </fieldset>
                         </div>
                         <div class="example-result">
@@ -416,13 +416,13 @@
                             </fieldset>
                         </div>
                 </section>
-                <section class="h4"><!--[mark]元素-->
-                    <h4>[mark]元素</h4>
+                <section class="h4"><!--&lt;mark&gt;元素-->
+                    <h4>&lt;mark&gt;元素</h4>
                     <p>此元素用于指定要突出显示的内容。</p>
                     <div class="example-html">
                         <span class="button">HTML</span>
                         <fieldset>
-                            <pre><ol><li>[h3]车道：[/h3]</li><li>[p]是的，先生。[mark]用托盘把三明治递给他的主人[/mark][/p]</li></ol></pre>
+                            <pre><ol><li>&lt;h3&gt;车道：&lt;/h3&gt;</li><li>&lt;p&gt;是的，先生。&lt;mark&gt;用托盘把三明治递给他的主人&lt;/mark&gt;&lt;/p&gt;</li></ol></pre>
                         </fieldset>
                     </div>
                     <div class="example-result">
@@ -436,12 +436,12 @@
                 </section>
                 <section class="h4"><!--语义因素的影响-->
                     <h4>语义因素的影响</h4>
-                    <p>如果您有机会尝试上面讨论的语义元素的例子，您会注意到语义元素通常在视觉上不具有前景。只有少数语义元素，如[mark]、[em]、[strong]和[code]为文档提供了某种视觉变化。除了为其余的文档提供结构外，不要做任何事情。</p>
-                    <p>一个很好的例子是[aside]。[aside]元素用于除主内容之外的辅助内容，例如侧边栏，但它实际上不会在页面中创建侧边栏。侧边栏是一个用户界面（UI）元素，必须设置样式以实现侧边栏的外观。以下代码只会为文档创建结构，不会对其进行任何视觉更改：</p>
+                    <p>如果您有机会尝试上面讨论的语义元素的例子，您会注意到语义元素通常在视觉上不具有前景。只有少数语义元素，如&lt;mark&gt;、&lt;em&gt;、&lt;strong&gt;和&lt;code&gt;为文档提供了某种视觉变化。除了为其余的文档提供结构外，不要做任何事情。</p>
+                    <p>一个很好的例子是&lt;aside&gt;。&lt;aside&gt;元素用于除主内容之外的辅助内容，例如侧边栏，但它实际上不会在页面中创建侧边栏。侧边栏是一个用户界面（UI）元素，必须设置样式以实现侧边栏的外观。以下代码只会为文档创建结构，不会对其进行任何视觉更改：</p>
                     <div class="example-html">
                         <span class="exmaple-button">HTML</span>
                         <fieldset>
-                            <pre><ol><li>[article]</li><li>[header id="intro"]</li><li>   [h2]序言[/h2]</li><li>[/header]</li><li>   [p]HTML5 代表……[/p]</li><li>   [!--这是一个旁白的例子。该段还展示了标记元素--]</li><li>   [aside]</li><li>      [h4]PIA[h4]</li><li>       [p]API展台……[/p]</li><li>   [/aside]</li><li>[/article]</li></ol></pre>
+                            <pre><ol><li>&lt;article&gt;</li><li>&lt;header id="intro"&gt;</li><li>   &lt;h2&gt;序言&lt;/h2&gt;</li><li>&lt;/header&gt;</li><li>   &lt;p&gt;HTML5 代表……&lt;/p&gt;</li><li>   &lt;!--这是一个旁白的例子。该段还展示了标记元素--&gt;</li><li>   &lt;aside&gt;</li><li>      &lt;h4&gt;PIA&lt;h4&gt;</li><li>       &lt;p&gt;API展台……&lt;/p&gt;</li><li>   &lt;/aside&gt;</li><li>&lt;/article&gt;</li></ol></pre>
                         </fieldset>
                     </div>
                     <div class="example-result">
@@ -473,31 +473,31 @@
                             <th>输出</th>
                         </tr>
                         <tr>
-                            <td>[code]</td>
+                            <td>&lt;code&gt;</td>
                             <td>用于在句子中表示简短的计算机代码。它以默认的单空格字体显示代码。</td>
-                            <td>[p]对于较大的代码段，应该使用[code]pre标记[/code][/p]</td>
+                            <td>&lt;p&gt;对于较大的代码段，应该使用&lt;code&gt;pre标记&lt;/code&gt;&lt;/p&gt;</td>
                             <td><p>对于较大的代码段，应该使用<code>pre标记</code></p></td>
                         </tr>
                         <tr>
-                            <td>[abbr]</td>
+                            <td>&lt;abbr&gt;</td>
                             <td>用来表示缩写的出现。</td>
-                            <td>[abbr title="Hypertext Markup Language"]HTML[/abbr]</td>
+                            <td>&lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt;</td>
                             <td><abbr title="Hypertext Markup Language">HTML</abbr></td>
                         </tr>
                         <tr>
-                            <td>[br]</td>
+                            <td>&lt;br&gt;</td>
                             <td>用于在HTML文档中引入换行符。</td>
-                            <td>[p]这里需要换行[br]这是第二行[/p]</td>
+                            <td>&lt;p&gt;这里需要换行&lt;br&gt;这是第二行&lt;/p&gt;</td>
                             <td><p>这里需要换行<br>这是第二行</p></td>
                         </tr>
                         <tr>
-                            <td>[address]</td>
-                            <td>用于为其最近的[article]或[body]祖先提供联系信息。</td>
-                            <td>[address] <br>
-                                [a href="www.example.com"]john doe[/a][br]<br>
+                            <td>&lt;address&gt;</td>
+                            <td>用于为其最近的&lt;article&gt;或&lt;body&gt;祖先提供联系信息。</td>
+                            <td>&lt;address&gt; <br>
+                                &lt;a href="www.example.com"&gt;john doe&lt;/a&gt;&lt;br&gt;<br>
                                 #123，Doe Villa<br>
                                 美国洛杉矶
-                                [/address]</td>
+                                &lt;/address&gt;</td>
                             <td><address>
                                 <a href="www.example.com">John Doe</a><br>
                                 #123, Doe Villa<br>
@@ -505,13 +505,13 @@
                                 </address></td>
                          </tr>
                         <tr>
-                            <td>[hr]</td>
+                            <td>&lt;hr&gt;</td>
                             <td>用于在HTML文档中引入水平线。</td>
-                            <td>[p]你好[/p][hr][p]世界[/p]</td>
+                            <td>&lt;p&gt;你好&lt;/p&gt;&lt;hr&gt;&lt;p&gt;世界&lt;/p&gt;</td>
                             <td><p>你好</p><hr><p>世界</p></td>
                         </tr>
                     </table>
-                    <p>除此之外，[cite]、[em]、[strong]、[p]和[blockquote]也是语义元素。</p>
+                    <p>除此之外，&lt;cite&gt;、&lt;em&gt;、&lt;strong&gt;、&lt;p&gt;和&lt;blockquote&gt;也是语义元素。</p>
                 </section>
                 <section class="h4"><!--2.3.3知识测验-->
                     <h4>2.3.3知识测验</h4>
@@ -525,16 +525,16 @@
                 </section>
                 <section class="h3"><!--2.3.4区分语义元素-->
                     <h3>2.3.4区分语义元素</h3>
-                    <p>现在，您已经了解了可用的语义元素及其语法。当你尝试实际应用它时，你可能会遇到一些常见的问题。例如，我们何时使用[header]以及何时使用[h1]到[h6]标记？我可以在网页中多次使用[header]、[footer]和[nav]等语义元素吗？或者一个更常见的问题，我使用的是[article]、[section]还是[div]？</p>
+                    <p>现在，您已经了解了可用的语义元素及其语法。当你尝试实际应用它时，你可能会遇到一些常见的问题。例如，我们何时使用&lt;header&gt;以及何时使用&lt;h1&gt;到&lt;h6&gt;标记？我可以在网页中多次使用&lt;header&gt;、&lt;footer&gt;和&lt;nav&gt;等语义元素吗？或者一个更常见的问题，我使用的是&lt;article&gt;、&lt;section&gt;还是&lt;div&gt;？</p>
                     <p>不要害怕。我们将详细讨论这些场景，以便您能够更好地在Web页面中应用语义元素。</p>
-                    <section class="h4"><!--[header]与[h1]-[h6]-->
-                        <h4>[header]与[h1]-[h6]</h4>
-                        <p>[header]只是一个添加页面介绍内容的区域。它可以包含标题[title]、段落[p]、表格[table]、图像[img]、徽标甚至导航[nav]。[h1]-[h6]是我们在课程早期学习的标题，[h1]是最重要的标题，[h6]是相对最不重要的标题。我们来看一个如何在网页中使用【header】和【h1】-【h6】的标记示例。</p>
-                        <p>如果您在W3C规范上查看页面源（您可以在任何浏览器上通过右键单击并选择“查看页面源”）并搜索“[header]”，您将能够查看header元素的内容，如下所示：</p>
+                    <section class="h4"><!--&lt;header&gt;与&lt;h1&gt;-&lt;h6&gt;-->
+                        <h4>&lt;header&gt;与&lt;h1&gt;-&lt;h6&gt;</h4>
+                        <p>&lt;header&gt;只是一个添加页面介绍内容的区域。它可以包含标题&lt;title&gt;、段落&lt;p&gt;、表格&lt;table&gt;、图像&lt;img&gt;、徽标甚至导航&lt;nav&gt;。&lt;h1&gt;-&lt;h6&gt;是我们在课程早期学习的标题，&lt;h1&gt;是最重要的标题，&lt;h6&gt;是相对最不重要的标题。我们来看一个如何在网页中使用【header】和【h1】-【h6】的标记示例。</p>
+                        <p>如果您在W3C规范上查看页面源（您可以在任何浏览器上通过右键单击并选择“查看页面源”）并搜索“&lt;header&gt;”，您将能够查看header元素的内容，如下所示：</p>
                         <div class="example-html">
                             <span class="example-button">HTML</span>
                             <fieldset>
-                                <pre><ol><li>[header]</li><li>    [!--您将在本章后面了解[a]和[img]标记--]</li><li>    [p]</li><li>    [a href="https://www.w3.org/"][img alt="W3C logo" height="48" src="https://www.w3.org/Icons/w3c_home" width="72"][/a]</li><li>    [/p]</li><li>    [h1]HTML 5.2[/h1]</li><li>    [h2]W3C Recommendation, 14 December 2017[/h2]</li><li>[/header]</li></ol></pre>
+                                <pre><ol><li>&lt;header&gt;</li><li>    &lt;!--您将在本章后面了解&lt;a&gt;和&lt;img&gt;标记--&gt;</li><li>    &lt;p&gt;</li><li>    &lt;a href="https://www.w3.org/"&gt;&lt;img alt="W3C logo" height="48" src="https://www.w3.org/Icons/w3c_home" width="72"&gt;&lt;/a&gt;</li><li>    &lt;/p&gt;</li><li>    &lt;h1&gt;HTML 5.2&lt;/h1&gt;</li><li>    &lt;h2&gt;W3C Recommendation, 14 December 2017&lt;/h2&gt;</li><li>&lt;/header&gt;</li></ol></pre>
                             </fieldset>
                         </div>
                         <div class="example-result">
@@ -550,12 +550,12 @@
                                 </header>
                             </fieldset>
                         </div>
-                        <p>与上面的示例一样，标题可以并且经常包含标题[h1]到[h6]。就标题而言，它们不必在标题中使用。</p>
+                        <p>与上面的示例一样，标题可以并且经常包含标题&lt;h1&gt;到&lt;h6&gt;。就标题而言，它们不必在标题中使用。</p>
                         <p><strong>重要事项：</strong>标题作为辅助技术用户的导航工具非常有用。虽然跳过标题级别是有效的（h2之后有一个h4），但这不是一个好的做法。辅助技术通常依赖标题的语义来理解文档的结构。 <a href="https://www.w3.org/TR/WCAG20-TECHS/H42.html" target="_blank"> 使用h1-h6识别标题中提供了更多信息。</a></p>
                         <div class="example-html">
                             <span class="example-button">HTML</span>
                             <fieldset>
-                                <pre><ol><li>[body]</li><li>  [h1]布拉德的食谱[/h1]</li><li>    [h2]慢煮食谱[/h2]</li><li>      [h3]意大利蔬菜汤[/h3]</li><li>        [h4]描述：[/h4]</li><li>          [p]意大利蔬菜汤是一道简单而营养丰富的菜……[/p]</li><li>      [h3](墨西哥)煎豆泥，炒豆[/h3]</li><li>        [h4]描述：[/h4]</li><li>          [p]孜然是这个配方的秘密。[/p]</li><li>    [h2]甜点食谱[/h2]</li><li>      [h3]桃子派[/h3]</li><li>        [h4]描述：[/h4]</li><li>          [p]如果你买不到新鲜的桃子，那就冷冻起来拯救吧！[/p]</li><li>[body]</li></ol></pre>
+                                <pre><ol><li>&lt;body&gt;</li><li>  &lt;h1&gt;布拉德的食谱&lt;/h1&gt;</li><li>    &lt;h2&gt;慢煮食谱&lt;/h2&gt;</li><li>      &lt;h3&gt;意大利蔬菜汤&lt;/h3&gt;</li><li>        &lt;h4&gt;描述：&lt;/h4&gt;</li><li>          &lt;p&gt;意大利蔬菜汤是一道简单而营养丰富的菜……&lt;/p&gt;</li><li>      &lt;h3&gt;(墨西哥)煎豆泥，炒豆&lt;/h3&gt;</li><li>        &lt;h4&gt;描述：&lt;/h4&gt;</li><li>          &lt;p&gt;孜然是这个配方的秘密。&lt;/p&gt;</li><li>    &lt;h2&gt;甜点食谱&lt;/h2&gt;</li><li>      &lt;h3&gt;桃子派&lt;/h3&gt;</li><li>        &lt;h4&gt;描述：&lt;/h4&gt;</li><li>          &lt;p&gt;如果你买不到新鲜的桃子，那就冷冻起来拯救吧！&lt;/p&gt;</li><li>&lt;body&gt;</li></ol></pre>
                             </fieldset>
                         </div>
                         <div class="example-result">
@@ -577,11 +577,11 @@
                                 </body>
                             </fieldset>
                         </div>
-                        <p>辅助技术使用标题标记，[h1]到[h6]来识别文档中的标题。通过使用它们定义文档的结构，解析网页的屏幕阅读器将以某种方式指示标题级别。例如，提高声音以指示更高级别的标题，或用阅读的文本宣布标题级别。它们还可以更快地浏览标题，让用户更容易浏览网页内容。</p>
+                        <p>辅助技术使用标题标记，&lt;h1&gt;到&lt;h6&gt;来识别文档中的标题。通过使用它们定义文档的结构，解析网页的屏幕阅读器将以某种方式指示标题级别。例如，提高声音以指示更高级别的标题，或用阅读的文本宣布标题级别。它们还可以更快地浏览标题，让用户更容易浏览网页内容。</p>
                         <p>您可以在另一个<a href="https://www.w3.org/WAI/tutorials/page-structure/headings/" target="_blank">关于标题的W3C资源页面中</a>了解有关此技术来源的更多信息。</p>   
                     </section>
-                    <section class="h4"><!--您可以有多个[header]、[footer]和[nav]？-->
-                        <h4>您可以有多个[header]、[footer]和[nav]？</h4>
+                    <section class="h4"><!--您可以有多个&lt;header&gt;、&lt;footer&gt;和&lt;nav&gt;？-->
+                        <h4>您可以有多个&lt;header&gt;、&lt;footer&gt;和&lt;nav&gt;？</h4>
                         <p>一个常见的误解是，一个网页只能有一个开头的页眉、一个结尾的页脚和一个主导航部分来操纵网站。</p>
                         <h5>多个页眉和页脚</h5>
                         <p>页眉和页脚元素用于它们所使用的父元素（节、文章、分区或正文）。如果您有多个章节或文章，那么每个章节或文章可以有一个页眉和页脚。</p>
@@ -601,71 +601,71 @@
                     </section>
                     <section class="h4"><!--完整示例-->
                         <h4>完整示例</h4>
-                        <p>现在，让我们来看一个使用全局页眉和多个[header]、[footer]和[nav]标记的更完整示例。</p>
+                        <p>现在，让我们来看一个使用全局页眉和多个&lt;header&gt;、&lt;footer&gt;和&lt;nav&gt;标记的更完整示例。</p>
                         <div class="example-html">
                             <span class="example-button">HTML</span>
                             <fieldset>
                                 <ol>
-                                    <pre><li>[body]</li></pre>
-                                    <pre><li>  [!--我们的全球标题用于我们网站的所有页面--]</li></pre>
-                                    <pre><li>  [header]</li></pre>
-                                    <pre><li>    [h1]Brad Abc的博客[/h1]</li></pre>
-                                    <pre><li>    [nav]</li></pre>
-                                    <pre><li>      [ul]</li></pre>
-                                    <pre><li>        [li][a href="#ces"]ces 2022[/a][/li]</li></pre>
-                                    <pre><li>        [li][a href="#vegan"]素食主义者[/a][/li]</li></pre>
-                                    <pre><li>        [li][a href="#html5"]HTML5[/a][/li]</li></pre>
-                                    <pre><li>      [/ul]</li></pre>
-                                    <pre><li>    [/nav]</li></pre>
-                                    <pre><li>  [/header]</li></pre>
-                                    <pre><li>  [!--博客的主要内容从这里开始--]</li></pre>
-                                    <pre><li>  [main]</li></pre>
-                                    <pre><li>  [!--每一篇博客文章都被分成了单独的文章--]</li></pre>
-                                    <pre><li>    [article id="ces"]</li></pre>
-                                    <pre><li>      [header]</li></pre>
-                                    <pre><li>        [h2]CES 2022[/h2]</li></pre>
-                                    <pre><li>        [h3]消费电子和消费技术展览会[/h3]</li></pre>
-                                    <pre><li>      [/header]</li></pre>
-                                    <pre><li>      [p]如果他正在受苦，他将被视为帮助他。如果你不笑，你就得跟着你的裙子走。你不必担心任何需要孩子的人。[/p]</li></pre>
-                                    <pre><li>      [footer]</li></pre>
-                                    <pre><li>        [p]作者为特邀作家尼古拉斯·Abc。在这里阅读尼古拉斯的博客。[/p]</li></pre>
-                                    <pre><li>      [/footer]</li></pre>
-                                    <pre><li>    [/article]</li></pre>
-                                    <pre><li>    [!--文章2--]</li></pre>
-                                    <pre><li>    [article id="vegan"]</li></pre>
-                                    <pre><li>      [header]</li></pre>
-                                    <pre><li>        [h2]素食主义者[/h2]</li></pre>
-                                    <pre><li>        [h3]我给新素食主义者的烹饪技巧[/h3]</li></pre>
-                                    <pre><li>      [/header]</li></pre>
-                                    <pre><li>      [p]直到我写这篇文章，但我责怪的不是鱼雷。如果他感到痛苦，他将被视为无助。埃涅阿斯就像地心引力。作为一只坏猫，它总是尘土飞扬，但它很疼。[/p]</li></pre>
-                                    <pre><li>      [footer]</li></pre>
-                                    <pre><li>        [p]作者：Brad Abc。在这里阅读我的其他健康文章。[/p]</li></pre>
-                                    <pre><li>      [/footer]</li></pre>
-                                    <pre><li>    [/article]</li></pre>
-                                    <pre><li>    [!--article 3--]</li></pre>
-                                    <pre><li>    [article id="html5"]</li></pre>
-                                    <pre><li>      [header]</li></pre>
-                                    <pre><li>        [h2]HTML[/h2]</li></pre>
-                                    <pre><li>        [h3]HTML5与HTML4的差异摘要[/h3]</li></pre>
-                                    <pre><li>      [/header]</li></pre>
-                                    <pre><li>      [p]拍卖人喝醉了，只是他很聪明。她将被瘟疫治愈，因为她必须去宫殿，然后她必须去宫殿。孩子们习惯于挂在河里。在那之前，我讨厌它。[/p]</li></pre>
-                                    <pre><li>      [footer]</li></pre>
-                                    <pre><li>        [p]作者BradABC，HTML5开发人员。在这里阅读我的其他技术文章。[/p]</li></pre>
-                                    <pre><li>      [/footer]</li></pre>
-                                    <pre><li>      [/article]</li></pre>
-                                    <pre><li>  [/main]</li></pre>
-                                    <pre><li>  [!--我们的全球页脚用于我们网站的所有页面--]</li></pre>
-                                    <pre><li>  [footer]</li></pre>
+                                    <pre><li>&lt;body&gt;</li></pre>
+                                    <pre><li>  &lt;!--我们的全球标题用于我们网站的所有页面--&gt;</li></pre>
+                                    <pre><li>  &lt;header&gt;</li></pre>
+                                    <pre><li>    &lt;h1&gt;Brad Abc的博客&lt;/h1&gt;</li></pre>
+                                    <pre><li>    &lt;nav&gt;</li></pre>
+                                    <pre><li>      &lt;ul&gt;</li></pre>
+                                    <pre><li>        &lt;li&gt;&lt;a href="#ces"&gt;ces 2022&lt;/a&gt;&lt;/li&gt;</li></pre>
+                                    <pre><li>        &lt;li&gt;&lt;a href="#vegan"&gt;素食主义者&lt;/a&gt;&lt;/li&gt;</li></pre>
+                                    <pre><li>        &lt;li&gt;&lt;a href="#html5"&gt;HTML5&lt;/a&gt;&lt;/li&gt;</li></pre>
+                                    <pre><li>      &lt;/ul&gt;</li></pre>
+                                    <pre><li>    &lt;/nav&gt;</li></pre>
+                                    <pre><li>  &lt;/header&gt;</li></pre>
+                                    <pre><li>  &lt;!--博客的主要内容从这里开始--&gt;</li></pre>
+                                    <pre><li>  &lt;main&gt;</li></pre>
+                                    <pre><li>  &lt;!--每一篇博客文章都被分成了单独的文章--&gt;</li></pre>
+                                    <pre><li>    &lt;article id="ces"&gt;</li></pre>
+                                    <pre><li>      &lt;header&gt;</li></pre>
+                                    <pre><li>        &lt;h2&gt;CES 2022&lt;/h2&gt;</li></pre>
+                                    <pre><li>        &lt;h3&gt;消费电子和消费技术展览会&lt;/h3&gt;</li></pre>
+                                    <pre><li>      &lt;/header&gt;</li></pre>
+                                    <pre><li>      &lt;p&gt;如果他正在受苦，他将被视为帮助他。如果你不笑，你就得跟着你的裙子走。你不必担心任何需要孩子的人。&lt;/p&gt;</li></pre>
+                                    <pre><li>      &lt;footer&gt;</li></pre>
+                                    <pre><li>        &lt;p&gt;作者为特邀作家尼古拉斯·Abc。在这里阅读尼古拉斯的博客。&lt;/p&gt;</li></pre>
+                                    <pre><li>      &lt;/footer&gt;</li></pre>
+                                    <pre><li>    &lt;/article&gt;</li></pre>
+                                    <pre><li>    &lt;!--文章2--&gt;</li></pre>
+                                    <pre><li>    &lt;article id="vegan"&gt;</li></pre>
+                                    <pre><li>      &lt;header&gt;</li></pre>
+                                    <pre><li>        &lt;h2&gt;素食主义者&lt;/h2&gt;</li></pre>
+                                    <pre><li>        &lt;h3&gt;我给新素食主义者的烹饪技巧&lt;/h3&gt;</li></pre>
+                                    <pre><li>      &lt;/header&gt;</li></pre>
+                                    <pre><li>      &lt;p&gt;直到我写这篇文章，但我责怪的不是鱼雷。如果他感到痛苦，他将被视为无助。埃涅阿斯就像地心引力。作为一只坏猫，它总是尘土飞扬，但它很疼。&lt;/p&gt;</li></pre>
+                                    <pre><li>      &lt;footer&gt;</li></pre>
+                                    <pre><li>        &lt;p&gt;作者：Brad Abc。在这里阅读我的其他健康文章。&lt;/p&gt;</li></pre>
+                                    <pre><li>      &lt;/footer&gt;</li></pre>
+                                    <pre><li>    &lt;/article&gt;</li></pre>
+                                    <pre><li>    &lt;!--article 3--&gt;</li></pre>
+                                    <pre><li>    &lt;article id="html5"&gt;</li></pre>
+                                    <pre><li>      &lt;header&gt;</li></pre>
+                                    <pre><li>        &lt;h2&gt;HTML&lt;/h2&gt;</li></pre>
+                                    <pre><li>        &lt;h3&gt;HTML5与HTML4的差异摘要&lt;/h3&gt;</li></pre>
+                                    <pre><li>      &lt;/header&gt;</li></pre>
+                                    <pre><li>      &lt;p&gt;拍卖人喝醉了，只是他很聪明。她将被瘟疫治愈，因为她必须去宫殿，然后她必须去宫殿。孩子们习惯于挂在河里。在那之前，我讨厌它。&lt;/p&gt;</li></pre>
+                                    <pre><li>      &lt;footer&gt;</li></pre>
+                                    <pre><li>        &lt;p&gt;作者BradABC，HTML5开发人员。在这里阅读我的其他技术文章。&lt;/p&gt;</li></pre>
+                                    <pre><li>      &lt;/footer&gt;</li></pre>
+                                    <pre><li>      &lt;/article&gt;</li></pre>
+                                    <pre><li>  &lt;/main&gt;</li></pre>
+                                    <pre><li>  &lt;!--我们的全球页脚用于我们网站的所有页面--&gt;</li></pre>
+                                    <pre><li>  &lt;footer&gt;</li></pre>
                                     <pre><li>     ©Copyright 2022. All rights reserved.</li></pre>
-                                    <pre><li>     [nav]</li></pre>
-                                    <pre><li>       [ul]</li></pre>
-                                    <pre><li>         [li][a href=""]Email[/a][/li]</li></pre>
-                                    <pre><li>         [li][a href=""]Twitter[/a][/li]</li></pre>
-                                    <pre><li>         [li][a href=""]License[/a][/li]</li></pre>
-                                    <pre><li>       [/ul]</li></pre>
-                                    <pre><li>     [/nav]</li></pre>
-                                    <pre><li>  [/footer]</li></pre>
-                                    <pre><li>[/body]</li></pre>
+                                    <pre><li>     &lt;nav&gt;</li></pre>
+                                    <pre><li>       &lt;ul&gt;</li></pre>
+                                    <pre><li>         &lt;li&gt;&lt;a href=""&gt;Email&lt;/a&gt;&lt;/li&gt;</li></pre>
+                                    <pre><li>         &lt;li&gt;&lt;a href=""&gt;Twitter&lt;/a&gt;&lt;/li&gt;</li></pre>
+                                    <pre><li>         &lt;li&gt;&lt;a href=""&gt;License&lt;/a&gt;&lt;/li&gt;</li></pre>
+                                    <pre><li>       &lt;/ul&gt;</li></pre>
+                                    <pre><li>     &lt;/nav&gt;</li></pre>
+                                    <pre><li>  &lt;/footer&gt;</li></pre>
+                                    <pre><li>&lt;/body&gt;</li></pre>
                                 </ol>
                             </fieldset>
 
@@ -754,76 +754,76 @@
                     </fieldset>
                 </section>
             </section>
-            <section class="h3"><!--2.3.5元素[article]he[section]-->
-                <h3>2.3.5元素[article]he[section]</h3>
-                <section class="h4"><!--[article]element-->
-                    <h4>[article]element</h4>
+            <section class="h3"><!--2.3.5元素&lt;article&gt;he&lt;section&gt;-->
+                <h3>2.3.5元素&lt;article&gt;he&lt;section&gt;</h3>
+                <section class="h4"><!--&lt;article&gt;element-->
+                    <h4>&lt;article&gt;element</h4>
                     <p>我们所知道的一个文章元素是独立内容。如果你从网页中挑选一篇文章，它本身就应该有意义。在前一单元中Brad的博客示例中，如果只提取第一篇文章，您可以看到它本身就有意义，没有任何上下文。它可以在其他任何地方重复使用。</p>
                     <div class="example-html">
                         <fieldset>
                             <ol>
-                                <pre><li>    [article id="ces"]</li></pre>
-                                <pre><li>      [header]</li></pre>
-                                <pre><li>        [h2]CES 2022[/h2]</li></pre>
-                                 <pre><li>        [h3]消费电子和消费技术展览会[/h3]</li></pre>
-                                <pre><li>      [/header]</li></pre>
-                                <pre><li>      [p]如果他正在受苦，他将被视为帮助他。如果你不笑，你就得跟着你走。你不必担心任何需要孩子的人。[/p]</li></pre>
-                                <pre><li>      [footer]</li></pre>
-                                <pre><li>        [p]作者为特邀作家尼古拉斯·Abc。在这里阅读尼古拉斯的博客。[/p]</li></pre>
-                                <pre><li>      [/footer]</li></pre>
-                                <pre><li>    [/article]</li></pre>
+                                <pre><li>    &lt;article id="ces"&gt;</li></pre>
+                                <pre><li>      &lt;header&gt;</li></pre>
+                                <pre><li>        &lt;h2&gt;CES 2022&lt;/h2&gt;</li></pre>
+                                 <pre><li>        &lt;h3&gt;消费电子和消费技术展览会&lt;/h3&gt;</li></pre>
+                                <pre><li>      &lt;/header&gt;</li></pre>
+                                <pre><li>      &lt;p&gt;如果他正在受苦，他将被视为帮助他。如果你不笑，你就得跟着你走。你不必担心任何需要孩子的人。&lt;/p&gt;</li></pre>
+                                <pre><li>      &lt;footer&gt;</li></pre>
+                                <pre><li>        &lt;p&gt;作者为特邀作家尼古拉斯·Abc。在这里阅读尼古拉斯的博客。&lt;/p&gt;</li></pre>
+                                <pre><li>      &lt;/footer&gt;</li></pre>
+                                <pre><li>    &lt;/article&gt;</li></pre>
                             </ol>
                         </fieldset>
                     </div>
-                    <p>一个项目元素可以嵌套在另一个项目元素中。例如，如果你有一篇博客文章，你想在其中包含一篇论坛文章或报纸文章，你可以将其嵌套在另一个[article]标签中。</p>
+                    <p>一个项目元素可以嵌套在另一个项目元素中。例如，如果你有一篇博客文章，你想在其中包含一篇论坛文章或报纸文章，你可以将其嵌套在另一个&lt;article&gt;标签中。</p>
                     <p>让我们看另一个例子：</p>
                     <div class="example-html">
                         <fieldset>
                             <ol>
-                                <pre><li>[h4]到那里去[/h4]</li></pre>
-                                <pre><li>[p]事实证明，到达展览地点对我来说要困难得多。我找不到离演出地点更近的酒店，所以不得不租车……[/p]</li></pre>
-                                <pre><li>[h4]会议届会[/h4]</li></pre>
-                                <pre><li>[p]第一天就挤进了三场会议……[/p]</li></pre>
+                                <pre><li>&lt;h4&gt;到那里去&lt;/h4&gt;</li></pre>
+                                <pre><li>&lt;p&gt;事实证明，到达展览地点对我来说要困难得多。我找不到离演出地点更近的酒店，所以不得不租车……&lt;/p&gt;</li></pre>
+                                <pre><li>&lt;h4&gt;会议届会&lt;/h4&gt;</li></pre>
+                                <pre><li>&lt;p&gt;第一天就挤进了三场会议……&lt;/p&gt;</li></pre>
                             </ol>
                         </fieldset>
                         <p>这看起来完全没有道理。因此，我们不能将其放入article元素中。也许是一个部分元素？</p>
                     </div>
                 </section>
                 <section class="h4"><!--元素<section>-->
-                    <h4>元素[section]</h4>
+                    <h4>元素&lt;section&gt;</h4>
                     <p>section元素用于剖切页面。例如，书中的章节、论文中的章节或将“关于我”的页面分为引言、兴趣和技能。节可以在页面或文章中使用。事实上，body元素中的所有内容都被视为在一个节中。节可以嵌套（一节嵌套在另一节中）。节也可以是文章的一部分、旁白或导航元素。虽然上述代码本身毫无意义，但如果您将其添加到我们的CES 2022示例中，它将正好适合：</p>
                     <div class="example-html">
                         <fieldset>
                         <legend>HTML Example</legend>
                         <ol>
-                            <li><pre>[!DOCTYPE html]</pre></li>
-                            <li><pre>[html lang="en"]</pre></li>
+                            <li><pre>&lt;!DOCTYPE html&gt;</pre></li>
+                            <li><pre>&lt;html lang="en"&gt;</pre></li>
                             <li><pre> </pre></li>
-                            <li><pre>[head]</pre></li>
-                            <li><pre>  [meta chearset="UTF-8"]</pre></li>
-                            <li><pre>  [title]article and section elements[/title]</pre></li>
-                            <li><pre>[/head]</pre></li>
+                            <li><pre>&lt;head&gt;</pre></li>
+                            <li><pre>  &lt;meta chearset="UTF-8"&gt;</pre></li>
+                            <li><pre>  &lt;title&gt;article and section elements&lt;/title&gt;</pre></li>
+                            <li><pre>&lt;/head&gt;</pre></li>
                             <li><pre>  </pre></li>
-                            <li><pre>[body]</pre></li>
-                            <li><pre>  [article class="ces"]</pre></li>
-                            <li><pre>    [header]</pre></li>
-                            <li><pre>      [h2]CES 2022[/h2]</pre></li>
-                            <li><pre>      [h3]消费电子和消费技术展览会[/h3]</pre></li>
-                            <li><pre>    [/header]</pre></li>
-                            <li><pre>    [section]</pre></li>
-                            <li><pre>      [h4]乘车路线[/h4]</pre></li>
-                            <li><pre>      [p]事实证明，到达展览地点对我来说要困难得多。我找不到离演出地点更近的酒店，所以不得不租车……【/p]</pre></li>
-                            <li><pre>    [/section]</pre></li>
-                            <li><pre>    [section]</pre></li>
-                            <li><pre>      [h4]会议届会[/h4]</pre></li>
-                            <li><pre>      [p]第一天我设法挤进了三场会议……[/p]</pre></li>
-                            <li><pre>    [/section]</pre></li>
-                            <li><pre>    [footer]</pre></li>
-                            <li><pre>      [p]>作者为特邀作家尼古拉斯·Abc。在这里阅读尼古拉斯的博客。[/p]</pre></li>
-                            <li><pre>    [/footer]</pre></li>
-                            <li><pre>  [/article]</pre></li>
-                            <li><pre>[/body]</pre></li>
-                            <li><pre>[/html]</pre></li>
+                            <li><pre>&lt;body&gt;</pre></li>
+                            <li><pre>  &lt;article class="ces"&gt;</pre></li>
+                            <li><pre>    &lt;header&gt;</pre></li>
+                            <li><pre>      &lt;h2&gt;CES 2022&lt;/h2&gt;</pre></li>
+                            <li><pre>      &lt;h3&gt;消费电子和消费技术展览会&lt;/h3&gt;</pre></li>
+                            <li><pre>    &lt;/header&gt;</pre></li>
+                            <li><pre>    &lt;section&gt;</pre></li>
+                            <li><pre>      &lt;h4&gt;乘车路线&lt;/h4&gt;</pre></li>
+                            <li><pre>      &lt;p&gt;事实证明，到达展览地点对我来说要困难得多。我找不到离演出地点更近的酒店，所以不得不租车……【/p&gt;</pre></li>
+                            <li><pre>    &lt;/section&gt;</pre></li>
+                            <li><pre>    &lt;section&gt;</pre></li>
+                            <li><pre>      &lt;h4&gt;会议届会&lt;/h4&gt;</pre></li>
+                            <li><pre>      &lt;p&gt;第一天我设法挤进了三场会议……&lt;/p&gt;</pre></li>
+                            <li><pre>    &lt;/section&gt;</pre></li>
+                            <li><pre>    &lt;footer&gt;</pre></li>
+                            <li><pre>      &lt;p&gt;>作者为特邀作家尼古拉斯·Abc。在这里阅读尼古拉斯的博客。&lt;/p&gt;</pre></li>
+                            <li><pre>    &lt;/footer&gt;</pre></li>
+                            <li><pre>  &lt;/article&gt;</pre></li>
+                            <li><pre>&lt;/body&gt;</pre></li>
+                            <li><pre>&lt;/html&gt;</pre></li>
                         </ol>
                     </fieldset>
                     </div>
@@ -858,34 +858,226 @@
                         <fieldset>
                             <legend>HTML Example</legend>
                             <ol>
-                                <li><pre>[!DOCTYPE html]</pre></li>
-                                <li><pre>[html lang="en"</pre></li>
-                                <li><pre>   </pre></li>
-                                <li><pre>[head]</pre></li>
-                                <li><pre>  [meta charset="UTF-8"]</pre></li>
-                                <li><pre>  [title]语义元素-完整示例[/title]</pre></li>
-                                <li><pre>[/head]</pre></li>
-                                <li><pre>[body]</pre></li>
-                                <li><pre>[!--这是整体的标题--]</pre></li>
-                                <li><pre>  [header]</pre></li>
-                                <li><pre>    [h1]HTML5[/h1]</pre></li>
-                                <li><pre>    [h2]内容列表[/h2]</pre></li>
-                                <li><pre>[!--导航可以单独进行，也可以在header元素中进行--]</pre></li>
-                                <li><pre>    [nav]</pre></li>
-                                <li><pre>      [ol]</pre></li>
-                                <li><pre>        [li][a href="#intro"]序言[/a][/li]</pre></li>
-                                <li><pre>        [li][a href="#history"]历史[/a][/li]</pre></li>
-                                <li><pre>        [li][a href="#features"]特征[/a][/li]</pre></li>
-                                <li><pre>      [/ol]</pre></li>
-                                <li><pre>    [/nav]</pre></li>
-                                <li><pre>  [/header]</pre></li>
-                                <li><pre>[/body]</pre></li>
+                                <li><pre>&lt;!DOCTYPE html&gt;</pre></li>
+                                <li><pre>&lt;html lang="en"&gt;</pre></li>
+                                <li><pre>&lt;head&gt;</pre></li>
+                                <li><pre>  &lt;meta charset="UTF-8"&gt;</pre></li>
+                                <li><pre>  &lt;title&gt;语义元素-完整示例&lt;/title&gt;</pre></li>
+                                <li><pre>&lt;/head&gt;</pre></li>
+                                <li><pre>&lt;body&gt;</pre></li>
+                                <li><pre>&lt;!--这是整体的标题--&gt;</pre></li>
+                                <li><pre>  &lt;header&gt;</pre></li>
+                                <li><pre>    &lt;h1&gt;HTML5&lt;/h1&gt;</pre></li>
+                                <li><pre>    &lt;h2&gt;内容列表&lt;/h2&gt;</pre></li>
+                                <li><pre>&lt;!--导航可以单独进行，也可以在header元素中进行--&gt;</pre></li>
+                                <li><pre>    &lt;nav&gt;</pre></li>
+                                <li><pre>      &lt;ol&gt;</pre></li>
+                                <li><pre>        &lt;li&gt;&lt;a href="#intro"&gt;序言&lt;/a&gt;&lt;/li&gt;</pre></li>
+                                <li><pre>        &lt;li&gt;&lt;a href="#history"&gt;历史&lt;/a&gt;&lt;/li&gt;</pre></li>
+                                <li><pre>        &lt;li&gt;&lt;a href="#features"&gt;特征&lt;/a&gt;&lt;/li&gt;</pre></li>
+                                <li><pre>        &lt;li&gt;&lt;a href="#logo"&gt;logo&lt;/a&gt;&lt;/li&gt;</pre></li>
+                                <li><pre>        &lt;li&gt;&lt;a href="#ref"&gt;附参考资料&lt;/a&gt;&lt;/li&gt;</pre></li>
+                                <li><pre>      &lt;/ol&gt;</pre></li>
+                                <li><pre>    &lt;/nav&gt;</pre></li>
+                                <li><pre>  &lt;/header&gt;</pre></li>
+                                <li><pre>  </pre></li>
+                                <li><pre>&lt;!--我们页面的主要内容从这里开始--&gt;</pre></li>
+                                <li><pre>  &lt;main&gt;</pre></li>
+                                <li><pre>&lt;!--我们的介绍包含在一个文章元素中，因为这个内容本身就有意义--&gt;</pre></li>
+                                <li><pre>    &lt;article&gt;</pre></li>
+                                <li><pre>      &lt;header id="intro"</pre></li>
+                                <li><pre>        &lt;h2&gt;序言&lt;/h2&gt;</pre></li>
+                                <li><pre>      &lt;/header&gt;</pre></li>
+                                <li><pre>      &lt;p&gt;HTML5代表超文本标记语言。它用于在类似万维网上的网页上创建内容。HTML5是该语言标准的第五次修订版。在HTML4标准化17年后，于2014年10月发布。&lt;/p&gt;</pre></li>
+                                <li><pre>      &lt;p&gt;HTML5旨在为最新的多媒体提供更好的支持。它还减少了对插件和API的依赖，提供了一个公共接口，使加载元素更容易……&lt;/p&gt;</pre></li>
+                                <li><pre>&lt;!--这是旁白的一个例子。该段中还展示了标记元素。--}</pre></li>
+                                <li><pre>        &lt;aside&gt;</pre></li>
+                                <li><pre>          &lt;h4&gt;API&lt;/h4&gt;</pre></li>
+                                <li><pre>          &lt;p&gt;API代表应用程序编程接口。它是一组用于构建软件和应用程序的例程、协议和工具。&lt;mark&gt;此内容使用aside元素。&lt;/mark&gt;这仅用于语义，因此没有任何表示说明。它将像文档中的普通段落一样显示。如果希望将其包含在侧栏中，则必须为其提供适当的标记和样式。&lt;/p&gt;</pre></li>
+                                <li><pre>        &lt;/aside&gt;</pre></li>
+                                <li><pre>     &lt;/article&gt;</pre></li>
+                                <li><pre>&lt;!--我们的历史部分--&gt;</pre></li>
+                                <li><pre>     &lt;section&gt;</pre></li>
+                                <li><pre>       &lt;header id="history"&gt;</pre></li>
+                                <li><pre>         &lt;h2&gt;历史&lt;/h2&gt;</pre></li>
+                                <li><pre>       &lt;/header&gt;</pre></li>
+                                <li><pre>       &lt;p&gt;HTML5基于Mozilla基金会和Opera软件在2004年W3C研讨会上发表的一份立场文件。网络超文本应用技术工作组（WHATWG）成立，开始这方面的工作……&lt;/p&gt;</pre></li>
+                                <li><pre>     &lt;/section&gt;</pre></li>
+                                <li><pre>&lt;!--标题较小的功能部分--&gt;</pre></li>
+                                <li><pre>     &lt;section&gt;</pre></li>
+                                <li><pre>       &lt;header id="features"&gt;</pre></li>
+                                <li><pre>         &lt;h2&gt;特征&lt;/h2&gt;</pre></li>
+                                <li><pre>         &lt;h4&gt;与时俱进&lt;/h4&gt;</pre></li>
+                                <li><pre>       &lt;/header&gt;</pre></li>
+                                <li><pre>       &lt;p&gt;HTML5引入了符合现代网站典型用法的元素和属性。它引入了新的语义元素来取代像div和span这样的通用块。纯粹的表示元素，如字体和中心也已完全删除……&lt;/p&gt;</pre></li>
+                                <li><pre>       &lt;h4&gt;新的API&lt;/h4&gt;</pre></li>
+                                <li><pre>       &lt;p&gt;引入了新的API以允许跨文档通信、拖放功能、使用canvas元素的即时模式2D绘图、webstorage等……&lt;/p&gt;</pre></li>
+                                <li><pre>       &lt;h4&gt;异常处理&lt;/h4&gt;</pre></li>
+                                <li><pre>       &lt;p&gt;HTML5提供了详细的解析规则，允许兼容HTML5的浏览器在解析错误语法时产生相同类型的行为。它是为与旧浏览器兼容而设计的。旧浏览器会忽略新的HTML5结构……&lt;/p&gt;</pre></li>
+                                <li><pre>     &lt;/section&gt;</pre></li>
+                                <li><pre>&lt;!--我们的徽标部分展示了如何使用语义元素figure和figcaption--&gt;</pre></li>
+                                <li><pre>     &lt;section&gt;</pre></li>
+                                <li><pre>       &lt;header id="logo"&gt;</pre></li>
+                                <li><pre>         &lt;h2&gt;LOGO&lt;/h2&gt;</pre></li>
+                                <li><pre>       &lt;/header&gt;</pre></li>
+                                <li><pre>       &lt;figure&gt;</pre></li>
+                                <li><pre>         &lt;img src="http://courses.edx.org/asset-v1:W3Cx+HTML5.0x+1T2017+type@asset+block@html5_logo.png" alt="HTML5 Logo"&gt;</pre></li>
+                                <li><pre>         &lt;figcaption&gt;图1-HTML5标志于2011年4月正式发布&lt;/figcaption&gt;</pre></li>
+                                <li><pre>       &lt;/figure&gt;</pre></li>
+                                <li><pre>     &lt;/section&gt;</pre></li>
+                                <li><pre>&lt;!--参考资料部分总结了本页的主要内容--&gt;</pre></li>
+                                <li><pre>     &lt;section&gt;</pre></li>
+                                <li><pre>       &lt;header id="ref"&gt;</pre></li>
+                                <li><pre>         &lt;h2&gt;附参考资料&lt;/h2&gt;</pre></li>
+                                <li><pre>       &lt;/header&gt;</pre></li>
+                                <li><pre>       &lt;p&gt;此示例的内容改编自&lt;a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"&gt;Wikipedia&lt;/a&gt;上的HTML5页面&lt;/p&gt;</pre></li>
+                                <li><pre>     &lt;/section&gt;</pre></li>
+                                <li><pre>    &lt;/main&gt;</pre></li>
+                                <li><pre>&lt;!--我们的全部页脚，您通常会指定版权、作者、联系信息和页脚导航栏--&gt;</pre></li>
+                                <li><pre>  &lt;footer&gt;</pre></li>
+                                <li><pre>    &lt;p&gt;版权信息……&lt;/p&gt;</pre></li>
+                                <li><pre>&lt;!--我们使用details和summary元素显示作者和联系方式。展开以显示内容。--&gt;</pre></li>
+                                <li><pre>    &lt;details&gt;</pre></li>
+                                <li><pre>      &lt;summary&gt;作者&lt;/summary&gt;</pre></li>
+                                <li><pre>      &lt;p&gt;作者：一&lt;/p&gt;</pre></li>
+                                <li><pre>      &lt;p&gt;作者：二&lt;/p&gt;</pre></li>
+                                <li><pre>    &lt;/detaile&gt;</pre></li>
+                                <li><pre>    &lt;details&gt;</pre></li>
+                                <li><pre>      &lt;summary&gt;联系方式&lt;/summary&gt;</pre></li>
+                                <li><pre>&lt;!--在摘要元素中使用nav--&gt;</pre></li>
+                                <li><pre>      &lt;nav&gt;</pre></li>
+                                <li><pre>&lt;!--已添加样式以使导航菜单位于水平行中--&gt;</pre></li>
+                                <li><pre>        &lt;ul style="margin: 0; padding: 0; list-style-type: none;"&gt;</pre></li>
+                                <li><pre>          &lt;li style="display: inline;"&gt;&lt;a href="#" style="text-decoration: none; padding: .2em 1em;"&gt;email&lt;/a&gt;&lt;/li&gt;</pre></li>
+                                <li><pre>          &lt;li style="display: inline;"&gt;&lt;a href="#" style="text-decoration: none; padding: .2em 1em;"&gt;twitter&lt;/a&gt;&lt;/li&gt;</pre></li>
+                                <li><pre>          &lt;li style="display: inline;"&gt;&lt;a href="#" style="text-decoration: none; padding: .2em 1em;"&gt;facebook&lt;/a&gt;&lt;/li&gt;</pre></li>
+                                <li><pre>          &lt;li style="display: inline;"&gt;&lt;a href="#" style="text-decoration: none; padding: .2em 1em;"&gt;GitHub&lt;/a&gt;&lt;/li&gt;</pre></li>
+                                <li><pre>        &lt;/ul&gt;</pre></li>
+                                <li><pre>      &lt;/nav&gt;</pre></li>
+                                <li><pre>      &lt;/details&gt;</pre></li>
+                                <li><pre>    &lt;/footer&gt;</pre></li>
+                                <li><pre>&lt;/body&gt;</pre></li>
+                                <li><pre>&lt;/htnl&gt;</pre></li>
                             </ol>
                         </fieldset>
-
                     </div>
+                    <div class="example-result">
+                        <fieldset>
+                            <legend>Example Result</legend>
+                            <header>
+                                <h1>HTML5</h1>
+                                <h2>内容列表</h2>
+                                <nav>
+                                    <ol>
+                                        <li><a href="#htmlintro">序言</a></li>
+                                        <li><a href="#htmlhistory">历史</a></li>
+                                        <li><a href="#htmlfeatures">特征</a></li>
+                                        <li><a href="#htmllogo">Logo</a></li>
+                                        <li><a href="#htmlref">参考资料</a></li>
+                                    </ol>
+                                </nav>
+                            </header>
+                            <main>
+                                <article>
+                                    <header id="htmlintro">
+                                        <h2>序言</h2>
+                                    </header>
+                                    <p>HTNL5代表超文本标记语言。它用于在类万维网上的网页创建内容。HTML5是该语言标准的第5次修订版。在HTML4标准化17年后，于2014年10月发布</p>
+                                    <p>HTML5旨在为最新的多媒体提供更好的支持。他还减少了对插件和API的依赖，提供了一个公共接口，使加载元素更容易……</p>
+                                    <asdis>
+                                        <h4>API</h4>
+                                        <p>API代表应用程序编程接口。它是一组用于构建软件和应用程序的例程、协议和工具。<mark>此内容使用aside元素。</mark>这仅用于语义，因此没有任何表示说明。他将向文档中普通段落一样显示。如果希望将其包含在侧栏中，则必须为其提供适当的标记和样式。</p>
+                                    </asdis>
+                                </article>
+                                <section>
+                                    <header id="htmlhistory">
+                                        <h2>历史</h2>
+                                    </header>
+                                    <p>HTML5基于Mozilla基金会和Opera软件在2004年W3C研讨会上发表的一份立场文件。网络超文本应用技术工作组（WHATWG）成立，开始这方面的工作……</p>
+                                </section>
+                                <section>
+                                    <header id="htmlfeatures">
+                                        <h2>特征</h2>
+                                        <h4>与时俱进</h4>
+                                    </header>
+                                    <p>HTML5引入了符合现代网站典型用法的元素和属性。它引入了新的语义元素来取代像div和span这样的通用块。纯粹的表示元素，如字体和中心也已完全删除……</p>
+                                    <h4>新的API</h4>
+                                    <p>引入了新的API以允许跨文档通信、拖放功能、使用canvas元素的即时模式2D绘图、webstorage等……</p>
+                                    <h4>异常处理</h4>
+                                    <p>HTML5提供了详细的解析规则，允许兼容HTML5的浏览器在解析错误语法时产生相同类型的行为。它是为与旧浏览器兼容而设计的。旧浏览器会忽略新的HTML5结构……</p>
+                                </section>
+                                <section>
+                                    <header id="logo">
+                                        <h2>LOGO</h2>
+                                    </header>
+                                    <figure>
+                                        <img src="http://courses.edx.org/asset-v1:W3Cx+HTML5.0x+1T2017+type@asset+block@html5_logo.png" alt="HTML5 Logo">
+                                        <figcaption>图1-HTML5标志于2011年4月正式发布</figcaption>
+                                    </figure>
+                                </section>
+                                <section>
+                                    <header id="htmlref">
+                                        <h2>参考资料</h2>
+                                    </header>
+                                    <p>此示例的内容改编自<a href="https://en.wikipedia.org/wiki/HTML5" target="_blank">Wikipedia</a>上的HTML5页面</p>
+                                </section>
+                            </main>
+                            <footer>
+                                <p>版权信息……</p>
+                                <details>
+                                    <summary>作者</summary>
+                                    <p>作者：一</p>
+                                    <p>作者：二</p>
+                                </details>
+                                <details>
+                                    <summary>联系方式</summary>
+                                    <nav>
+                                        <ul>
+                                            <li style="display: inline;"><a href="#" style="text-decoration: none; padding: .2em 1em;">email</a></li>
+                                            <li style="display: inline;"><a href="#" style="text-decoration: none; padding: .2em 1em;">twitter</a></li>
+                                            <li style="display: inline;"><a href="#" style="text-decoration: none; padding: .2em 1em;">facebook</a></li>
+                                            <li style="display: inline;"><a href="#" style="text-decoration: none; padding: .2em 1em;">GitHub</a></li>
+                                        </ul>
+                                    </nav>
+                                </details>
+                            </footer>
+                        </fieldset>
+                    </div>
+                    <p>这是一个使用以下语义元素的关于HTML5的信息页面示例：标题、导航、主、文章、节、旁白、标记、图、figcaption、详细信息和摘要。</p>
+                    <p>尝试使用示例并尝试插入您想要尝试的其他语义元素。</p>
                 </section>
-
+                <section>
+                    <header id="check2.3.5">
+                        <h3>知识检测2.3.5</h3>
+                    </header>
+                    <div class="example-html">
+                    <fieldset>
+                        <fieldset>
+                            <ol>
+                                <li><pre>&lt;article id="main-content"&gt;</pre></li>
+                                <li><pre>  &lt;header&gt;</pre></li>
+                                <li><pre>    &lt;h2&gt;技术趋势&lt;/h2&gt;</pre></li>
+                                <li><pre>    &lt;h3&gt;2022年的最佳科技&lt;/h3&gt;</pre></li>
+                                <li><pre>  &lt;/header&gt;</pre></li>
+                                <li><pre>  &lt;p&gt;一些关于技术的酷信息……&lt;/p&gt;</pre></li>
+                                <li><pre>  &lt;article id="sub-article"&gt;</pre></li>
+                                <li><pre>    &lt;header&gt;</pre></li>
+                                <li><pre>      &lt;h3&gt;《XXX》杂志于2022年8月发表的关于技术趋势的文章&lt;/h3&gt;</pre></li>
+                                <li><pre>    &lt;/header&gt;</pre></li>
+                                <li><pre>    &lt;p&gt;XXX文章内容……&lt;/p&gt;</pre></li>
+                                <li><pre>  &lt;/article&gt;</pre></li>
+                                <li><pre>  &lt;p&gt;一些更酷的信息……&lt;/p&gt;</pre></li>
+                                <li><pre>&lt;/article&gt;</pre></li>
+                            </ol>
+                        </fieldset>            
+                        <summary>以上代码是否有效？</summary>
+                        <input type="radio" name="check2.3.5" id="check2.3.5.1" value="ok">
+                        <label for="check2.3.5.1">Yes</label><br>
+                        <input type="radio" name="check2.3.5" id="check2.3.5.2" value="no">
+                        <label for="check2.3.5.2">No</label>
+                    </fieldset>
+                </div>
+                </section>
             </section>
         </main>
         <footer>

@@ -1,0 +1,193 @@
+Hi there! In this video,
+we're going to take a closer look at how we add
+images to our HTML pages.
+We'll explore how to load an image,
+and how to give it a good alternate text value,
+and a good title value,
+as well as how to adjust the size of the image on
+a page using 'height' and 'width' attributes.
+We've all heard the phrase that
+a picture paints a thousand words.
+Well, images are a very important part
+of any Web page design.
+They enhance the visual appeal of a page,
+can create excitement or interest about our content,
+and can have an impact on
+the message we are sending our readers.
+Let's load our first image.
+To define an image on a page,
+we use the image element.
+Now this is a self closing tag,
+meaning that it doesn't require an end tag.
+To define the image, we go inside
+the image tag and we set some attributes.
+One of the key attributes
+to set is the source attribute,
+which tells the browser the location of
+the image and before I set
+this let's have a look at
+the images on my local machine.
+As you can see my "images.html",
+which is this page,
+is here on my local machine.
+And at the same level on my desk,
+I have this "images" folder which is
+a good practice for gathering all the images I
+want to use on my web page
+or Web site into this single folder.
+Inside this "images" folder,
+I have lots of images,
+some of them are png and jpg files and as you can
+imagine any modern browser can
+support these image types and can show the images.
+So the image I want to use
+is located in this "images" folder
+and it's called "beach.png".
+So that's the value I will set here in my HTML page.
+I'll set the location to be: "images/beach.png"
+So that's a relative path,
+it's telling the browser that they'll find this image,
+in an "images" folder and it's called, beach.png.
+So when I "Save" my file,
+there you go, I have loaded my first image.
+Let's talk now about the 'alt' attribute
+and why we add alternate text.
+The 'alt' attribute is important because
+it offers an alternate source of
+information about this image
+for those who cannot see the image.
+This text is read aloud by
+screen reader software for those
+with impaired vision or disabilities.
+And search engines can't see the image either,
+so they rely on the alt text
+to understand what the image is about.
+This text is also displayed to the user if,
+for some reason, the browser can't display your image.
+So for all of these reasons make sure you supply a
+good descriptive alt text for every image.
+Now what text you supply depends
+on the type of image you are displaying.
+If the image is just a background or a decorative image,
+you might not want to describe it with
+this text and instead let the screen reader skip over it.
+But for functional images or images
+containing or supporting information for your page,
+you should always apply this alt text.
+Now, while the image we have in front of us
+here could be decorative,
+what of is being shown on the page that is,
+renting a beach house,
+and this is a view from the backyard.
+In that case, I would provide
+a description that conveys the meaning of the image.
+I think this would be a good alternate attribute value.
+So here what I've said is:
+"Enjoy the magnificent view of the beach and
+the sea from this oceanfront cottage."
+So, let's show the alt text
+in action when the browser can't load my image.
+To do that, I'm going to break the link on
+the page by pointing to
+a location or file that doesn't exist.
+So for example, if I have a typo here,
+and that now is a file that doesn't exist on my disk,
+so as you can see,
+when the link for the image
+points to a file that doesn't exist,
+our alt text is displayed nice and clearly on the page.
+So this is the view that you would see.
+It's not ideal but at least you still get
+some information and can continue with the page.
+So that's the alt text attribute.
+So let's go ahead and
+repair our link so we can see the image again.
+I'll just change it back to
+the original value, and
+I'll move this down so we can see it.
+So the next attribute that I'd like to talk
+to you about is the 'title' attribute.
+Now this is a global attribute and it's
+supported by the image element.
+It's used to convey more information about the image.
+So for example, if I type in,
+'title=' and then paste in
+some descriptive text it says,
+"Oceanfront view from
+the Surfers Paradise rental cottage, California."
+And what happens is, if I sav my page,
+nothing looks like it happened over on the page.
+But if I hover over the actual image,
+now I get that information.
+So this is a visual element that is displaying
+more information about the actual image in question.
+So that's the 'title' attribute.
+Now let's have a look at how you adjust
+the size of the image on our page.
+For that I'm going to need a bigger image.
+So to save time I'll just "Paste" in
+a new image and "Save" my page.
+And as you can see this is a new image,
+smiley.jpg and if I scroll down you can see whooo,
+this is a very large image.
+So, what can we do?
+Well we can easily fix this with
+the help of the 'width' and 'height' attributes.
+While I use this attribute 'width',
+I'll have to define this in pixels.
+So you may have heard the term pixel before.
+It's just a unit of measurement for computer screens.
+Each screen is made up of millions of
+these tiny squares called pixels.
+For example, my monitor that you see
+here is 1920 by 1080,
+meaning it's a thousand nine hundred and twenty
+pixels tall and a thousand eighty pixels wide.
+So let's try 'width' value in
+pixels and I'll pick something small.
+Say, 300, and I'll "Save" my image.
+And after I just scroll down you can see
+my image is actually showing.
+So again if I remove the 'width', "Save" again,
+you can see the image is in its native size but
+if I was to set the 'width',
+you can see the image shrinks down to a nice size.
+You also notice that I've only defined a new 'width'
+attribute value but the height
+of the image has also been adjusted.
+Well that's because the browser tries to
+maintain the aspect ratio of the image.
+So, I could define a 'height' attribute as well.
+And when I "Save" my image,
+when I scroll down you can see that the image height has
+changed and the image looks
+squashed because I've changed the aspect ratio,
+the height to width ratio.
+So I'll just remove that once more,
+and there we have a smaller image.
+So that's changing the size of an image using
+the 'width' and 'height' attributes.
+Finally, I'd like to show you how to load remote images.
+Up until this point we've loaded images
+located on a path relative to our page.
+As you can see here the smiley.jpg
+image is in a folder called
+"images" relative to this page called images.html
+However, the real power of the Web is to be able to
+gather information from across the Internet.
+And all we need to do is supply an address.
+This time, I'll "Paste" one in and as you can see,
+this is just a URL and it's
+telling the browser to find this image located at
+this site and
+gist.githubsercontent.com/AndrewJburn, etc., etc.
+At the end of this long URL is
+just the name of my image, image001/png.
+And when I "Save" my file and we scroll down,
+you can see that that image has been loaded from
+this remote site into our Web page.
+So, that's it.
+In this video, we'd fun with images,
+the image tag and its attributes.
+So, you're all set to spice up
+your pages with some images. Take care!

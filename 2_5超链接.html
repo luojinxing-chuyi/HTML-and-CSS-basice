@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <meta charset="UTF-8">
+        <title>2.5HTML超链接</title>
+    </header>
+    <body>
+        <header>
+            <h1>THML与CSS基础/属性、图像和链接</h1>
+            <h2>HTML超链接</h2>
+            <details>
+                <summary>第二章：属性、图像和链接</summary>
+                <nav>
+                    <ul>
+                        <li><a href="2_0章节目录.html" target="_blank">2.0章节目录</a></li>
+                        <li><a href="2_1导言.html" target="_blank">2.1本章导言</a></li>
+                        <li><a href="2_2属性.html" target="_blank">2.2HTML属性</a></li>
+                        <li><a href="2_3语义.html" target="_blank">2.3HTML语义</a></li>
+                        <li><a href="2_4图像.html" target="_blank">2.4HTML图像</a></li>
+                        <li><a href="2_5超链接.html" >2.5HTML超链接</a></li>
+                        <li><a href="2_6练习模块.html" target="_blank">2.6练习模块</a></li>
+                    </ul>
+                </nav>
+            </details>
+            <hr>
+        </header>
+        <main>
+            <article id="article2.5.1"><!--2.5.1超链接简介-->
+                <header>
+                <h3>2.5.1超链接简介</h3>
+                </header>
+                <h4>什么是超链接？</h4>
+                <p>在一个典型的网页中，您可能会看到这样一句话：</p>
+                <p>了解有关我们产品的<a href="https://en.wikipedia.org/wiki/Hyperlink" target="_blank"> 更多信息！</a></p>
+                <p>或者类似的：</p>
+                <input type="submit" value="buy-now" style="background-color: aqua;">
+                <p>尝试单击蓝色文本或“立即购买！”，如果你还没有。</p>
+                <p>超链接是将您带到其他位置的任何文本或图像。这可以是：</p>
+                <ul>
+                    <li>另一个网页：例如，位于https://en.wikipedia.org/wiki/Hyperlink</li>
+                    <li>书签（网页的特定部分）：例如，位于https://en.wikipedia.org/wiki/Hyperlink#History <br>
+                    在前面的关于属性的单元中，我们学习了如何使用id属性作为链接目标。如果页面中有一个分区，则可以使用其id属性（例如历史记录）的值，并按照#历史记录以数字符号开头，链接到该分区</li>
+                    <li>本地链接（链接到同一网页的另一部分）：例如\u标记。asp是属于此网站的网页</li>
+                    <li>电子邮件：例如mailto：authors@example.com</li>                    
+                </ul>
+                <h4>为什么您更喜欢文本链接而不是图像</h4>
+                <p>当涉及到超链接时，尽可能使用文本而不是图像：</p>
+                <ul>
+                    <li>图像不像文本那样容易理解或识别。</li>
+                    <li>文本更便于访问。</li>
+                    <li>如果图像中有文本，如“立即购买”按钮，搜索引擎将无法识别图像中的文本。图像的备选文本应传达将启动的操作（图像的目的，例如“立即购买”），而不是图像的描述（“按钮”）。</li>
+                </ul>
+                <h4>最好的做法</h4>
+                <ul>
+                    <li>将超链接应用于短短语。在整个段落周围使用链接标记是不常见的。</li>
+                    <li>使链接短语有意义。避免使用“单击此处”或“阅读更多”之类的短语当您可以围绕短语“获取帮助”创建链接时，单击此处获取帮助是多余的。该链接表示应单击该链接。</li>
+                    <li>不要使用短链接文本。如果在一个单词或字符上使用“蓝色”超链接，很容易错过，用户很难使用触摸屏单击。</li>
+                    <li>外观-链接在大多数浏览器中都有默认外观，蓝色和下划线。确保页面中的其他文本没有下划线，以避免混淆用户。他们可能会对点击他们认为是链接的文本感到沮丧。</li>
+                    <li>如果您选择有图像链接，它应该有描述链接目的的替代文本，而不是使用的图像-描述目标链接。
+                        <fieldset class="example-html">
+                            <legend>Example HTML</legend>
+                            <ol>
+                                <li><pre>[a href="https://www.w3.org/Style/Examples/007/leaders"]</pre></li>
+                                <li><pre>[img src="table-th.png" alt="CSS tips related to dot leaders"]</pre></li>
+                                <li><pre>[/a]</pre></li>
+                            </ol>
+                        </fieldset>
+                        <fieldset class="example-result">
+                            <legend>Example Resuld</legend>
+                            <a href="https://www.w3.org/Style/Examples/007/leaders">
+                                <img src="table-th.png" alt="CSS tips related to dot leaders">
+                              </a>
+                        </fieldset>
+                    </li>
+                </ul>
+                <h4>锚元素:[a]</h4>
+                <p>html中的hyperlink标记只是[a>]，它被称为锚元素。下面是它的使用方法：</p>
+                <fieldset class="example-html">
+                    <legend>Example HTML</legend>
+                    <ol>
+                        <li><pre>[a href="https://en.wikipedia.org/wiki/Hyperlink"]Click here[/a] to go to the Wikipedia Hyperlink page.</pre></li>
+                    </ol>
+                </fieldset>
+                <fieldset class="example-result">
+                    <legend>Example Result</legend>
+                    <a href="https://en.wikipedia.org/wiki/Hyperlink">Click here</a> to go to the Wikipedia Hyperlink page.
+                    
+
+                </fieldset>
+             
+            </article>
+        </main>
+    </body>
+</html>

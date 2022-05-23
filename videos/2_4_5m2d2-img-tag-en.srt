@@ -1,0 +1,772 @@
+0
+00:00:00,000 --> 00:00:02,800
+Hi there! In this video,
+
+1
+00:00:02,800 --> 00:00:04,720
+we're going to take a closer look at how we add
+
+2
+00:00:04,720 --> 00:00:06,955
+images to our HTML pages.
+
+3
+00:00:06,955 --> 00:00:09,040
+We'll explore how to load an image,
+
+4
+00:00:09,040 --> 00:00:11,680
+and how to give it a good alternate text value,
+
+5
+00:00:11,680 --> 00:00:13,570
+and a good title value,
+
+6
+00:00:13,570 --> 00:00:15,510
+as well as how to adjust the size of the image on
+
+7
+00:00:15,510 --> 00:00:18,580
+a page using 'height' and 'width' attributes.
+
+8
+00:00:18,580 --> 00:00:19,990
+We've all heard the phrase that
+
+9
+00:00:19,990 --> 00:00:22,250
+a picture paints a thousand words.
+
+10
+00:00:22,250 --> 00:00:24,430
+Well, images are a very important part
+
+11
+00:00:24,430 --> 00:00:26,320
+of any Web page design.
+
+12
+00:00:26,320 --> 00:00:28,840
+They enhance the visual appeal of a page,
+
+13
+00:00:28,840 --> 00:00:31,895
+can create excitement or interest about our content,
+
+14
+00:00:31,895 --> 00:00:33,550
+and can have an impact on
+
+15
+00:00:33,550 --> 00:00:36,050
+the message we are sending our readers.
+
+16
+00:00:36,050 --> 00:00:38,305
+Let's load our first image.
+
+17
+00:00:38,305 --> 00:00:40,660
+To define an image on a page,
+
+18
+00:00:40,660 --> 00:00:44,655
+we use the image element.
+
+19
+00:00:44,655 --> 00:00:46,656
+Now this is a self closing tag,
+
+20
+00:00:46,656 --> 00:00:50,683
+meaning that it doesn't require an end tag.
+
+21
+00:00:50,683 --> 00:00:52,390
+To define the image, we go inside
+
+22
+00:00:52,390 --> 00:00:55,765
+the image tag and we set some attributes.
+
+23
+00:00:55,765 --> 00:00:57,460
+One of the key attributes
+
+24
+00:00:57,460 --> 00:00:59,140
+to set is the source attribute,
+
+25
+00:00:59,140 --> 00:01:00,940
+which tells the browser the location of
+
+26
+00:01:00,940 --> 00:01:02,860
+the image and before I set
+
+27
+00:01:02,860 --> 00:01:04,120
+this let's have a look at
+
+28
+00:01:04,120 --> 00:01:07,205
+the images on my local machine.
+
+29
+00:01:07,205 --> 00:01:08,590
+As you can see my "images.html",
+
+30
+00:01:08,590 --> 00:01:10,765
+which is this page,
+
+31
+00:01:10,765 --> 00:01:12,770
+is here on my local machine.
+
+32
+00:01:12,770 --> 00:01:15,775
+And at the same level on my desk,
+
+33
+00:01:15,775 --> 00:01:17,470
+I have this "images" folder which is
+
+34
+00:01:17,470 --> 00:01:19,540
+a good practice for gathering all the images I
+
+35
+00:01:19,540 --> 00:01:21,550
+want to use on my web page
+
+36
+00:01:21,550 --> 00:01:23,800
+or Web site into this single folder.
+
+37
+00:01:23,800 --> 00:01:25,225
+Inside this "images" folder,
+
+38
+00:01:25,225 --> 00:01:26,260
+I have lots of images,
+
+39
+00:01:26,260 --> 00:01:30,520
+some of them are png and jpg files and as you can
+
+40
+00:01:30,520 --> 00:01:32,380
+imagine any modern browser can
+
+41
+00:01:32,380 --> 00:01:35,905
+support these image types and can show the images.
+
+42
+00:01:35,905 --> 00:01:37,240
+So the image I want to use
+
+43
+00:01:37,240 --> 00:01:38,510
+is located in this "images" folder
+
+44
+00:01:38,510 --> 00:01:42,270
+and it's called "beach.png".
+
+45
+00:01:42,270 --> 00:01:46,605
+So that's the value I will set here in my HTML page.
+
+46
+00:01:46,605 --> 00:01:55,310
+I'll set the location to be: "images/beach.png"
+
+47
+00:01:55,310 --> 00:01:56,760
+So that's a relative path,
+
+48
+00:01:56,760 --> 00:02:01,360
+it's telling the browser that they'll find this image,
+
+49
+00:02:01,360 --> 00:02:05,169
+in an "images" folder and it's called, beach.png.
+
+50
+00:02:05,169 --> 00:02:06,880
+So when I "Save" my file,
+
+51
+00:02:06,880 --> 00:02:10,150
+there you go, I have loaded my first image.
+
+52
+00:02:10,150 --> 00:02:11,968
+Let's talk now about the 'alt' attribute
+
+53
+00:02:11,968 --> 00:02:14,605
+and why we add alternate text.
+
+54
+00:02:14,605 --> 00:02:16,600
+The 'alt' attribute is important because
+
+55
+00:02:16,600 --> 00:02:18,160
+it offers an alternate source of
+
+56
+00:02:18,160 --> 00:02:20,140
+information about this image
+
+57
+00:02:20,140 --> 00:02:22,030
+for those who cannot see the image.
+
+58
+00:02:22,030 --> 00:02:23,410
+This text is read aloud by
+
+59
+00:02:23,410 --> 00:02:25,090
+screen reader software for those
+
+60
+00:02:25,090 --> 00:02:27,400
+with impaired vision or disabilities.
+
+61
+00:02:27,400 --> 00:02:29,810
+And search engines can't see the image either,
+
+62
+00:02:29,810 --> 00:02:31,073
+so they rely on the alt text
+
+63
+00:02:31,073 --> 00:02:34,000
+to understand what the image is about.
+
+64
+00:02:34,000 --> 00:02:36,190
+This text is also displayed to the user if,
+
+65
+00:02:36,190 --> 00:02:39,005
+for some reason, the browser can't display your image.
+
+66
+00:02:39,005 --> 00:02:41,560
+So for all of these reasons make sure you supply a
+
+67
+00:02:41,560 --> 00:02:45,070
+good descriptive alt text for every image.
+
+68
+00:02:45,070 --> 00:02:46,600
+Now what text you supply depends
+
+69
+00:02:46,600 --> 00:02:48,475
+on the type of image you are displaying.
+
+70
+00:02:48,475 --> 00:02:51,449
+If the image is just a background or a decorative image,
+
+71
+00:02:51,449 --> 00:02:53,080
+you might not want to describe it with
+
+72
+00:02:53,080 --> 00:02:56,200
+this text and instead let the screen reader skip over it.
+
+73
+00:02:56,200 --> 00:02:58,510
+But for functional images or images
+
+74
+00:02:58,510 --> 00:03:01,630
+containing or supporting information for your page,
+
+75
+00:03:01,630 --> 00:03:04,190
+you should always apply this alt text.
+
+76
+00:03:04,190 --> 00:03:05,980
+Now, while the image we have in front of us
+
+77
+00:03:05,980 --> 00:03:08,075
+here could be decorative,
+
+78
+00:03:08,075 --> 00:03:09,880
+what of is being shown on the page that is,
+
+79
+00:03:09,880 --> 00:03:11,153
+renting a beach house,
+
+80
+00:03:11,153 --> 00:03:13,425
+and this is a view from the backyard.
+
+81
+00:03:13,425 --> 00:03:14,830
+In that case, I would provide
+
+82
+00:03:14,830 --> 00:03:17,795
+a description that conveys the meaning of the image.
+
+83
+00:03:17,795 --> 00:03:23,703
+I think this would be a good alternate attribute value.
+
+84
+00:03:23,703 --> 00:03:26,070
+So here what I've said is:
+
+85
+00:03:26,070 --> 00:03:28,820
+"Enjoy the magnificent view of the beach and
+
+86
+00:03:28,820 --> 00:03:31,790
+the sea from this oceanfront cottage."
+
+87
+00:03:31,790 --> 00:03:33,936
+So, let's show the alt text
+
+88
+00:03:33,936 --> 00:03:36,230
+in action when the browser can't load my image.
+
+89
+00:03:36,230 --> 00:03:38,570
+To do that, I'm going to break the link on
+
+90
+00:03:38,570 --> 00:03:39,870
+the page by pointing to
+
+91
+00:03:39,870 --> 00:03:42,695
+a location or file that doesn't exist.
+
+92
+00:03:42,695 --> 00:03:47,560
+So for example, if I have a typo here,
+
+93
+00:03:47,560 --> 00:03:53,810
+and that now is a file that doesn't exist on my disk,
+
+94
+00:03:53,810 --> 00:03:55,488
+so as you can see,
+
+95
+00:03:55,488 --> 00:03:57,810
+when the link for the image
+
+96
+00:03:57,810 --> 00:04:00,870
+points to a file that doesn't exist,
+
+97
+00:04:00,870 --> 00:04:03,960
+our alt text is displayed nice and clearly on the page.
+
+98
+00:04:03,960 --> 00:04:05,785
+So this is the view that you would see.
+
+99
+00:04:05,785 --> 00:04:07,440
+It's not ideal but at least you still get
+
+100
+00:04:07,440 --> 00:04:10,185
+some information and can continue with the page.
+
+101
+00:04:10,185 --> 00:04:13,445
+So that's the alt text attribute.
+
+102
+00:04:13,445 --> 00:04:15,000
+So let's go ahead and
+
+103
+00:04:15,000 --> 00:04:18,440
+repair our link so we can see the image again.
+
+104
+00:04:18,440 --> 00:04:20,610
+I'll just change it back to
+
+105
+00:04:20,610 --> 00:04:23,105
+the original value, and
+
+106
+00:04:23,105 --> 00:04:26,905
+I'll move this down so we can see it.
+
+107
+00:04:26,905 --> 00:04:30,820
+So the next attribute that I'd like to talk
+
+108
+00:04:30,820 --> 00:04:33,503
+to you about is the 'title' attribute.
+
+109
+00:04:33,503 --> 00:04:35,260
+Now this is a global attribute and it's
+
+110
+00:04:35,260 --> 00:04:37,215
+supported by the image element.
+
+111
+00:04:37,215 --> 00:04:39,595
+It's used to convey more information about the image.
+
+112
+00:04:39,595 --> 00:04:42,070
+So for example, if I type in,
+
+113
+00:04:42,070 --> 00:04:44,410
+'title=' and then paste in
+
+114
+00:04:44,410 --> 00:04:47,362
+some descriptive text it says,
+
+115
+00:04:47,362 --> 00:04:49,225
+"Oceanfront view from
+
+116
+00:04:49,225 --> 00:04:52,250
+the Surfers Paradise rental cottage, California."
+
+117
+00:04:52,250 --> 00:04:55,030
+And what happens is, if I sav my page,
+
+118
+00:04:55,030 --> 00:04:57,395
+nothing looks like it happened over on the page.
+
+119
+00:04:57,395 --> 00:04:59,925
+But if I hover over the actual image,
+
+120
+00:04:59,925 --> 00:05:01,390
+now I get that information.
+
+121
+00:05:01,390 --> 00:05:03,730
+So this is a visual element that is displaying
+
+122
+00:05:03,730 --> 00:05:06,648
+more information about the actual image in question.
+
+123
+00:05:06,648 --> 00:05:08,680
+So that's the 'title' attribute.
+
+124
+00:05:08,680 --> 00:05:10,115
+Now let's have a look at how you adjust
+
+125
+00:05:10,115 --> 00:05:12,370
+the size of the image on our page.
+
+126
+00:05:12,370 --> 00:05:14,875
+For that I'm going to need a bigger image.
+
+127
+00:05:14,875 --> 00:05:16,780
+So to save time I'll just "Paste" in
+
+128
+00:05:16,780 --> 00:05:20,050
+a new image and "Save" my page.
+
+129
+00:05:20,050 --> 00:05:22,632
+And as you can see this is a new image,
+
+130
+00:05:22,632 --> 00:05:26,585
+smiley.jpg and if I scroll down you can see whooo,
+
+131
+00:05:26,585 --> 00:05:28,460
+this is a very large image.
+
+132
+00:05:28,460 --> 00:05:29,881
+So, what can we do?
+
+133
+00:05:29,881 --> 00:05:31,930
+Well we can easily fix this with
+
+134
+00:05:31,930 --> 00:05:34,825
+the help of the 'width' and 'height' attributes.
+
+135
+00:05:34,825 --> 00:05:37,560
+While I use this attribute 'width',
+
+136
+00:05:37,560 --> 00:05:39,685
+I'll have to define this in pixels.
+
+137
+00:05:39,685 --> 00:05:41,936
+So you may have heard the term pixel before.
+
+138
+00:05:41,936 --> 00:05:44,690
+It's just a unit of measurement for computer screens.
+
+139
+00:05:44,690 --> 00:05:46,750
+Each screen is made up of millions of
+
+140
+00:05:46,750 --> 00:05:48,985
+these tiny squares called pixels.
+
+141
+00:05:48,985 --> 00:05:50,950
+For example, my monitor that you see
+
+142
+00:05:50,950 --> 00:05:53,905
+here is 1920 by 1080,
+
+143
+00:05:53,905 --> 00:05:56,890
+meaning it's a thousand nine hundred and twenty
+
+144
+00:05:56,890 --> 00:06:01,330
+pixels tall and a thousand eighty pixels wide.
+
+145
+00:06:01,330 --> 00:06:02,650
+So let's try 'width' value in
+
+146
+00:06:02,650 --> 00:06:04,810
+pixels and I'll pick something small.
+
+147
+00:06:04,810 --> 00:06:07,895
+Say, 300, and I'll "Save" my image.
+
+148
+00:06:07,895 --> 00:06:09,850
+And after I just scroll down you can see
+
+149
+00:06:09,850 --> 00:06:11,900
+my image is actually showing.
+
+150
+00:06:11,900 --> 00:06:16,385
+So again if I remove the 'width', "Save" again,
+
+151
+00:06:16,385 --> 00:06:19,600
+you can see the image is in its native size but
+
+152
+00:06:19,600 --> 00:06:23,570
+if I was to set the 'width',
+
+153
+00:06:23,570 --> 00:06:28,065
+you can see the image shrinks down to a nice size.
+
+154
+00:06:28,065 --> 00:06:31,035
+You also notice that I've only defined a new 'width'
+
+155
+00:06:31,035 --> 00:06:33,500
+attribute value but the height
+
+156
+00:06:33,500 --> 00:06:35,055
+of the image has also been adjusted.
+
+157
+00:06:35,055 --> 00:06:36,660
+Well that's because the browser tries to
+
+158
+00:06:36,660 --> 00:06:39,510
+maintain the aspect ratio of the image.
+
+159
+00:06:39,510 --> 00:06:45,807
+So, I could define a 'height' attribute as well.
+
+160
+00:06:45,807 --> 00:06:47,715
+And when I "Save" my image,
+
+161
+00:06:47,715 --> 00:06:51,570
+when I scroll down you can see that the image height has
+
+162
+00:06:51,570 --> 00:06:53,400
+changed and the image looks
+
+163
+00:06:53,400 --> 00:06:56,110
+squashed because I've changed the aspect ratio,
+
+164
+00:06:56,110 --> 00:06:58,585
+the height to width ratio.
+
+165
+00:06:58,585 --> 00:07:02,505
+So I'll just remove that once more,
+
+166
+00:07:02,505 --> 00:07:05,460
+and there we have a smaller image.
+
+167
+00:07:05,460 --> 00:07:08,400
+So that's changing the size of an image using
+
+168
+00:07:08,400 --> 00:07:12,380
+the 'width' and 'height' attributes.
+
+169
+00:07:12,380 --> 00:07:16,545
+Finally, I'd like to show you how to load remote images.
+
+170
+00:07:16,545 --> 00:07:19,020
+Up until this point we've loaded images
+
+171
+00:07:19,020 --> 00:07:21,625
+located on a path relative to our page.
+
+172
+00:07:21,625 --> 00:07:23,845
+As you can see here the smiley.jpg
+
+173
+00:07:23,845 --> 00:07:25,890
+image is in a folder called
+
+174
+00:07:25,890 --> 00:07:31,180
+"images" relative to this page called images.html
+
+175
+00:07:31,180 --> 00:07:33,330
+However, the real power of the Web is to be able to
+
+176
+00:07:33,330 --> 00:07:35,785
+gather information from across the Internet.
+
+177
+00:07:35,785 --> 00:07:38,700
+And all we need to do is supply an address.
+
+178
+00:07:38,700 --> 00:07:42,960
+This time, I'll "Paste" one in and as you can see,
+
+179
+00:07:42,960 --> 00:07:44,940
+this is just a URL and it's
+
+180
+00:07:44,940 --> 00:07:48,210
+telling the browser to find this image located at
+
+181
+00:07:48,210 --> 00:07:49,950
+this site and
+
+182
+00:07:49,950 --> 00:07:57,165
+gist.githubsercontent.com/AndrewJburn, etc., etc.
+
+183
+00:07:57,165 --> 00:07:59,850
+At the end of this long URL is
+
+184
+00:07:59,850 --> 00:08:04,615
+just the name of my image, image001/png.
+
+185
+00:08:04,615 --> 00:08:08,275
+And when I "Save" my file and we scroll down,
+
+186
+00:08:08,275 --> 00:08:11,160
+you can see that that image has been loaded from
+
+187
+00:08:11,160 --> 00:08:15,115
+this remote site into our Web page.
+
+188
+00:08:15,115 --> 00:08:16,447
+So, that's it.
+
+189
+00:08:16,447 --> 00:08:18,435
+In this video, we'd fun with images,
+
+190
+00:08:18,435 --> 00:08:21,235
+the image tag and its attributes.
+
+191
+00:08:21,235 --> 00:08:22,730
+So, you're all set to spice up
+
+192
+00:08:22,730 --> 00:08:25,370
+your pages with some images. Take care!
+
