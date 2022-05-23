@@ -754,10 +754,10 @@
                     </fieldset>
                 </section>
             </section>
-            <section class="h2">
-                <h2>元素[article]he[section]</h2>
-                <section class="h3">
-                    <h3>[article]element</h3>
+            <section class="h3"><!--2.3.5元素[article]he[section]-->
+                <h3>2.3.5元素[article]he[section]</h3>
+                <section class="h4"><!--[article]element-->
+                    <h4>[article]element</h4>
                     <p>我们所知道的一个文章元素是独立内容。如果你从网页中挑选一篇文章，它本身就应该有意义。在前一单元中Brad的博客示例中，如果只提取第一篇文章，您可以看到它本身就有意义，没有任何上下文。它可以在其他任何地方重复使用。</p>
                     <div class="example-html">
                         <fieldset>
@@ -787,9 +787,103 @@
                             </ol>
                         </fieldset>
                         <p>这看起来完全没有道理。因此，我们不能将其放入article元素中。也许是一个部分元素？</p>
+                    </div>
+                </section>
+                <section class="h4"><!--元素<section>-->
+                    <h4>元素[section]</h4>
+                    <p>section元素用于剖切页面。例如，书中的章节、论文中的章节或将“关于我”的页面分为引言、兴趣和技能。节可以在页面或文章中使用。事实上，body元素中的所有内容都被视为在一个节中。节可以嵌套（一节嵌套在另一节中）。节也可以是文章的一部分、旁白或导航元素。虽然上述代码本身毫无意义，但如果您将其添加到我们的CES 2022示例中，它将正好适合：</p>
+                    <div class="example-html">
+                        <fieldset>
+                        <legend>HTML Example</legend>
+                        <ol>
+                            <li><pre>[!DOCTYPE html]</pre></li>
+                            <li><pre>[html lang="en"]</pre></li>
+                            <li><pre> </pre></li>
+                            <li><pre>[head]</pre></li>
+                            <li><pre>  [meta chearset="UTF-8"]</pre></li>
+                            <li><pre>  [title]article and section elements[/title]</pre></li>
+                            <li><pre>[/head]</pre></li>
+                            <li><pre>  </pre></li>
+                            <li><pre>[body]</pre></li>
+                            <li><pre>  [article class="ces"]</pre></li>
+                            <li><pre>    [header]</pre></li>
+                            <li><pre>      [h2]CES 2022[/h2]</pre></li>
+                            <li><pre>      [h3]消费电子和消费技术展览会[/h3]</pre></li>
+                            <li><pre>    [/header]</pre></li>
+                            <li><pre>    [section]</pre></li>
+                            <li><pre>      [h4]乘车路线[/h4]</pre></li>
+                            <li><pre>      [p]事实证明，到达展览地点对我来说要困难得多。我找不到离演出地点更近的酒店，所以不得不租车……【/p]</pre></li>
+                            <li><pre>    [/section]</pre></li>
+                            <li><pre>    [section]</pre></li>
+                            <li><pre>      [h4]会议届会[/h4]</pre></li>
+                            <li><pre>      [p]第一天我设法挤进了三场会议……[/p]</pre></li>
+                            <li><pre>    [/section]</pre></li>
+                            <li><pre>    [footer]</pre></li>
+                            <li><pre>      [p]>作者为特邀作家尼古拉斯·Abc。在这里阅读尼古拉斯的博客。[/p]</pre></li>
+                            <li><pre>    [/footer]</pre></li>
+                            <li><pre>  [/article]</pre></li>
+                            <li><pre>[/body]</pre></li>
+                            <li><pre>[/html]</pre></li>
+                        </ol>
+                    </fieldset>
+                    </div>
+                    <div>
+                        <fieldset>
+                            <legend>Result Example</legend>
+                            <article id="ces">
+                                <header>
+                                  <h2>CES 2022</h2>
+                                  <h3>Consumer electronics and consumer technology tradeshow</h3>
+                                </header>
+                                <section>
+                                  <h4>Getting There</h4>
+                                  <p>Arriving at the show location proved much harder for me. I couldn't get a hotel closer to where the show was taking place and so had to rent a car....</p>
+                                </section>
+                                <section>
+                                  <h4>Conference Sessions</h4>
+                                  <p>I managed to squeeze in 3 conference sessions on the first day...</p>
+                                </section>
+                                <footer>
+                                  <p>Written by guest author Nicholas Abc. Read Nicholas's blog here.</p>
+                                </footer>
+                              </article>
+                        </fieldset>
+                    </div>
+                    <p>article元素可以使用section元素将其内容拆分为组。</p>
+                </section>
+                <section>
+                    <h4>语义元素示例</h4>
+                    <p>要更好地了解网页中语义元素的用法，请尝试使用以下代码笔：</p>
+                    <div class="example-html">
+                        <fieldset>
+                            <legend>HTML Example</legend>
+                            <ol>
+                                <li><pre>[!DOCTYPE html]</pre></li>
+                                <li><pre>[html lang="en"</pre></li>
+                                <li><pre>   </pre></li>
+                                <li><pre>[head]</pre></li>
+                                <li><pre>  [meta charset="UTF-8"]</pre></li>
+                                <li><pre>  [title]语义元素-完整示例[/title]</pre></li>
+                                <li><pre>[/head]</pre></li>
+                                <li><pre>[body]</pre></li>
+                                <li><pre>[!--这是整体的标题--]</pre></li>
+                                <li><pre>  [header]</pre></li>
+                                <li><pre>    [h1]HTML5[/h1]</pre></li>
+                                <li><pre>    [h2]内容列表[/h2]</pre></li>
+                                <li><pre>[!--导航可以单独进行，也可以在header元素中进行--]</pre></li>
+                                <li><pre>    [nav]</pre></li>
+                                <li><pre>      [ol]</pre></li>
+                                <li><pre>        [li][a href="#intro"]序言[/a][/li]</pre></li>
+                                <li><pre>        [li][a href="#history"]历史[/a][/li]</pre></li>
+                                <li><pre>        [li][a href="#features"]特征[/a][/li]</pre></li>
+                                <li><pre>      [/ol]</pre></li>
+                                <li><pre>    [/nav]</pre></li>
+                                <li><pre>  [/header]</pre></li>
+                                <li><pre>[/body]</pre></li>
+                            </ol>
+                        </fieldset>
 
                     </div>
-
                 </section>
 
             </section>
