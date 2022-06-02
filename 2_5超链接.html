@@ -88,7 +88,74 @@
                 <p>注意：锚元素不应与[link]标记相混淆。[link]标签用于定义文档和外部资源（如外部样式表）之间的链接。在下一章中，您将了解有关<link>标记的更多信息。</p>
                 <h4>超链接的状态</h4>
                 <p>如果尚未单击该链接，则该链接将为蓝色并带下划线。现在，单击链接，您将看到已访问的链接看起来是紫色的，并带有下划线。除了未访问和已访问的链接之外，还有一个状态称为活动链接。当用户单击链接时，该链接变为活动链接。在此期间，链接将为红色并加下划线。</p>
-             
+                <ul>
+                    <li>未访问：蓝色+下划线</li>
+                    <li>访问：紫色+下划线</li>
+                    <li>活动：红色+下划线</li>
+                </ul>
+                <h4>使用方法</h4>
+                <p>[a]标签可以围绕文本或图像。</p>
+                <fieldset class="example-html">
+                    <legend>Example HTML</legend>
+                    <ol>
+                        <li><pre>[!--超链接中的文本--]</pre></li>
+                        <li><pre>[a href="https://www.qwant.com/"]如果你点击我, 我会带你去qwant.com。[/a]</pre></li>
+                        <li><pre>[!--超链接中的段落--]</pre></li>
+                        <li><pre>[a href="https://www.qwant.com/"][p]如果你点击我, 我会带你去qwant.com。[/p][/a]</pre></li>
+                        <li><pre>[!--超链接中的图像--]</pre></li>
+                        <li><pre>[a href="https://www.qwant.com/"][img src="images/qwant-image.png" alt="Image navigating to Qwant"[/a]</pre></li>
+                    </ol>
+                </fieldset>
+                <p>您甚至可以使用anchor元素在网页的contacts部分下添加电子邮件地址。</p>
+                <fieldset class="example-html">
+                    <legend>Example HTML</legend>
+                    <ol>
+                        <li><pre>[p]Feedback:[a href="mailto:authors@example.com?Subject=Hello"]使用SubSec向作者发送邮件[/a][/p]</pre></li>
+                    </ol>
+                </fieldset>
+                <fieldset class="example-result">
+                    <legend>Example Result</legend>
+                    <p>Feedback: <a href="mailto:authors@example.com?Subject=Hello">Send mail to authors with subject</a></p>
+                </fieldset>
+                <p>不过，您可能应该避免对电子邮件地址使用超链接：</p>
+                <ul>
+                    <li>电子邮件地址通常在用户计算机上的默认电子邮件客户端上打开，用户可能不会使用该客户端。这违背了整个目的。</li>
+                    <li>在网页中直接以文本或超链接形式提供您的电子邮件地址将显示您的电子邮件地址。机器人程序或垃圾邮件爬虫可用于搜索Web以获取垃圾邮件的电子邮件地址。如果可能的话，你应该避免这种情况，而应该使用联系方式。</li>
+                </ul>
+                <h4>知识检查2.5.1</h4><!--知识检查2.5.1-->
+                <p>对还是错？锚点元素与[link]标记相同。</p>
+                <input type="radio" name="check2.5.1" id="check2.5.1.1" value="false">
+                <label for="check2.5.1.1">False</label><br>
+                <input type="radio" name="check2.5.1" id="check2.5.1.2" value="true">
+                <label for="check2.5.1.2">True</label>             
+            </article>
+            <article id="article2.5.2"><!--笔记未完成2.5.2属性：href和target-->
+                <header>
+                    <h3>2.5.2属性：href和target</h3>
+                </header>
+                <h4>这是href属性</h4>
+
+
+            </article>
+            <article id="2.5.3"><!--2.5.3属性：media和download-->
+                <header>
+                    <h3>2.5.3属性：media和download</h3>
+                </header>
+                <h4>媒体属性:media</h4>
+                <p>HTML5中引入了媒体属性。它用于指定在href中链接到的URL针对哪种媒体或设备进行了优化。URL可以针对投影仪、语音合成器或打印页面等特殊设备。如果您希望满足URL指向特定设备类型的目标文档的需要，这将非常有用。</p>
+                <p>假设您有一个分散着多个图像的页面，并且希望在手持设备上显示此页面。众所周知，手持设备的屏幕很小，带宽有限。我们希望在小屏幕上更好地对齐页面，并减小图像的大小。因此，media属性允许我们告诉anchor元素该页面是针对手持设备的。可以通过为属性提供值来实现这一点。此值可以是任何有效的媒体查询，并且是设备类型和媒体呈现值的组合。</p>
+                <p>让我们看另一个例子——您可以创建一个指向内容密集的长页面的打印链接，该链接将重定向到相同页面的打印版本。您希望将此打印版本格式化为一页，非常适合打印，分辨率为250 dpi。下面是HTML5代码的样子：</p>
+                <fieldset class="example-html">
+                    <legend>Example HTML</legend>
+                    <ol>
+                        <li><pre>[a href="https://en.wikipedia.org/wiki/Media_queries?output=print" media="print and (resolution:250dpi)"]打印关于媒体查询的wiki页面[/a]</pre></li>
+                    </ol>
+                </fieldset>
+                <fieldset class="example-result">
+                    <legend>Example Result</legend>
+                    <a href="https://en.wikipedia.org/wiki/Media_queries?output=print" media="print and (resolution:250dpi)">Print wiki page about media queries</a>
+                </fieldset>
+                <a href="videos/1_3_8 Putting it all together.mp4" download>xiaz</a>
             </article>
         </main>
     </body>
