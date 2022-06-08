@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>3.2CSS的基础语法</title>
+    </head>
+    <body>
+        <header>
+            <h1>THML与CSS基础/使用CSS添加样式</h1>
+            <h2>CSS基本语法</h2>
+            <nav>
+            <details>
+                <summary>HTML与CSS基础索引</summary>
+                <ul>
+                    <li><a href="0HTML与CSS基础.html" target="_blank">HTML与CSS基础目录</a></li>
+                </ul>
+                <details>
+                    <summary>第一章：我的第一个网页</summary>
+                    <ul>
+                        <li><a href="1_0章节目录.html" target="_blank">第一章目录</a></li>
+                        <li><a href="1_1章节简介.html" target="_blank">1.1章节简介</a></li>
+                        <li><a href="1_2三大要素.html" target="_blank">1.2三大要素</a></li>
+                        <li><a href="1_3元素、标记和属性.html" target="_blank">1.3元素、标记和属性</a></li>
+                        <li><a href="1_4字符编码.html" target="_blank">1.4字符编码</a></li>
+                        <li><a href="1_5最佳实践，智慧.html" target="_blank">1.5最佳实践，智慧</a></li>
+                        <li><a href="1_6关于标签的更多信息.html" target="_blank">1.6关于标签的更多信息</a></li>
+                        <li><a href="1_7测试你的知识.html" target="_blank">1.7测试你的知识</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>第二章：属性、图像和链接</summary>
+                    <ul>
+                        <li><a href="2_0章节目录.html" target="_blank">第二章目录</a></li>
+                        <li><a href="2_1导言.html" target="_blank">2.1章节简介</a></li>
+                        <li><a href="2_2属性.html" target="_blank">2.2属性</a></li>
+                        <li><a href="2_3语义.html" target="_blank">2.3语义</a></li>
+                        <li><a href="2_4图像.html" target="_blank">2.4图像</a></li>
+                        <li><a href="2_5超链接.html" target="_blank">2.5超链接</a></li>
+                        <li><a href="2_6练习模块.html" target="_blank">2.6练习模块</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>第三章：使用CSS添加样式</summary>
+                            <ul>
+                                <li><a href="3_0第三章目录.html" target="_blank">第三章目录</a></li>
+                                <li><a href="3.1章节简介.html" target="_blank">3.1章节简介</a></li>
+                                <li><a href="3_2CSS的基本语法.html"> 3.2CSS的基础语法</a></li>
+                                <li><a href="3_3CSS属性.html" target="_blank">3.3CSS属性</a></li>
+                                <li><a href="3_4列表和选择器.html" target="_blank">3.4列表和选择器</a></li>
+                                <li><a href="3_5CSS练习.html" target="_blank">3.5CSS练习</a></li>
+                            </ul>                        
+                </details>
+            </details>
+            </nav>
+            <hr>
+        </header>
+        <main>
+            <hr>
+            <article><!--3.2.1<style>和<link>标签-->
+                <header>
+                    <h3>3.2.1&lt;style&gt;和&lt;link&gt;标签</h3>
+                </header>
+                <section><!--这是<style>标签-->
+                <h4>这是&lt;style&gt;标签</h4>
+                <p>使用CSS的最佳实践是使用&lt;link&gt;标记将其保存在外部文件中。但是，在开始时，只需将其直接放入正在编辑的文档中就更简单了。</p>
+                <p>要将CSS直接放置到HTML文档中，我们使用&lt;style&gt;标记。此标记可以出现在HTML文档中的任何位置，但是，最常见的做法是将其放置在&lt;head&gt;部分。例如：</p>
+                <fieldset class="example-html">
+                    <legend>Example HTML</legend>
+                    <ol>
+                        <li><pre>&lt;head&gt;</pre></li>
+                        <li><pre>  &lt;meta charset="UTF-8"&gt;</pre></li>
+                        <li><pre>  &lt;title&gt;style and link tags</pre></li>
+                        <li><pre>  &lt;style&gt;</pre></li>
+                        <li><pre>  /*CSS将进入此区域*/</pre></li>
+                        <li><pre>  &lt;/style&gt;</pre></li>
+                        <li><pre>&lt;/header&gt;</pre></li>
+                    </ol>
+                </fieldset>
+                </section>
+                <section><!--这是<linl>标签-->
+                    <h4>这是&lt;linl&gt;标签</h4>
+                    <p>虽然&lt;style&gt;很方便，但更好的做法是将CSS放在一个单独的文件中。使用单独文件的一个关键优势是，CSS样式可以在不同的用户之间轻松重复使用。html页面。许多作者进一步将CSS划分为不同的文件（例如：一个用于文本样式，另一个用于布局）。</p>
+                    <p>只需将CSS放在一个单独的文件中。此文件不需要任何HTML标记（即不需要标记）。使用。css文件扩展名，并使用&lt;link&gt;标记将其绑定。标签必须出现在&lt;head&gt;部分。按照惯例，css文件保存在一个名为css的目录中。</p>
+                    <p>将此链接用作模板：</p>
+                    <fieldset class="example-html">
+                        <legend>Example HTML</legend>
+                        <ol>
+                            <li><pre>&lt;link rel="stylesheet" href="css/my_style.css"&gt;</pre></li>
+                        </ol>
+                    </fieldset>
+                    <p>下面是一个示例HTML文档。</p>
+                    <fieldset class="example html">
+                        <legend>Example HTML</legend>
+                        <ol>
+                            <li><pre>&lt;head&gt;</pre></li>
+                            <li><pre>  &lt;meta charset="UTF-8"&gt;</pre></li>
+                            <li><pre>  &lt;title&gt;style and link tags&lt;/title&gt;</pre></li>
+                            <li><pre>  &lt;link rel="stylesheet" href="css/my_style.css"&gt;</pre></li>
+                            <li><pre>&lt;/head&gt;</pre></li>
+                        </ol>
+                    </fieldset>
+                </section>
+            </article>  
+            <hr> 
+            <hr> 
+            <article><!--3.2.2规则：选择器和声明-->
+                <header>
+                    <h3>3.2.2规则：选择器和声明</h3>
+                </header>
+                <p>最简单的说，CSS只是一个规则列表。每个规则由一个选择器和一个声明组成。以下是一个示例：</p>
+                <img src="images/3_2_2CSS-legend.jpg" alt="the CSS legend">
+                <h4>Selector(选择器）</h4>
+                <p>在上面的例子中，选择器是p。如果选择器没有被任何标点符号固定，则假定它与HTML标记匹配。因此，p选择器将CSS规则应用于文档中的所有标签。<br>
+                我们将在将来介绍更多的选择器可能性。</p>
+                <h4>Declaration（声明）</h4>
+                <p>CSS规则的声明部分用大括号打开和关闭：{}在它们之间，可以放置任意数量的属性值对。</p>
+                <h4>Properties and values(属性和值)</h4>
+                <p>可以通过CSS设置数百种不同的视觉属性。每个属性都有一系列可以设置的可能值。从语法上讲，属性值对很简单。每对由一个属性组成，后跟一个冒号：后跟一个值，以分号结尾；</p>
+                <p><pre>font-size: 12px</pre></p>
+                <h4>最佳实践</h4>
+                <p>在上面的示例中，整个CSS规则都写在一行上。当CSS规则的声明只有一个属性时，这种情况并不少见。如果CSS规则有多个属性，那么应该编写为每个属性值对使用一行。例如：
+                </p>
+                <fieldset class="example-css">
+                    <legend>Example CSS</legend>
+                    <ol>
+                        <li><pre>p{</pre></li>
+                        <li><pre>  font-size: 12px;</pre></li>
+                        <li><pre>  line-height: 15px;</pre></li>
+                        <li><pre>  color: #223344;</pre></li>
+                        <li><pre>}</pre></li>
+                    </ol>
+                </fieldset>
+            </article>        
+            <hr>
+            <hr>
+            <article><!--3.2.3评论-->
+                <header>
+                    <h3>3.2.3评论</h3>
+                </header>
+                <p>CSS也可以包含“注释”，通过这些注释，您（今天的开发人员）可以给您（明天的另一个开发人员）留下注释和提醒。或其他可能阅读你的CSS的人。</p>
+                <p>注释以/*开头，必须以*/结尾，可以跨多行。但它们不能嵌套。</p>
+                <fieldset class="example-css">
+                    <legend>Example CSS</legend>
+                    <ol>
+                        <li><pre>p{</pre></li>
+                        <li><pre>  font-size: 8px; /* client insists small text makes them more 'professional'. */</pre></li>
+                        <li><pre>  /* I hope his idea of 'professional' includes paying on time. */</pre></li>
+                        <li><pre>  line-height: 24px; /* see above */</pre></li>
+                        <li><pre>  /* none of the stuff below is working. I don't know why.</pre></li>
+                        <li><pre>  margin-top: 5%;</pre></li>
+                        <li><pre>  margin-bottom:6%;</pre></li>
+                        <li><pre>  */</pre></li>
+                        <li><pre>}</pre></li>
+                    </ol>
+                </fieldset>
+
+
+            </article>
+            <hr>
+            <hr>
+            <article><!--3.2.4知识检查-->
+                <header>
+                    <h3>3.2.4知识检查</h3>
+                </header>
+                <h4>1、标签支持</h4>
+                <p>哪个标记在其开始标记和结束标记之间支持CSS代码？</p>
+                <fieldset class="check">
+                    <input type="radio" name="3.2.4check1" id="3.2.4.1check1" value="no">
+                    <label for="3.2.4.1check1">&lt;div&gt;...&lt;/div&gt;</label><br>
+                    <input type="radio" name="3.2.4check1" id="3.2.4.2check1" value="no">
+                    <label for="3.2.4.2check1">&lt;css&gt;...&lt;/css&gt;</label><br>
+                    <input type="radio" name="3.2.4check1" id="3.2.4.3check1" value="yes">
+                    <label for="3.2.4.3check1">&lt;style&gt;...&lt;/style&gt;</label><br>
+                    <input type="radio" name="3.2.4check1" id="3.2.4.4check1" value="no">
+                    <label for="3.2.4.4check1">&lt;link&gt;...&lt;/link&gt;</label>
+                </fieldset>
+                <h4>2、链接使用</h4>
+                <p>以下哪个标记的使用是正确的？</p>
+                <fieldset class="check">
+                    <input type="radio" name="3.2.4chekck2" id="3.2.4.1check2" value="yes">
+                    <label for="3.2.4.1check2">&lt;link rel="stylesheet" href="css/my_styles.css" &gt;</label><br>
+                    <input type="radio" name="3.2.4chekck2" id="3.2.4.2check2" value="no">
+                    <label for="3.2.4.2check2">&lt;link rel="stylesheet" src="css/my_styles.css" &gt;</label><br>
+                    <input type="radio" name="3.2.4chekck2" id="3.2.4.3check2" value="no">
+                    <label for="3.2.4.3check2">&lt;link rel="css"&gt;</label><br>
+                    <input type="radio" name="3.2.4chekck2" id="3.2.4.4check2" value="no">
+                    <label for="3.2.4.4check2">&lt;link href="css/my_styles.css"&gt;</label>
+                </fieldset>
+                <h4>3、利用CSS</h4>
+                <p>从网页中利用CSS的一般最佳实践是什么？</p>
+                <fieldset>
+                    <input type="radio" name="3.2.4check3" id="3.2.4.1check3" value="yes">
+                    <label for="3.2.4.1check3">使用&lt;link&gt;标记从外部文件在CSS中绑定</label><br>
+                    <input type="radio" name="3.2.4check3" id="3.2.4.2check3" value="no">
+                    <label for="3.2.4.2check3">直接在&lt;style&gt;块中输入CSS</label>
+                </fieldset>
+                <h4>外部CSS文件</h4>
+                <p>在外部CSS文件中执行CSS文件my_file.css，需要被&lt;style&gt;&lt;/style&gt;标记包围？</p>
+                <fieldset>
+                    <input type="radio" name="3.2.4check4" id="3.2.4.1check4" value="yes">
+                    <label for="3.2.4.1check4">No</label><br>
+                    <input type="radio" name="3.2.4check4" id="3.2.4.2check4" value="no">
+                    <label for="3.2.4.2check4">Yes</label>
+                </fieldset>
+
+                
+
+            </article>
+        </main>
+        <footer>
+
+        </footer>
+    </body>  
+</html>
