@@ -59,7 +59,7 @@
             <hr>
             <article><!--3.3.1常见CSS属性-->
                 <header>
-                    <h1>3.3.1常见CSS属性</h1>
+                    <h2>3.3.1常见CSS属性</h2>
                 </header>
                 <p>有数百个CSS属性供您使用。完整的列表可以在 <a href="https://www.w3.org/Style/CSS/all-properties.en.html" target="_blank">W3C网站</a> 上找到（也可以参见 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">MDN网站上的CSS参考页</a> ）。</p>
                 <p>下面我们收集了一个更易于管理的最有用和常见CSS属性列表：font-size字体大小、line-height行高、text-align文本对齐、text-decoration文本装饰、font-weight字体重量、font-style字体样式和font-family字体系列。</p>
@@ -73,11 +73,321 @@
                             <dt><pre>q { font-size: .8em; }</pre></dt>
                             <dt><pre>blockquote { font-size: 10vh; }</pre></dt>
                         </dl>
-
+                    </fieldset>
+                    <p>在 CSS 中，可以使用各种度量单位指定元素的大小或长度，如PX、EM、REM、%、VW 和 VH等，不过也许你还不十分了解，这些单位之间有什么区别？什么情况下该用什么单位？</p>
+                    <p>了解不同单位的最重要方面是有些单位，例如 PX，是绝对单位，有些则是相对单位。</p>
+                    <h4>绝对单位</h4>
+                    <p>PX：像素 (px) 被视为绝对单位，尽管它们与查看设备的 DPI 和分辨率有关。但是在设备本身上，PX 单元是固定的，不会根据任何其他元素进行更改。对于响应式站点，使用 PX 可能会出现问题，但它们对于保持某些元素的大小一致很有用。如果你有不应调整大小的元素，那么使用 PX 是一个不错的选择。</p>
+                    <h4>相对单位</h4>
+                    <dl>
+                        <dt>EM：</dt>
+                        <dd>相对于父元素的字体大小，因此如果你希望根据父元素的大小缩放元素的大小，请使用 EM。</dd>
+                        <dt>REM：</dt>
+                        <dd>相对于根 (HTML) 字体大小，因此如果你希望根据根大小缩放元素的大小，无论父大小是什么，请使用 REM。如果你使用过 EM 并且由于大量嵌套元素而发现大小问题，那么 REM 可能是更好的选择。</dd>
+                        <dt>%：</dt>
+                        <dd>相对与父元素类似于 VW 和 VH，但它不是相对于视口的宽度或高度的长度。相反，它是父元素宽度或高度的百分比。例如，百分比单位通常可用于设置边距的宽度。</dd>
+                        <dt>VW：</dt>
+                        <dd>可用于创建填充整个视口宽度的全宽元素 (100%)。当然，你可以使用视口宽度的任意百分比来实现其他目标，例如宽度的一半为 50% 等。</dd>
+                        <dt>VH：</dt>
+                        <dd>可用于创建填充整个视口高度的全高元素 (100%)。当然，你可以使用视口高度的任意百分比来实现其他目标，例如高度的一半为 50% 等。</dd>
+                    </dl>
+                    <p>与 PX 不同，%、EM 和 REM 等相对单位更适合响应式设计，也有助于满足可访问性标准。相对单位在不同设备上的缩放效果更好，因为它们可以根据另一个元素的大小进行缩放。</p>
+                    <p>下面讨论这些单元。</p>
+                    <p>此外，font-size（字体大小）支持许多作者喜欢的更可读的值集：xx-small、x-small、small、medium、large、x-large、xx-large和相对大小（相对于父对象的文本）：larger，smaller。例如：</p>
+                    <fieldset class="example-css">
+                        <legend>Example CSS</legend>
+                        <dl>
+                            <dt>p { font-size: medium; }</dt>
+                            <dt>q { font-size: small; }</dt>
+                            <dt>blockquote { font-size: larger; }</dt>
+                        </dl>
                     </fieldset>
 
 
                 </section>
+                <section><!--line-height 行间距-->
+                    <h4>line-height 行间距</h4>
+                    <p>font-size(字体大小)可能决定文本本身的大小，而line height(行间距)属性则决定文本所绘制空间的高度。行高越大，文本的间距就越大。小的行高会将文本行拼凑在一起。</p>
+                    <p>例如，以下所有Middlemarch文本的字体大小设置font-size:16px;</p>
+                    <p>但在左边，我们可以看到设置为line-height:0.5；右侧设置为line-height:3;</p>
+                    <table>
+                        <tr>
+                            <th>line-height:0.5;</th>
+                            <th>line-height:3;</th>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 16px; line-height: 0.5;">Miss Brooke had that kind of beauty which seems to be thrown into relief by poor dress.</td>
+                            <td style="font-size: 16px; line-height:3;">Miss Brooke had that kind of beauty which seems to be thrown into relief by poor dress.</td>
+                        </tr>
+                    </table>
+                    <p>使用的值是这个无单位&lt;number&gt;乘以元素的字体大小。计算值与指定值相同。在大多数情况下，这是设置行高的首选方法，在继承的情况下不会产生意外的结果。在MDN网站上 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height">阅读</a> 更多信息。</p>
+                </section>
+                <section><!--text-align 文本对齐-->
+                    <h4>text-align 文本对齐</h4>
+                    <p>熟悉文本编辑器的任何人都会熟悉此属性。它可用于将文本(left)左对齐、(center)居中对齐或(right)右对齐。还有其他可能的值，如justify和justify all。它通常默认为“左”。但是，请记住，不应该不必要地使用文本对齐。</p>
+                    <p>请注意，如果将文本对齐应用于与文本宽度相同的元素，或其宽度由其中的文本决定的元素（即内联元素），则文本对齐可能无法按预期工作。标记[span]、[a]、[i]、[b]、[q]和其他标记被视为“内联”，因为它们在使用时不会收到自己的新行。文本对齐在这些标记上通常没有用处。</p>
+                    <p>但它在块级文本标记上很有用，例如[p]、[li]、[ul]、[ol]、[div]和[blockquote]</p>
+                    <fieldset class="example-css">
+                        <legend>Example CSS</legend>
+                        <dl>
+                            <dt>p { text-align: left; }</dt>
+                            <dt>blockquote { text-align: right; }</dt>
+                        </dl>
+                    </fieldset>
+                    <p>此外，请记住，只有当对齐方式确实需要更改时，才应该使用文本对齐方式，因为当翻译为使用阿拉伯语、希伯来语、塔纳语脚本、脚本的语言时，可能会导致额外的工作来反转所有值（这些语言的默认对齐方式是正确的）。新的值start和end目前正在浏览器中实现，一旦Internet Explorer支持它们，它们将是比left和right更好的选择。</p>
+                    <table>
+                        <tr>
+                            <th>left</th>
+                            <th>center</th>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">这是最好的时代，这是最坏的时代，这是智慧的时代，这是愚蠢的时代，这是信仰的时代，这是怀疑的时代，这是光明的季节，这是黑暗的季节，这是希望的春天，这是绝望的冬天。</td>
+                            <td style="text-align: center;">这是最好的时代，这是最坏的时代，这是智慧的时代，这是愚蠢的时代，这是信仰的时代，这是怀疑的时代，这是光明的季节，这是黑暗的季节，这是希望的春天，这是绝望的冬天。</td>
+                        </tr>
+                        <tr>
+                            <th>right</th>
+                            <th>justify</th>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">这是最好的时代，这是最坏的时代，这是智慧的时代，这是愚蠢的时代，这是信仰的时代，这是怀疑的时代，这是光明的季节，这是黑暗的季节，这是希望的春天，这是绝望的冬天。</td>
+                            <td style="text-align: justify;">这是最好的时代，这是最坏的时代，这是智慧的时代，这是愚蠢的时代，这是信仰的时代，这是怀疑的时代，这是光明的季节，这是黑暗的季节，这是希望的春天，这是绝望的冬天。</td>
+                        </tr>
+                    </table>
+                    <p>请注意，CSS将来将更好地支持单词不以空格分隔的语言（如中文和泰语）或单词以特殊标记分隔的语言（如阿姆哈拉语）中的对齐。有关证明的不同方法的更多信息，请参阅本文。完成本课程后，在进一步探索CSS的特性时，请注意CSS的这些和其他国际特性。</p>
+                </section>
+                <section><!--text-decoration (underline) 文本装饰（下划线）-->
+                    <h4>text-decoration (underline) 文本装饰（下划线）</h4>
+                    <p>如何给文本加下划线？这是一个常见的问题。在CSS中，这是通过文本装饰属性完成的。其值为：(underline)下划线、(overline)上划线、(line-through)线穿过和(none)无；它们可以组合在一起。</p>
+                    <fieldset class="example-css">
+                        <legend>Example CSS</legend>
+                        <dl>
+                            <dt>p { text-decoration: underline; }</dt>
+                            <dt>a { text-decoration: none; } /* 默认情况下，超链接带有下划线，但可以删除 */ </dt>
+                            <dt>span { text-decoration: overline; }</dt>
+                            <dt>span { text-decoration: underline overline; } /* 应用两个值，两个值之间只有一个空格 */</dt>
+                            <dt>span { text-decoration: underline overline line-through; } /* everything */</dt>
+                        </dl>
+                    </fieldset>
+                    <table>
+                        <tr>
+                            <th>underline</th>
+                            <th>oyerline</th>
+                            <th>line-through</th>
+                            <th>underline overline line-through</th>
+                        </tr>
+                        <tr>
+                            <td style="text-decoration:underline;">Middlemarch</td>
+                            <td style="text-decoration: overline;">Middlemarch</td>
+                            <td style="text-decoration: line-through;">Middlemarch</td>
+                            <td style="text-decoration:underline overline line-through;">Middlemarch</td>
+                        </tr>
+                    </table>
+                    <p>注意：还有其他属性可以帮助自定义文本装饰，例如(text-decoration-color)文本装饰颜色和(text-decoration-style)文本装饰样式，但它们在浏览器中不受很好的支持（ <a href="https://caniuse.com/mdn-css_properties_text-decoration"> 请参阅相关的caniuse表）</a></p>             
+                </section>
+                <section><!--font-weight(bold) 字体大小（粗体）-->
+                    <h4>font-weight(bold)</h4>
+                    <p>前面我们看到，[b]和[strong]标记将使文本加粗。然而，从语义上讲，这只是标记的副作用。任何标记都可以通过字体权重CSS属性使文本更粗体（或更少粗体）。虽然常用值为普通和粗体，但也可以使文本比其父文本更粗体（或更少粗体），使其值更粗体和更浅。最后，字体权重可以显式设置为数值。选项有：100、200、300、400、500、600、700、800和900。法线贴图为400，粗体贴图为700。但是，不同的数字选择仅适用于支持各种字体权重的字体。很多时候，数字权重将简单地映射回粗体或法线。</p>
+                    <fieldset class="example-css">
+                        <legend>Example CSS</legend>
+                        <dl>
+                            <dt>p { font-weight: bold; }</dt>
+                            <dt>blockquote { font-weight: 900; }</dt>
+                        </dl>
+                    </fieldset>
+                    <table style="text-align: center;">
+                        <tr>
+                            <th>normal</th>
+                            <th>bold</th>
+                            <th>200</th>
+                            <th>500</th>
+                            <th>700</th>
+                            <th>900</th>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: normal;">A Tale of Two Cities</td>
+                            <td style="font-weight: bold;">A Tale of Two Cities</td>
+                            <td style="font-weight: 200;">A Tale of Two Cities</td>
+                            <td style="font-weight: 500;">A Tale of Two Cities</td>
+                            <td style="font-weight: 700;">A Tale of Two Cities</td>
+                            <td style="font-weight: 900;">A Tale of Two Cities</td>
+                        </tr>
+                    </table>               
+                </section>
+                <section><!--font-style(italic) 字体样式（斜体）-->
+                    <h4>font-style(italic) 字体样式（斜体）</h4>
+                    <p>前面我们看到，[i]和[em]标记可以使文本斜体化。但是，正如我们在讨论字体权重时所看到的，这可以通过CSS进行更改，并且任何标记都可以使用font-style属性使其文本倾斜或倾斜。此属性的值可以选择(normal)普通和(italic)斜体。</p>
+                    <table>
+                        <tr>
+                            <th>font-style:normal</th>
+                            <th>font-style:italic</th>
+                        </tr>
+                        <tr>
+                            <td style="font-style: normal;">许多年后，当他面对行刑队时，奥雷利亚诺·布恩迪亚上校想起了那个遥远的下午，他的父亲带他去发现冰。</td>
+                            <td style="font-style: italic;">许多年后，当他面对行刑队时，奥雷利亚诺·布恩迪亚上校想起了那个遥远的下午，他的父亲带他去发现冰。</td>
+                        </tr>
+                    </table>
+
+                </section>
+                <section><!--font-family 设置字体系列-->
+                    <h4>font-family 设置字体系列</h4>
+                    <p>要为页面上的项目设置字体吗？字体系列是任务的正确属性，但有以下注意事项：</p>
+                    <ul>
+                        <li>各种浏览器只保证几个标准选择：(serif)衬线、(sans-serif)无衬线、(monospace)单空格、(cursive)草书和(fantasy)幻想。</li>
+                        <li>用户计算机上必须已安装任何其他选项。</li>
+                        <li>或者您可以使用“Web字体”，但您的选择虽然丰富，但可能与您习惯的选择不匹配。</li>
+                        <li>您计算机上最喜爱的字体可能受到许可限制，无法使用。您当然可以指定要使用它，但如果最终用户自己没有它，他们将看不到它。你不能“给”他们。同样，“Web字体”是这里的另一种选择。</li>
+                    </ul>
+                    <p>为了帮助改善这些限制，font family属性接受可能的字体选择列表。浏览器将首先尝试列出的第一种字体，如果不可用（或没有所需的图示符），则将继续使用列表中的下一种字体，依此类推。下面是一个典型的字体系列声明：</p>
+                    <fieldset class="example-css">
+                        <legend>Example CSS</legend>
+                        <dl>
+                            <dt>p { font-family: "Helvetica", "Verdana", "Arial", sans-serif; }</dt>
+                        </dl>
+                    </fieldset>
+                    <p>上面的规则是首先尝试名为“Helvetica”的字体。如果不可用，请尝试使用“Verdana”，如果没有“Arial”，最后使用内置的(sans-serif)无衬线浏览器字体。</p>
+                    <ul>
+                        <li>每个命名字体系列用逗号（，）分隔</li>
+                        <li>如果字体族名称包含任何空格（或某些其他字符），则必须用引号括起来。字体名称往往很复杂，何时需要引号的确切规则也很难懂，因此最简单也是最好的做法是始终将字体系列名称括在引号中，但五个内置的（衬线、无衬线等）除外</li>
+                    </ul>
+                    <p>Web字体超出了本课程的范围。谷歌提供了一个很好的许可免费网页字体选择。在任何搜索引擎中键入“google Web字体教程”以了解更多信息。</p>
+
+
+                </section>
+            </article>
+            <hr>
+            <hr>
+            <article><!--3.3.2边距和颜色-->
+                <header>
+                    <h2>3.3.2边距和颜色</h2>
+                </header>
+                <section><!--Margin 边距-->
+                    <h3>Margin 边距</h3>
+                    <p>我们将在后面的单元中检查布局。但margin属性是定位元素的关键。当你想移动一些东西时，边距属性应该是你的第一个想法，当有布局问题时，它是你应该检查的第一件事。</p>
+                    <p>边距可能有点混乱。根据上下文的不同，它会将一个项目隔开，使之远离它的近邻（在HTML中）或父项目的边缘。此外，不仅有一个保证金资产，还有五个：</p>
+                    <fieldset class="example-css">
+                        <legend>Example CSS</legend>
+                        <dl>
+                            <dt>p { margin: 10px; }  /* 将在项目的所有四边应用10像素的边距 */</dt>
+                            <dt>p {<br>
+                                 margin-left: 10px; <br>
+                                 margin-right: 10px;<br>
+                                 margin-top: 10px;   <br>
+                                 margin-bottom: 10px; <br>
+                            }</dt>
+                        </dl>
+                    </fieldset>
+                </section>
+                <section><!--color 颜色-->
+                    <h3>Color 颜色</h3>
+                    <p>color属性可用于设置元素的文本颜色。该值有几种可能的格式。</p>
+                    <h4>named colors 命名的颜色</h4>
+                    <fieldset class="example-css">
+                        <legend>Example CSS</legend>
+                        <ol>
+                            <li>p { color: blue; }</li>
+                            <li><pre>b { color: transparent; } /* 透明的 */</pre></li>
+                            <li><pre>i { color: lightgrey; }</pre></li>
+                        </ol>
+                    </fieldset>
+                    <p>有几十个不同的名字。支持最常见的颜色英文名称以及其他许多名称。</p>
+                    <p>其中一个更有趣的是(transparent)透明，这将使文本不可见。但是，如果要使HTML元素不可见，则显示：none；或可见性：隐藏；首选规则。它们将在以后的一节中讨论。</p>
+                    <h4>rgb/rgba 三原色/颜色值</h4>
+                    <fieldset class="example-css">
+                        <legend>Example CSS</legend>
+                        <dl>
+                            <dt>p { color: rgb(10, 200, 255); }</dt>
+                            <dt>p { color: rgb(0, 0, 0); } /* 0,0,0 is black */</dt>
+                            <dt>p { color: rgb(255, 255, 255); } /* 255,255,255 is white */</dt>
+                            <dt>b { color: rgba(10, 200, 255, 0.5); }  /* semi-transparent */</dt>
+                        </dl>
+                    </fieldset>
+                    <p>通常，计算机上的任何颜色都是通过将三种成分混合在一起来精确指定的：红色、绿色和蓝色。每个组件的数量在0到255之间。因此，可以使用rgb（）函数指定颜色。</p>
+                    <ul>
+                        <li>rgb（红色、绿色、蓝色）；</li>
+                        <li>每个组件之间需要括号和逗号。</li>
+                    </ul>
+                    <p>类似地，rgba（）函数可用于半透明颜色。第四个值表示“alpha通道”（因此“rgba”中的“a”），表示不透明度。它是一个介于0和1之间的数字（例如，0.5）。</p>
+                    <h4>Hex code 十六进制代码</h4>
+                    <fieldset class="example-css">
+                        <legend>Example CSS</legend>
+                        <dl>
+                            <dt>p { color: #3A2BFF; }</dt>
+                        </dl>
+                    </fieldset>
+                    <p>比冗长的rgb（）函数更快的是只提供十六进制（hex）代码。这总是以磅符号（#）开头，然后是三对十六进制数，范围从00到FF。<br>
+                    构造rgb三元组已经够难了，而解密和生成十六进制代码则更难了。然而，几乎每个编辑器和颜色选择器都至少会显示红色、绿色和蓝色的值，并且许多编辑器和颜色选择器也会显示十六进制代码。<br>
+                    白色的十六进制代码为#FFFFFF；黑色为#000000。</p>
+                </section>
+
+            </article>
+            <hr>
+            <hr>
+            <article><!--3.3.3. 单位-->
+                <header>
+                    <h2>3.3.3. 单位</h2>
+                </header>
+                <p>(font-size)字体大小、(font-height)行高、(margins)边距和许多其他CSS属性需要某种尺寸值。标注值支持多种单位。但最常见和最有用的是：px、em、rem、%、vh和vw。</p>
+                <h3>px 像素</h3>
+                <p>“px”是“pixel”的缩写，是屏幕上的一个单点。因此，字体大小为20px的文本在屏幕上的高度为20像素。实际上，由于浏览器缩放、视网膜显示或其他因素，这可能与屏幕上的20个物理像素相匹配，也可能不匹配。</p>
+                <p>px对水平和垂直尺寸都有用。</p>
+                <h3>em</h3>
+                <p>“em”是一个出现在网络上的印刷术语。在Web上，em单位通常用于垂直尺寸。在父上下文中，一个“em”映射到一个大写字母的高度。</p>
+                <fieldset class="example-css">
+                    <legend>EXample CSS</legend>
+                    <ol>
+                        <li><pre>li { font-size: 0.9em; }  /* 列表项中的文本小于其父项 */</pre></li>
+                        <li><pre>h1 { font-size: 1.2em; }  /* 但是h1会比父代大 */</pre></li>
+                        <li><pre>i  { font-size: 0.5em; }  /* 任何斜体文字都是一半大. */</pre></li>
+                    </ol>
+                </fieldset>
+                <p>以上所有文本大小都是相对于页面基本大小的。您将在页面的其余部分看到与应用于正文的这些规则完全不同的结果，但相对而言，它们的大小将保持正确。</p>
+                <h3>rem</h3>
+                <p>“rem”与“em”非常相似，只是“em”相对于其父元素调整元素的大小，“rem”总是相对于根派生其大小。在包含大量嵌套元素的HTML文档中，“rem”通常比“em”更可靠所有现代浏览器都支持rem，包括移动浏览器，但旧浏览器不支持。</p>
+                <p>使用上面em部分的CSS规则，嵌套列表项（[li]birds[ul][li]hawk[li][ul][li]）将变得越来越小。如果使用“rem”单位，它们的大小将相同。</p>
+                <p>注意：要确保您正在设置根大小，请同时使用html和正文选择器。</p>
+                <h3>%</h3>
+                <p>em是相对于父文本大小的度量，而百分比单位（%）是相对于父维度的。这对于水平和垂直尺寸都是一个有用的单位，但通常在水平方向更有用。</p>
+                <p>起初，百分比单位似乎非常方便（事实上也是如此），许多开发人员都爱上了它。但这段恋情通常是短暂的。此规则的限制之一是，要使其正常工作，父级必须设置明确的宽度或高度。这种限制在垂直尺寸上尤其明显。如果父元素没有明确的高度设置，则子元素的百分比可以是0。</p>
+                <h3>vh / vw</h3>
+                <p>“vh”表示视口高度，“vw”表示视口宽度。vh和vw单元的工作原理与百分比（%）单元非常相似。但它不是父对象的百分比，而是屏幕的百分比（又名视口）。显然，vh表示垂直尺寸，vw表示水平尺寸。</p>
+                <p>vh和vw不受%单位的父限制。大多数现代浏览器都支持这些单元，但在较旧的移动浏览器上也有一些例外。</p>    
+            </article>
+            <hr>
+            <hr>
+            <article><!--3.3.4无障碍排版-->
+                <header>
+                    <h2>3.3.4无障碍排版</h2>
+                </header>
+                <p>我们开始使用的CSS规则很有趣，也很容易理解。他们主要关注排版。稍后，我们将了解如何使用CSS包含装饰图像，查看其他装饰属性，并讨论布局主题。</p>
+                <p>但是，即使我们有了一个温和的开端，我们也必须再次探讨无障碍性的话题。在模块2中，我们了解到，出于各种原因，使用具有最佳语义的正确标记非常重要，其中之一包括可能有残疾的访客。如果您清楚地将页面导航放在[nav]块中，并使用标题标签和其他标签（如[article]或[main]），那么这可以大大增强某些残疾访问者的页面体验，例如盲人，他们可能会用屏幕阅读器大声朗读页面。</p>
+                <p>可访问性问题对于CSS的使用也很重要。或许更是如此。作为页面作者，如果我们不使用CSS，那么页面访问者只会看到带有默认排版的页面，也许还可以借助一些工具来帮助放大页面、放大文本、反转感光颜色等。但是当我们开始使用CSS自定义页面外观时，我们可能会无意中阻碍这些工具的使用，或使那些有视力问题的人的阅读体验变得不那么舒适。</p>
+                <section><!--Guidelines 指导方针-->
+                    <h3>Guidelines 指导方针</h3>
+                    <p>对于无障碍排版，实际上只有几件事需要避免：</p>
+                    <ol>
+                        <li>不要使文本太小</li>
+                        <li>不要使文本行太紧</li>
+                        <li>不要使用彼此太接近的前景色和背景色，换句话说，确保有良好的颜色对比度</li>
+                        <li>不要不规则地隔开文本或使其跳跃</li>
+                    </ol>
+                    <p>看看这四条准则。您能否将每个准则与之前的一个或多个CSS属性相匹配？花点时间想想。我们将在下面讨论具体规则。</p>
+                </section>
+                <section><!--Properties-->
+                    <h3>Properties</h3>
+                    <h4>font-size</h4>
+                    <p>滥用字体大小可能会使文本太小。所以要小心。此外，过去的金标准做法是使用em单位而不是px。这已不再是事实，但使用em或rem单位的做法肯定是值得鼓励的，而且它应该是处理文本时的默认单位。</p>
+                    <h4>line-height</h4>
+                    <p>线条高度过小会导致线条变得狭窄和难以阅读。即使是最大的文本也可能因行高太小而无法读取。通常，您的行高应始终至少是字体大小的1.5倍（即，行高应大于1.5em）。</p>
+                    <h4>color</h4>
+                    <p>颜色对比度很容易因错误使用颜色属性而取消。对比度的确切规则相当先进。例如，“宽笔划”文本的对比度允许小于窄笔划文本。但是，不管规则如何，整体概念都很容易理解：保持文本与背景的高对比度。对于某些组合（如亮红色背景上的亮蓝色文本），还有进一步的颜色指南，但经验法则是，如果文本对你来说很难阅读，那么就假设它对视觉残疾的人来说是不可读的。如果您感兴趣，有一些工具可以提供帮助，如 <a href="https://contrast-finder.tanaguru.com/" target="_blank"> Tanaguru</a>对比度查找器或颜色对比度分析器 <a href="https://www.tpgi.com/color-contrast-checker/" target="_blank"> （CCA）</a>， <a href=""></a> Monsido的颜色对比度检查器。</p>
+                    <h4>text-align</h4>
+                    <p>任何长文章的对齐方式都应该与阅读顺序相匹配。也就是说，如果语言是英语，从左到右阅读，那么任何一段长的文本都应该左对齐。右对齐或中对齐的文本对于诵读困难者来说可能非常困难。</p>
+                    <p>显然，标题或菜单可能是不需要的，因为它们通常不是很长的文本段落。因此，这条指导方针并不意味着良好的页面布局和排版的终结。</p>
+                    <h3>snmmary</h3>
+                    <p>现在，我们已经了解了排版如何影响页面的可访问性和适用性。这不是很难。常识和意识是很好的伴侣，会很好地为你服务。</p>
+                    <p>这些简单的指导方针只触及表面。如果您对可访问性感兴趣，那么还有更多需要学习的内容（例如，从Medium查看这篇文章-了解字体可访问性的指南）。</p>
+                </section>
+              
             </article>
         </main>
     </body>

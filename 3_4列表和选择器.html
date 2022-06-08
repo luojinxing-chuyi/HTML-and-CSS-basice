@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>3_4列表和选择器</title>
+    </head>
+    <body>
+        <header>
+            <h1>THML与CSS基础/使用CSS添加样式</h1>
+            <h2>列表和选择器</h2>
+            <nav>
+                <details>
+                    <summary>HTML与CSS基础索引</summary>
+                    <ul>
+                        <li><a href="0HTML与CSS基础.html" target="_blank">HTML与CSS基础目录</a></li>
+                    </ul>
+                    <details>
+                        <summary>第一章：我的第一个网页</summary>
+                        <ul>
+                            <li><a href="1_0章节目录.html" target="_blank">第一章目录</a></li>
+                            <li><a href="1_1章节简介.html" target="_blank">1.1章节简介</a></li>
+                            <li><a href="1_2三大要素.html" target="_blank">1.2三大要素</a></li>
+                            <li><a href="1_3元素、标记和属性.html" target="_blank">1.3元素、标记和属性</a></li>
+                            <li><a href="1_4字符编码.html" target="_blank">1.4字符编码</a></li>
+                            <li><a href="1_5最佳实践，智慧.html" target="_blank">1.5最佳实践，智慧</a></li>
+                            <li><a href="1_6关于标签的更多信息.html" target="_blank">1.6关于标签的更多信息</a></li>
+                            <li><a href="1_7测试你的知识.html" target="_blank">1.7测试你的知识</a></li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>第二章：属性、图像和链接</summary>
+                        <ul>
+                            <li><a href="2_0章节目录.html" target="_blank">第二章目录</a></li>
+                            <li><a href="2_1导言.html" target="_blank">2.1章节简介</a></li>
+                            <li><a href="2_2属性.html" target="_blank">2.2属性</a></li>
+                            <li><a href="2_3语义.html" target="_blank">2.3语义</a></li>
+                            <li><a href="2_4图像.html" target="_blank">2.4图像</a></li>
+                            <li><a href="2_5超链接.html" target="_blank">2.5超链接</a></li>
+                            <li><a href="2_6练习模块.html" target="_blank">2.6练习模块</a></li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>第三章：使用CSS添加样式</summary>
+                                <ul>
+                                    <li><a href="3_0第三章目录.html" target="_blank">第三章目录</a></li>
+                                    <li><a href="3.1章节简介.html" target="_blank">3.1章节简介</a></li>
+                                    <li><a href="3_2CSS的基本语法.html" target="_blank"> 3.2CSS的基础语法</a></li>
+                                    <li><a href="3_3CSS属性.html" target="_blank">3.3CSS属性</a></li>
+                                    <li><a href="3_4列表和选择器.html" >3.4列表和选择器</a></li>
+                                    <li><a href="3_5CSS练习.html" target="_blank">3.5CSS练习</a></li>
+                                </ul>                        
+                    </details>
+                </details>
+                </nav>
+                <hr>
+    
+        </header>
+        <hr>
+        <main>
+            <article><!--3.4.1样式列表-->
+                <h2>3.4.1样式列表</h2>
+                <p>列表标记标记（[ul]、[ol]和[li]）是HTML中最常用的特定用途标记。有几个CSS样式的属性可用于列表。</p>
+                <h3>list-style-type 列表样式类型属性</h3>
+                <p>列表样式类型控制通常位于任何列表项左侧的小列表标记。</p>
+                <p>对于未排序列表（[ul]），有几个常用值：disc、circle、square和none。</p>
+                <table style="text-align: center;">
+                    <tr>
+                        <th>html</th>
+                        <th>default</th>
+                        <th>disc</th>
+                        <th>circle</th>
+                        <th>square</th>
+                        <th>none</th>
+                    </tr>
+                    <tr>
+                        <td>     </td>
+                        <td>默认样式</td>
+                        <td>圆点</td>
+                        <td>圆圈</td>
+                        <td>方形点</td>
+                        <td>没有</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">[ul] <br>
+                        [li]eggs[/li] <br>
+                        [li]milk[/li] <br>
+                        [li]bread[/li] <br>
+                        [ul]</td>
+                        <td>
+                            <ul style="list-style-type: default;">
+                                <li>eggs</li>
+                                <li>milk</li>
+                                <li>bread</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul style="list-style-type: disc;">
+                                <li>eggs</li>
+                                <li>milk</li>
+                                <li>bread</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul style="list-style-type: circle;">
+                                <li>eggs</li>
+                                <li>milk</li>
+                                <li>bread</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul style="list-style-type: square;">
+                                <li>eggs</li>
+                                <li>milk</li>
+                                <li>bread</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul style="list-style-type: none;">
+                                <li>eggs</li>
+                                <li>milk</li>
+                                <li>bread</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <p>对于有序列表（[ol]），您可以选择不同的方式显示数字：十进制(decimal)、十进制前导零(decimal-leading-zero)、小写罗马（lower-roman）、大写罗马（upper-roman）、小写字母（lower-alpha）、大写字母（upper-alpha），以及几种世界语言：亚美尼亚语（armenian）、格鲁吉亚语(georgian)、中文(simp-chinese-formal)和其他许多语言。</p>
+                <table style="text-align: center;">
+                    <tr>
+                        <th>HTML</th>
+                        <th>decimal</th>
+                        <th>decimal-leading-zero</th>
+                        <th>lower-roman</th>
+                        <th>upper-alpha</th>
+                        <th>simp-chinese-formal</th>
+                        <th>armenian</th>
+                    </tr>
+                    <tr>
+                        <th>  </th>
+                        <th>十进制</th>
+                        <th>十进制前导零</th>
+                        <th>小写罗马</th>
+                        <th>大写字母</th>
+                        <th>中文</th>
+                        <th>美尼亚语</th>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">[ul] <br>
+                            [li]eggs[/li] <br>
+                            [li]milk[/li] <br>
+                            [li]bread[/li] <br>
+                            [ul]
+                        </td>
+                        <td>
+                            <ol style="list-style-type: decimal;">
+                                <li>eggs</li>
+                                <li>milk</li>
+                                <li>bread</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <ol style="list-style-type: decimal-leading-zero;">
+                                <li>eggs</li>
+                                <li>milk</li>
+                                <li>bread</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <ol style="list-style-type: lower-roman;">
+                                <li>eggs</li>
+                                <li>milk</li>
+                                <li>bread</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <ol style="list-style-type: upper-alpha;">
+                                <li>eggs</li>
+                                <li>milk</li>
+                                <li>bread</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <ol style="list-style-type: simp-chinese-formal;">
+                                <li>eggs</li>
+                                <li>milk</li>
+                                <li>bread</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <ol style="list-style-type: armenian;">
+                                <li>eggs</li>
+                                <li>milk</li>
+                                <li>bread</li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+                <h3>list-style-position 列表样式位置属性</h3>
+                <p>除了选择应用于每个列表项的标记类型外，还可能需要控制它与列表本身的距离。“列表样式位置”属性可处理该问题。这两个值是inside和outside。它们控制标记是放置在列表框的内部还是外部。如果将边框、背景或类似内容应用于列表，则这一点最为明显。下面，我们在列表上加了一个蓝色边框。</p>
+                <h3>list-style-image 列表样式图片属性</h3>
+                <p>列表上的小标记也可以自定义为您选择的图像。这将要求您拥有一个与Web兼容格式（建议使用PNG或JPEG）的小图像，并知道从定义CSS的位置到图像的路径。模块2中介绍了图像路径名，我们将在背景图像部分再次讨论它们。</p>
+                <fieldset class="example-css">
+                    <legend>Example CSS</legend>
+                    <ol>
+                        <li><pre>li { list-style-image: url("my_triangle.png"); }</pre></li>
+                    </ol>
+                </fieldset>
+                <table>
+                    <tr>
+                        <th>list-style-image</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ol style="list-style-image: url(images/3_4_1imags.png);">
+                                <li>eggs</li>
+                                <li>milk</li>
+                                <li>bread</li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+                <p>请注意，浏览器只会绘制图像。无法保证缩放图像或辅助间距或对齐。许多用户觉得列表样式的图像令人沮丧，因此使用了具有更多选项的背景图像CSS属性。有一个部分专门用于“背景图像”属性。</p>
+            </article>
+
+        </main>
+    </body>
+</html>
