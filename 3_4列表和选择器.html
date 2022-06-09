@@ -58,7 +58,9 @@
         <hr>
         <main>
             <article><!--3.4.1样式列表-->
+                <header>
                 <h2>3.4.1样式列表</h2>
+            </header>
                 <p>列表标记标记（[ul]、[ol]和[li]）是HTML中最常用的特定用途标记。有几个CSS样式的属性可用于列表。</p>
                 <h3>list-style-type 列表样式类型属性</h3>
                 <p>列表样式类型控制通常位于任何列表项左侧的小列表标记。</p>
@@ -219,6 +221,208 @@
                     </tr>
                 </table>
                 <p>请注意，浏览器只会绘制图像。无法保证缩放图像或辅助间距或对齐。许多用户觉得列表样式的图像令人沮丧，因此使用了具有更多选项的背景图像CSS属性。有一个部分专门用于“背景图像”属性。</p>
+            </article>
+            <hr>
+            <hr>
+            <article><!--3.4.2选择器-->
+                <h2>3.4.2选择器</h2>
+                <img src="images/3_4_2select-declare.jpg" alt="选择器示例图">
+                <p>前面，我们了解到CSS规则由两部分组成：选择器和声明。我们已经看到了很多不同的声明，但我们学到的唯一选择器是标记选择器。还有其他选择，它们可以以有趣和有用的方式组合在一起。让我们学习更多的CSS选择器。</p>
+                <h3>tag selector 标签选取器</h3>
+                <p>我们已经看过这个了。仅由单个标记（无标点或空格）组成的CSS选择器将应用于页面上的任何匹配标记。</p>
+                <fieldset class="example-css">
+                    <legend>Example CSS</legend>
+                    <ol>
+                        <li><pre>li { list-style-type: circle; }</pre></li>
+                    </ol>
+                </fieldset>
+                <h3>id selector id选择器</h3>
+                <p>您可能还记得id属性（identifier的缩写）。此属性可以应用于HTML标记以唯一标识元素。回想一下，任何给定id属性的值在文档中只能出现一次。不允许两个标记具有相同的id。您可能还记得，id不能包含空格、大多数标点符号，也不能以数字开头。</p>
+                <p>在下面的HTML中，有两个段落标记。因此，为了单独设置样式，我们可以对段落应用唯一的id属性（id=“p18”和id=“p19”）。在CSS中，我们将使用id选择器。id选择器只是一个哈希符号（#），后跟id。</p>
+                <fieldset class="example-css">
+                    <legend>Example CSS</legend>
+                    <ol>
+                        <li><pre>#p18 { color: blue; }</pre></li>
+                        <li><pre>#p19 { color: green; }</pre></li>
+                    </ol>
+                </fieldset>
+                <fieldset class="example-html">
+                    <legend>Example CSS</legend>
+                    <ol>
+                        <li><pre>[p id="p18"]He is Ulysses, a man of great craft, son of Laertes. He was born in rugged Ithaca, and excels in all manner of stratagems and subtle cunning.[/p]</pre></li>
+                        <li><pre>[p id="p19"]Madam, you have spoken truly.[/p]</pre></li>
+                    </ol>
+                </fieldset>
+                <fieldset class="example-result">
+                    <style>
+                        #p18 { color: blue; }
+                        #p19 { color: green; }
+                    </style>
+                    <legend>Example Result</legend>
+                    <p id="p18">He is Ulysses, a man of great craft, son of Laertes. He was born in rugged Ithaca, and excels in all manner of stratagems and subtle cunning.</p>
+                    <p id="p19">Madam, you have spoken truly.</p>
+                </fieldset>
+                <h3>class selector</h3>
+                <p>class属性类似于id。然而，尽管id必须是唯一的和单数的，但class属性的值可以由多个标记共享。而且，只需用空格将多个类分隔开，就可以为一个标记分配多个类。</p>
+                <fieldset class="example-html">
+                    <legend>Example HTML</legend>
+                    <ol>
+                        <li><pre>[ul]</pre></li>
+                        <li><pre>[li class="bird flying"]eagle[/li]</pre></li>
+                        <li><pre>[li class="bird"]ostrich[/li]</pre></li>
+                        <li><pre>[li class="insect"]ant[/li]</pre></li>
+                        <li><pre>[li class="insect flying"]moth[/li]</pre></li>
+                        <li><pre>[/ul]</pre></li>
+                    </ol>
+                </fieldset>
+                <fieldset class="example-css">
+                    <legend>Example CSS</legend>
+                    <ol>
+                        <li><pre>.bird   { color: blue; }
+                        </pre></li>
+                        <li><pre>.insect { color: green; }</pre></li>
+                        <li><pre>.flying { text-decoration: underline; }</pre></li>
+                    </ol>
+                </fieldset>
+                <fieldset class="example-result">
+                    <legend>Example Result</legend>
+                    <style>
+                        .bird   { color: blue; }
+                        .insect { color: green; }
+                        .flying { text-decoration: underline; }
+                    </style>
+                    <ul>
+                        <li class="bird flying">eagle</li>
+                        <li class="bird">ostrich</li>
+                        <li class="insect">ant</li>
+                        <li class="insect flying">moth</li>
+                        </ul>
+                </fieldset>
+            </article>
+            <hr>
+            <hr>
+            <article><!--3.4.3组合选择器-->
+                <header>
+                    <h2>3.4.3组合选择器</h2>
+                </header>
+                <p>能够根据标记、类或id定义CSS选择器是非常强大的。但在文档中的每个标记上放置类是不现实的，更不用说在整个文档中放置唯一的ID了。不断重复CSS规则也很不方便。但通过组合组合选择器，所有这些都可以避免。</p>
+                <h3>Comma separated selectors 逗号分隔选择器</h3>
+                <p>假设我们想将所有的[blockquote]标签、[q]标签以及类字符串中带有“speech”的任何内容都做成红色斜体文本。我们该怎么做？我们可以创建三个单独的规则集。或者，更好的是，我们可以在一个规则集之前用逗号（，）分隔选择器。像这样：</p>
+                <table >
+                    <tr>
+                        <th>separate 分离</th>
+                        <th>joined 集合</th>
+                    </tr>
+                    <tr style="text-align: left;">
+                        <td><pre>blockquote {<br>  color: red;<br>  font-style: italic;<br>} <br>q          {<br>  color: red;<br>  font-style: italic;<br>}<br>.speech    {<br>  color: red;<br>  font-style: italic;<br>}</pre></td>
+                        <td><pre>blockquote,<br>q,<br>.speech {<br>  color: red;<br>  font-style: italic;   <br>}</pre></td>
+                    </tr>
+                </table>
+                <p>右侧的连接版本更易于阅读和维护。</p>
+                <p>如果“speech”项目也需要加粗，只需通过附加规则添加即可：</p>
+                <fieldset class="example-css">
+                    <legend>Example CSS</legend>
+                    <ol>
+                        <li><pre>blockquote,</pre></li>
+                        <li><pre>q,</pre></li>
+                        <li><pre>.speech {</pre></li>
+                        <li><pre>    color: red;</pre></li>
+                        <li><pre>    font-style: italic;</pre></li>
+                        <li><pre>}</pre></li>
+                        <li><pre>.speech { font-weight: bold; }</pre></li>
+                    </ol>
+                </fieldset>
+                <h4>Specialized selectors 专用选择器</h4>
+                <p>如果两个不同类型的选择器（如tag和class）相邻出现，并且没有空格分隔它们，则它们构成专用选择器。要匹配，候选人必须同时匹配这两条规则。如果使用标记选择器，它必须首先出现。</p>
+                <p>这对于类和标记选择器非常有用，例如：</p>
+                <fieldset class="example-css">
+                    <legend>Example CSS</legend>
+                    <ol>
+                        <li><pre>blockquote.speech { font-color: green; }</pre></li>
+                    </ol>
+                </fieldset>
+                <p>在上面的示例中，blockquote.speech选择器是一个blockquote标记选择器，与.speech选择器。因此，这条规则不一定适用于每个blockquote，也不一定适用于speech类的每个元素。相反，它只适用于那些也有speech类的blockquotes标记。</p>
+                <p>以这种方式连接多个类也很常见：</p>
+                <fieldset class="example-html">
+                    <legend>Example HTML</legend>
+                    <ol>
+                        <li><pre>[ul]</pre></li>
+                        <li><pre>[li class="bir flyin"]parrot[/li]</pre></li>
+                        <li><pre>[li class="bir"]ostrich[/li]</pre></li>
+                        <li><pre>[li class="insec"]ant[/li]</pre></li>
+                        <li><pre>[li class="insec flyin"]wasp[/li]</pre></li>
+                        <li><pre>[li class="insec flyin"]moth[/li]</pre></li>
+                        <li><pre>[li class="flyin"]airplane[/li]</pre></li>
+                        <li><pre>[/ul</pre></li>
+                    </ol>
+                </fieldset>
+                <fieldset class="example-css">
+                    <legend>Example CSS</legend>
+                    <ol>
+                        <li><pre>.insect.flying{</pre></li>
+                        <li><pre>    text-decoration: underline;</pre></li>
+                        <li><pre>    font-weight: bold;</pre></li>
+                        <li><pre>}</pre></li>
+                    </ol>
+                </fieldset>
+                <fieldset class="example=result">
+                    <legend>Example Result</legend>
+                    <style>
+                        .insec.flyin {
+                            text-decoration: underline;
+                            font-weight: bold;
+                        }
+                    </style>
+                     <ul>
+                        <li class="bir flyin">parrot</li>
+                        <li class="bir">ostrich</li>
+                        <li class="insec">ant</li>
+                        <li class="insec flyin">wasp</li>
+                        <li class="insec flyin">moth</li>
+                        <li class="flyin">airplane</li>
+                       </ul>
+                </fieldset>
+                <h3>Descendant selectors 使用子选择器</h3>
+                <p>在下面的HTML中，我们看到一些段落中有一些链接（[a]）。链接标记位于段落内，但不一定是直接子项。</p>
+                <fieldset class="example-html">
+                    <legend>Example HTML</legend>
+                    <ol>
+                        <li><pre>[section id="intro"]Welcome to [a href="#palaceland"]PalaceLand[/a], world renown [q]Land of endless palaces and [a href="#delight"]delights[/a][/q]. As you make your way about, remember the words of our founder [blockquote]Shouldn't we have [a href="#chairs"]chairs[/a]? Never made much sense wandering room a room looking for a place to sit a spell. Folk that don't sit are not likely all right in the [a href="#head"]head[/a][/blockquote][/section]</pre></li>
+                        <li><pre>[section id="guideline"]There are guidelines to follow while in [a href="#palaceland"]PalaceLand[/a]. They are outlined on the back of your [q]Daring Footman [a href="#trademark"](tm)[/a][/q] card. But the spirit of the guidelines are best summed up by our founder [blockquote]Don't just [a href="#standthere"]stand there[/a] with your mouth hanging open waiting for a pair of nesting birds.[/blockquote] (and no [a href="#camera_policy"]flash photography[/a] please.)[/section]</pre></li>
+                    </ol>
+                </fieldset>
+                <p>如果我们希望介绍部分中的所有链接都是红色的，而指南部分中的所有链接都是绿色的，那该怎么办？这就是后代选择器的用途。下面是我们面临的问题的一个例子：</p>
+                <fieldset class="example-css">
+                    <legend>Example CSS</legend>
+                    <ol>
+                        <li><pre>#intro a { color: red; }</pre></li>
+                        <li><pre>#guideline a { color: #00FF00; }</pre></li>
+                    </ol>
+                </fieldset>
+                <p>我们仅仅用空格分隔标记、标识符或类选择器。</p>
+                <p>因此，在第一条规则中，我们看到选择器将与#intro的后代的任何[a]标记相匹配。标签可以直接出现在#intro中，也可以隐藏在子项中。结果如下：</p>
+                <p>但是，如果我们想让简介部分的创始人区块引述中的链接加粗怎么办？同样，子代选择器也可以工作。我们添加以下内容：</p>
+                <fieldset class="example-css">
+                    <legend>Example CSS</legend>
+                    <ol>
+                        <li><pre>#intro blockquote a { font-weight: bold; } </pre></li>
+                    </ol>
+                </fieldset>
+                <p>#intro简介部分中[blockquote]任何位置的任何[a]标记现在都将加粗。</p>
+                <fieldset class="example-result">
+                    <legend>Example Result</legend>
+                    <style>
+                        #intro a { color: red; }
+                        #guideline a { color: #00FF00; }
+                        #intro blockquote a { font-weight: bold; }
+                    </style>
+                    <section id="intro">Welcome to <a href="#palaceland">PalaceLand</a>, world renown <q>Land of endless palaces and <a href="#delight">delights</a></q>. As you make your way about, remember the words of our founder <blockquote>Shouldn't we have <a href="#chairs">chairs</a>? Never made much sense wandering room a room looking for a place to sit a spell. Folk that don't sit are not likely all right in the <a href="#head">head</a></blockquote></section>
+                    <section id="guideline">There are guidelines to follow while in <a href="#palaceland">PalaceLand</a>. They are outlined on the back of your <q>Daring Footman <a href="#trademark">(tm)</a></q> card. But the spirit of the guidelines are best summed up by our founder <blockquote>Don't just <a href="#standthere">stand there</a> with your mouth hanging open waiting for a pair of nesting birds.</blockquote> (and no <a href="#camera_policy">flash photography</a> please.)</section>
+                </fieldset>
+                <h3>Direct descendant selectors ( > ) 直接后代选择器（>）</h3>
+                <p>有时，您不想将样式应用于任何可能的子对象，而只想应用于直接子对象。这可以使用>符号完成。在选择器之间使用它可以将应用程序限制为父级的直接子级。例如，如果将此规则应用于上一个选择器的HTML，则会导致简介部分中的链接变大，但不会导致任何嵌套引号或块引号中的链接变大</p>
+               
+
             </article>
 
         </main>
