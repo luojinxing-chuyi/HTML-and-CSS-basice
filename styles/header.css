@@ -1,10 +1,13 @@
-nav{
-    border-bottom: 1px solid black;
+nav summary{
+    font-weight: bold;
 }
-.catalogs ul{
-    list-style-type: none;
-    padding-left: 0;
+nav a{
+    text-decoration: none;
+    color: darkgray;
 }
-.catalog{
-    display: inline-block;
+header{
+    background-color: cornsilk;
+}
+body{
+    background-color:beige;
 }

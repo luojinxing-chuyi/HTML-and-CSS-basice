@@ -421,10 +421,159 @@
                 </fieldset>
                 <h3>Direct descendant selectors ( > ) 直接后代选择器（>）</h3>
                 <p>有时，您不想将样式应用于任何可能的子对象，而只想应用于直接子对象。这可以使用>符号完成。在选择器之间使用它可以将应用程序限制为父级的直接子级。例如，如果将此规则应用于上一个选择器的HTML，则会导致简介部分中的链接变大，但不会导致任何嵌套引号或块引号中的链接变大</p>
-               
-
+                <fieldset class="examlple-css">
+                    <legend>Example CSS</legend>
+                    <ol>
+                        <li><pre>#intro > a { font-size: large; }</pre></li>
+                    </ol>
+                </fieldset>
+                <h3>Everything selector (*)所有内容选择器（*）</h3>
+                <p>星号（*）可用于匹配任何标记。就其本身而言，这只是略微有用。但与其他选择器组合成后代选择器时，它可能非常有用。</p>
+                <fieldset class="example-css">
+                    <legend>Example CSS</legend>
+                    <ol>
+                        <li><pre>body > * { margin-left: 10px; } /* 正文的所有直系子代都获得了边缘 */</pre></li>
+                        <li><pre>p * { text-decoration: underline; } /* 这段文字将是正常的，但其中任何一个孩子都将加下划线 */</pre></li>
+                    </ol>
+                </fieldset>
             </article>
+            <article><!--3.4.4级联：继承和优先-->
+                <header>
+                    <h2>3.4.4级联：继承和优先</h2>
+                </header>
+                <h3>继承 Inheritance</h3>
+                <p>现在我们已经介绍了定义CSS选择器的几种方法，我们需要了解当多个选择器解析到同一个元素时会发生什么，以及一个元素如何从其父元素获取继承规则。</p>
+                <p>还记得我们说过“现在不要担心‘级联’部分…”在本模块开始时？好吧，那是过去，这是现在。从现在起，您需要担心级联。</p>
+                <p>大多数CSS规则一旦应用于一个元素，也会应用于该元素的所有子元素，以及它们的子元素和无限的子元素。也有例外，尤其是布局属性（边距、填充、位置、宽度等）和装饰属性（边框、背景等）不层叠。CSS属性从父级到子级的级联也称为“继承”。</p>
+                <p>一般来说，继承是一件好事。是否希望整个页面使用公司认可的Web字体？</p>
+                <p>正文{字体系列：“无灵魂”，衬线；}这就是你所需要的。无需对页面中使用的每个标记应用相同的字体族属性。谢谢你，级联！</p>
+                <p>然而，有时继承可能是一件坏事。一个元素可能会突然以您意想不到的方式显示，并且您无法找到该元素的任何相关CSS规则。在这种情况下，一个可能的罪魁祸首是从父级继承的CSS规则。谢谢，级联！</p>
+                <p>可以显式利用继承。许多CSS属性接受inherit的值，这意味着从父级继承该值。通过巧妙地利用inherit，您可以减少CSS规则中的重复，并使项目更易于维护。</p>
+                <p>在下面的示例中，我们看到了一段关于孩子和孙子的内容。CSS规则应用于将字体系列设置为单空格的段落，填充设置为40像素。请注意，在结果中，字体族应用于所有子项，而填充仅应用于段落本身，其子项都不会继承填充。</p>
+                <fieldset class="example-html">
+                    <legend>Example HTML</legend>
+                    <ol>
+                        <li><pre>[p]This paragraph has children [span]spans[/span] and [span]q[/span], which, in turn, have their own child [span]spans[/span].[q]With this structure, we can see how some CSS [span]rules[/span] are[span]applied across a [q]variety[/q][/span] of scopes.[/q][/p]</pre></li>
+                    </ol>
+                </fieldset>
+                <fieldset class="example-css">
+                    <legend>Example CSS</legend>
+                    <ol>
+                        <li><pre>p {</pre></li>
+                        <li><pre>/* 由p的子女继承 */</pre></li>
+                        <li><pre>font-family: monospace;</pre></li>
+                        <li><pre>/*未继承*/</pre></li>
+                        <li><pre> padding: 40px;</pre></li>
+                        <li><pre>}</pre></li>
+                    </ol>
+                </fieldset>
+                <fieldset class="example-result" id="example3441">
+                    <legend>Example Result</legend>
+                    <style>
+                        #example3441 p { 
+                            /* inherited by children of p */
+                            font-family: monospace;  
+                            /* not inherited */ 
+                            padding: 40px;       
+                        }
+                    </style>
+                    <p>This paragraph has children <span>spans</span> and <span>q</span>, which, in turn, have their own child <span>spans</span>.
 
+                        <q>With this structure, we can see how some CSS <span>rules</span> are
+                        <span>applied across a <q>variety</q></span> of scopes.</q>
+                        </p>
+                </fieldset>
+                <p><strong>讨论：</strong></p>
+                <p>在右边，我们添加了另一个CSS规则，该规则指示span和q元素的填充应该从其父元素继承。看右边的结果，填充非常明显。</p>
+                <fieldset class="example-css">
+                    <legend>Example CSS</legend>
+                    <ol>
+                        <li><pre>p {</pre></li>
+                        <li><pre>/* 由p的子女继承 */</pre></li>
+                        <li><pre>font-family: monospace;</pre></li>
+                        <li><pre>/*未继承*/</pre></li>
+                        <li><pre> padding: 40px;</pre></li>
+                        <li><pre>}</pre></li>
+                        <li><pre>span, q {</pre></li>
+                        <li><pre>padding: inherit;</pre></li>
+                        <li><pre> }</pre></li>
+                    </ol>
+                </fieldset>
+                <fieldset class="example-result" id="example3442">
+                    <legend>Example Result</legend>
+                    <style>
+                        #example3442 p { 
+                            /* inherited by children of p */
+                            font-family: monospace;  
+                            /* not inherited */ 
+                            padding: 40px;  
+                        }
+                        #example3442 span, 
+                        #example3442 q {
+                            padding: inherit; 
+                        }     
+                                
+                    </style>
+                    <p>This paragraph has children <span>spans</span> and <span>q</span>, which, in turn, have their own child <span>spans</span>.
+
+                        <q>With this structure, we can see how some CSS <span>rules</span> are
+                        <span>applied across a <q>variety</q></span> of scopes.</q>
+                        </p>
+                </fieldset>
+                <h3>哪些规则是可继承的？</h3>
+                <p>对于哪些CSS属性默认可继承，哪些不可继承，没有可靠的规则。但是，通常不会继承与定位和布局关联的属性。同样，装饰特性（边框、背景图像等）也不会继承。大多数以文本或字体开头的属性继承。</p>
+                <h3>优先级</h3>
+                <p>可以很容易地将多个不同的CSS规则应用于同一个元素。这通常是有利的，因为大多数CSS属性彼此正交，这意味着它们不会相互干扰。这使我们可以自由地按照规则组织CSS属性，以使我们作为开发人员有意义，因为我们知道它们可以很好地组合。例如，一段文字可以按一条规则倾斜，按另一条规则加粗，按第三条规则加下划线。如果我们不方便的话，我们不必把所有这些财产放在一个地方。</p>
+                <p>但是，如果有不同的规则竞争为同一属性设置不同的值，会发生什么情况？这就是CSS优先级发挥作用的地方。呈现CSS时，浏览器会遵循一些准则来解决冲突规则。以下是大致的总结，顺序如下：</p>
+                <h4>1-最具体的规则</h4>
+                <p>更具体的规则优先于不太具体的规则。将应用比一般规则更紧密地匹配特定元素的规则。</p>
+                <fieldset class="example-css">
+                    <legend>Exanple CSS</legend>
+                    <ol>
+                        <li><pre>span { color: blue; }</pre></li>
+                        <li><pre>ul li span { color: red; }</pre></li>
+                    </ol>
+                </fieldset>
+                <p>在上面的示例中，这两个规则都试图为列表项内的范围设置范围颜色。然而，当发生冲突时，第二条规则将“获胜”（如本例中的颜色）。</p>
+                <h4>2-#id选择器是最具体的</h4>
+                <p>带有id选择器（例如#someid）的规则被认为比没有id的规则更具体。</p>
+                <h4>3- .类选择器比标记选择器更具体</h4>
+                <p>使用类选择器（例如someclass）的规则被认为比没有的规则更具体（但没有#id选择器那么具体，后者胜过一切）。</p>
+                <h4>4-晚来的规则优先于早来的规则</h4>
+                本指南适用于具有相同选择器的两个CSS规则集。如果存在冲突，则适用后一条规则。
+                <h3>不要害怕</h3>
+                <p>这些指导方针似乎相当简单，但情况很快就会变得相当棘手。例如，在这种情况下，我们应该期望什么颜色？</p>
+                <table>
+                    <tr>
+                        <th>HTML</th>
+                        <th>CSS</th>
+                    </tr>
+                    <tr>
+                        <td><pre>[p class="forest"][span class="tree"]arbol[/span][/p]</pre></td>
+                        <td><pre> p.forest span       { color: green; } <br>p        span.tree  { color: blue;  }</pre></td>
+                    </tr>
+                </table>
+                <p>如果CSS规则的顺序颠倒了怎么办？这会有所不同吗？</p>
+                <p>如果这个问题似乎很难解决，不要担心。在下一节中，我们将介绍Chrome开发工具。您将看到如何使用浏览器本身中的工具来检查元素，并确切地看到继承、应用了哪些CSS规则和属性，以及它们的优先级是什么。</p>
+                <fieldset class="example-result" id="example3443">
+                    <legend>Example Result</legend>
+                    <style>
+                        #example3443 p.forest span       { color: green; }
+                        #example3443 p        span.tree  { color: blue;  }
+                    </style>
+                    <p class="forest"><span class="tree">arbol</span></p>
+                </fieldset>
+                <h4>!重要的 ！important</h4>
+                <p>因为多个CSS选择器可以解析为同一个元素，而且控制优先级的规则很复杂，所以您可能会不时遇到这样的情况，即您需要应用特定的CSS属性，并且无论发生什么情况，都希望它优先于所有其他属性！重要人物会这样做的。</p>
+                <p>感叹号是必需的，整个符号（！important）位于值之后分号（；）之前。</p>
+                <fieldset class="example-css">
+                    <legend>Example CSS</legend>
+                    <ol>
+                        <li><pre>p { color: orange !important; }</pre></li>
+                    </ol>
+                </fieldset>
+                <p>这似乎是一个很有吸引力的选择，但不建议使用它。一旦您开始使用它，那么您最终将与正在使用的各种规则发生冲突！重要的是，从这场冲突中无法逃脱。如果您在优先级方面有问题，最好的建议是直接修复它们，而不是使用！重要的</p>
+            </article>
         </main>
     </body>
 </html>
