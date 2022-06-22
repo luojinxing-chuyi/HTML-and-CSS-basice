@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>4.3盒子模型</title>
+        <link rel="stylesheet" href="styles/header.css">
+    </head>
+    <body>
+        <header>
+                    <h1>THML与CSS基础/使用CSS添加样式</h1>
+                    <h2>盒子模型</h2>
+                    <nav>
+                        <details>
+                            <summary>HTML与CSS基础索引</summary>
+                            <ul>
+                                <li><a href="0HTML与CSS基础.html" target="_blank">HTML与CSS基础目录</a></li>
+                            </ul>
+                            <details>
+                                <summary>第一章：我的第一个网页</summary>
+                                <ul>
+                                    <li><a href="1_0章节目录.html" target="_blank">第一章目录</a></li>
+                                    <li><a href="1_1章节简介.html" target="_blank">1.1章节简介</a></li>
+                                    <li><a href="1_2三大要素.html" target="_blank">1.2三大要素</a></li>
+                                    <li><a href="1_3元素、标记和属性.html" target="_blank">1.3元素、标记和属性</a></li>
+                                    <li><a href="1_4字符编码.html" target="_blank">1.4字符编码</a></li>
+                                    <li><a href="1_5最佳实践，智慧.html" target="_blank">1.5最佳实践，智慧</a></li>
+                                    <li><a href="1_6关于标签的更多信息.html" target="_blank">1.6关于标签的更多信息</a></li>
+                                    <li><a href="1_7测试你的知识.html" target="_blank">1.7测试你的知识</a></li>
+                                </ul>
+                            </details>
+                            <details>
+                                <summary>第二章：属性、图像和链接</summary>
+                                <ul>
+                                    <li><a href="2_0章节目录.html" target="_blank">第二章目录</a></li>
+                                    <li><a href="2_1导言.html" target="_blank">2.1章节简介</a></li>
+                                    <li><a href="2_2属性.html" target="_blank">2.2属性</a></li>
+                                    <li><a href="2_3语义.html" target="_blank">2.3语义</a></li>
+                                    <li><a href="2_4图像.html" target="_blank">2.4图像</a></li>
+                                    <li><a href="2_5超链接.html" target="_blank">2.5超链接</a></li>
+                                    <li><a href="2_6练习模块.html" target="_blank">2.6练习模块</a></li>
+                                </ul>
+                            </details>
+                            <details>
+                                <summary>第三章：使用CSS添加样式</summary>
+                                        <ul>
+                                            <li><a href="3_0第三章目录.html" target="_blank">第三章目录</a></li>
+                                            <li><a href="3.1章节简介.html" target="_blank">3.1章节简介</a></li>
+                                            <li><a href="3_2CSS的基本语法.html" target="_blank"> 3.2CSS的基础语法</a></li>
+                                            <li><a href="3_3CSS属性.html" target="_blank">3.3CSS属性</a></li>
+                                            <li><a href="3_4列表和选择器.html" >3.4列表和选择器</a></li>
+                                            <li><a href="3_5CSS练习.html" target="_blank">3.5CSS练习</a></li>
+                                        </ul>                        
+                            </details>
+                            <details>
+                                <summary>第四章：修复和调试</summary>
+                                <ul>
+                                    <li><a href="4_0章节目录.html" target="_blank">4.0章节目录</a></li>
+                                    <li><a href="4_1简介.html" target="_blank">4.1章节简介</a></li>
+                                    <li><a href="4_2工具.html" target="_blank">4.2工具</a></li>
+                                    <li><a href="4_3盒子模型.html" target="_blank">4.3盒子模型</a></li>
+                                    <li><a href="4_4优先顺序.html" target="_blank">4.4优先顺序</a></li>
+                                    <li><a href="4_5让你的大脑得到锻炼.html" target="_blank">4.5让你的大脑得到锻炼</a></li>
+                                </ul>
+                            </details>
+                        </details>
+                    </nav>
+        
+        </header>
+        <hr>
+        <hr>
+        <main>
+            <article><!--4.3.1 CSS盒模型-->
+                <header>
+                    <h2>4.3.1 CSS盒模型</h2>
+                </header>
+                <p>在我们深入调试之前，更深入地了解CSS的几个方面是很有帮助的。</p>
+                <p>网页上元素的放置可能相当复杂。CSS框模型是影响Web页面上内容去向的最基本特性之一。长方体模型控制CSS的3个重要间距特性。我们之前了解到边距是元素之间的空间。还有两个类似的概念，填充和边框。</p>
+                <p>也许最好的理解方式是通过图片：</p>
+                <img src="images/4_3_1boxmodel.jpg" alt="">
+                <p>html文档中的所有元素最终都被视为窗口中某个地方的矩形。每个矩形的内容对应于下图中最内侧的矩形。内容的外部是填充。这有点像一个内部边距，意味着它将内容与边框分隔开。边框基本上跟踪填充矩形的边。</p>
+                <p>需要注意的是，边框围绕内容和填充。有时与元素相关联的可见事物在技术上不属于元素内容的一部分。其中一个示例是列表项：</p>
+                <ul>
+                    <li style="border: solid blue">我在一个蓝色的盒子里</li> 
+                </ul>
+                <p>框中不包含项目符号，因为它位于内容之外。有时，当您看到它可能有点令人困惑时，尤其是因为它也会影响填充（在边框内）。</p>
+                <ul>
+                    <li style="border: solid blue; padding-left: 1rem"  >padding-left: 1rem;(左侧填充：1rem；)</li>
+                </ul>
+                <p>有一个列表样式选项“列表样式位置”，可用于将项目符号作为内容的一部分包括在内：</p>
+                <ul>
+                    <li style="border: solid blue;list-style-position: inside;padding-left: 1rem">list-style-position: inside; padding-left: 1rem;(列表样式位置：内部；左侧填充：1rem；)</li>
+                </ul>
+                <p>现在，项目符号位于边框内，填充会影响项目符号和文本。</p>
+                <p>border属性的选项比padding或margin多得多。想象一下，使用钢笔绘制矩形的边。您可以选择笔的厚度，以及绘制实线还是虚线。你甚至可以选择转弯的方式，无论是急转弯还是更平缓的圆形。所有这些特性都可以由CSS属性控制，如边框宽度、边框样式和边框半径。</p>
+                <p>虽然所有这些边框属性都有默认值，但在指定边框时，有三个最常见的属性：边框宽度（假想笔的大小）、边框样式（虚线、虚线、实线等）和边框颜色（笔的颜色）。事实上，这些都是如此常见的指定，以至于有一种速记语法可以将所有三个设置在一行中：</p>
+                <p style="border:5px solid blue">border: 5px solid blue;</p>
+                <p>还有很多其他的捷径可以学习，但这一条很常见。要绘制边框，您需要知道边框的宽度、样式和颜色。这些值有默认值，因此从技术上讲，您不需要指定所有这些值，但这是所需的最少信息，而且非常常见。</p>
+                <p>正如我们前面所了解的，边距指定元素相对于相邻元素的位置，可以是右侧或左侧，也可以是顶部或底部。边距始终是透明的，并且可以单独设置每一侧。边距的独特之处在于，任何边的值都可以是负数，即使这意味着它与页面上的另一个元素重叠。当您想要控制元素在页面上的位置时，这会很有用。</p>
+                <p>在以下图片中，黑色矩形包含内容：</p>
+                <img src="images/4_3_1P25.png" alt="">
+                <img src="images/4_P26.png" alt="">
+                <p>在左边，我们看到三个块之间没有边距。右侧是相同的3个块，但现在块2的左边距为正，在块1和块2之间创建了空间。块3的左边距为负，导致其左侧与块2重叠。</p>
+                <p>边界可能更容易理解，因为它通常是可见的，尽管它不一定是可见的。与边距（或填充）不同，有更多选项可以控制边框的大小、形状、颜色和样式。您甚至可以创建完全或部分透明的边框，也可以将边框的颜色与背景的颜色相匹配，基本上使其不可见。但它仍然存在，占用了页面上的一些空间，并影响了浏览器中显示的元素的位置。边框的宽度控制其大小（厚度），因此只有接受大于或等于0的数字才有意义。如果边框宽度小于0，浏览器的操作是未定义的，不应依赖于此。</p>
+                <img src="images/4_3_2P27.png" alt="">
+                <p>上面，块1、2和3都有宽度不同的边框，但边距为零。没有重叠，无论其宽度如何，边界都是相对的。内容有不同的位置，受边框宽度的影响。如果我们要使边框不可见（完全透明），那么内容的位置将是相同的。</p>
+                <p>边框内是填充物。这将控制元素内容和边框框之间的空间量（无论是否可见）。如果没有填充，那么元素的内容（可能是文本或图像）将正好对着边框，如果有可见的边框，这可能会很尴尬。</p>
+                <p>与边缘和边界一样，所有四个边都可以独立设置。填充区域的背景与元素的背景匹配，因此元素的有效可见大小包括填充。</p>
+                <img src="images/4_3_2P28.png" alt="">
+                <p>在这里，我们在内容周围有一个很薄的边框，用来描述内容结束和填充开始的位置。同样，内容受填充宽度的影响，但现在填充的背景与内容的背景相同。这使它看起来更像是内容被扩展了。</p>
+                <p>如果我们给这些添加一个薄边框，我们会看到内容和边框之间的空白反映了填充。</p>
+                <img src="images/4_3_2P29.png" alt="">
+                <p>所有这些都可以具有0的宽度，这相当于没有它们，因此“边距：0；”与“边距：无；”相同。每个都可以用相对或绝对长度单独控制。虽然填充和边框需要非负宽度，但边距可以是正宽度，也可以是负宽度。</p>
+                <p>结合使用这三种设置可以在间距和绘制边框方面提供相当大的灵活性。如果有填充和可见边框，则可以控制边框与内容的距离。通过设置边距，可以控制边界与周围图元的距离。</p>
+                <p>甚至可以使用“边界半径”（border radius）设置提供边界圆角：</p>
+                <img src="images/4_3_2P30.png" alt="">
+                <input type="button" value="Block1" style="background-color: cornflowerblue; border: solid 10px brown; padding: 15px; border-radius: 10px">
+            </article>
+            <article><!--4.3.2箱型调试-->
+                <header>
+                    <h2>4.3.2箱型调试</h2>
+                </header>
+                <p>在任何浏览器的调试器中，都会看到一个长方体模型图。看起来是这样的：</p>
+                <img src="images/4_3_2CSS-box-model.png" alt="">
+                <p>这是所选元素的长方体模型信息图的示例。最里面的框给出元素的尺寸，外部是填充，然后是边框，边框周围是边距。每个对应矩形的每一侧都是该侧的宽度（以像素为单位），当它为0（基本上不存在）时，用“-”表示。此外，当您将鼠标悬停在其中一个矩形上时，元素的该部分将在呈现的页面上高亮显示，以便您可以确切地看到边距、边框、填充和元素的位置。</p>
+                <p>因此，在上述示例中：</p>
+                <ul>
+                    <li>居中的蓝色框对应于被检查元素的大小：宽度为536像素，高度为118像素</li>
+                    <li>padding仅由值为40像素的padding left定义</li>
+                    <li>每侧有5个像素的边框</li>
+                    <li>未定义左边距和右边距（默认值为0像素）</li>
+                    <li>边距顶部和边距底部等于16像素</li>
+                </ul>
+            </article>
+            
+
+        </main>    
+        
+    </body>
+        
+</html>

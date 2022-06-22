@@ -1,0 +1,156 @@
+0
+00:00:00,680 --> 00:00:06,065
+Okay, let's see the Box Model here in our Web page.
+
+1
+00:00:06,065 --> 00:00:09,530
+So, I'm going to start the developers tools.
+
+2
+00:00:09,530 --> 00:00:13,580
+I'm going to "Inspect Element" here.
+
+3
+00:00:13,580 --> 00:00:15,480
+And for the Box Model,
+
+4
+00:00:15,480 --> 00:00:18,515
+this comes in the "Styles" pane
+
+5
+00:00:18,515 --> 00:00:22,815
+and should be in the "Layout" tab in Microsoft Edge.
+
+6
+00:00:22,815 --> 00:00:25,460
+So now, we're looking at
+
+7
+00:00:25,460 --> 00:00:29,150
+the Box Model for the body elements.
+
+8
+00:00:29,150 --> 00:00:32,420
+So for the body of the HTML page,
+
+9
+00:00:32,420 --> 00:00:35,555
+we can see there is a little bit of margin here.
+
+10
+00:00:35,555 --> 00:00:37,570
+There is no border and there
+
+11
+00:00:37,570 --> 00:00:39,770
+is no padding and the content of
+
+12
+00:00:39,770 --> 00:00:44,413
+the body is taking this amount of space.
+
+13
+00:00:44,413 --> 00:00:54,110
+So, I'm going to move on and focus on our list here.
+
+14
+00:00:54,110 --> 00:00:55,408
+For the list here,
+
+15
+00:00:55,408 --> 00:00:57,854
+you can see there is an offset,
+
+16
+00:00:57,854 --> 00:00:59,405
+some margin as well,
+
+17
+00:00:59,405 --> 00:01:03,560
+and there is some padding on the left and
+
+18
+00:01:03,560 --> 00:01:08,149
+there is the content of the list.
+
+19
+00:01:08,149 --> 00:01:13,971
+So I'm going to add a border for my list here.
+
+20
+00:01:13,971 --> 00:01:15,565
+My border is going to be...
+
+21
+00:01:15,565 --> 00:01:22,995
+I'm thinking 4 pixels solid style and green color.
+
+22
+00:01:22,995 --> 00:01:27,690
+So now, I see this around my list here.
+
+23
+00:01:27,690 --> 00:01:32,190
+So, if I go to check the Box Model for my list,
+
+24
+00:01:32,190 --> 00:01:34,465
+I see that now I have a border of
+
+25
+00:01:34,465 --> 00:01:37,598
+4 pixels on all sides.
+
+26
+00:01:37,598 --> 00:01:39,295
+We can change that, actually.
+
+27
+00:01:39,295 --> 00:01:41,565
+So let's make it a little bit thicker.
+
+28
+00:01:41,565 --> 00:01:44,450
+So it's 10 pixels from the top.
+
+29
+00:01:44,450 --> 00:01:47,715
+I can do the same for all sides of the border.
+
+30
+00:01:47,715 --> 00:01:50,895
+And you see that there is no padding.
+
+31
+00:01:50,895 --> 00:01:52,898
+I can add a little bit of padding, too,
+
+32
+00:01:52,898 --> 00:01:56,000
+and see what happens.
+
+33
+00:01:56,000 --> 00:02:00,030
+Margin also, we can like increase the margin or decrease
+
+34
+00:02:00,030 --> 00:02:02,790
+the margin and see how that's going
+
+35
+00:02:02,790 --> 00:02:05,833
+to like effect things on my page.
+
+36
+00:02:05,833 --> 00:02:09,490
+So let's put it back.
+
+37
+00:02:10,400 --> 00:02:14,500
+And that's it for this demo.
+
+38
+00:02:14,500 --> 00:02:15,520
+See you next time.
+

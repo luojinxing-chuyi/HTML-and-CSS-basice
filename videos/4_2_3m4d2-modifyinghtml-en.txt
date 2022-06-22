@@ -1,0 +1,114 @@
+Welcome. In this demo,
+I'm going to show how you can use the developers tools in
+your browser to modify your HTML elements, and
+their attribute values, as well as your CSS properties
+and their values to make modifications to your Web page,
+immediately see their effect on the page.
+And when you become happy with the values you have
+experimented with, and you
+have reached the results you want,
+you can take those values to your code,
+save them and have the page
+render the same way every time.
+So, if you recall from
+the previous lesson that the way to
+bring up the developers tools of your browser
+is to either press F12 in your keyboard, or use
+the mouse to inspect any of
+the elements or the sections on your Web page.
+So I'm going to go with that approach
+here, and right click anywhere on my page,
+and it shows "Inspect Element",
+which is not bring up the developer's tools for me.
+I'm using Microsoft Edge
+as my browser today in this demo.
+And as you can see,
+I did a right click on this list item here,
+so it brought up the developers tools for me, and it was
+highlighted on this particular element
+I choose to inspect.
+So, for this demo I'm thinking,
+maybe I will change
+this image here to show you how you can
+modify your values in
+your tags and see them right away on the Web page.
+So I'm going to go to my image here,
+and I'm thinking to use
+another image other than this one.
+So, to do a modification on the HTML tag,
+you'll just go to the tag you would like to change,
+double click on it so it brings you up in an edit mode.
+I know that I have another image in this tag,
+it just has another filename,
+so I'm going to move this filename here, and use
+the other image I know I have it here.
+So, I do my modifications and then press "Enter".
+And I should see the changes right away on the Web page.
+So I see this seagull bird here,
+but it doesn't really work
+well for that context of my page so
+I'm going to put it back to the right image here.
+And this is how you can modify your HTML elements.
+One more thing you can modify in
+the developer's tools is the tyles, the CSS styles.
+And there is a pane
+for that here in
+the developers tools, so on the right here,
+this is the pane for your CSS values.
+So I'm here on this image tag.
+It's highlighted, so that means it is selected,
+so I can change the width.
+So as you see here,
+it's set to 400 pixels.
+I can change this value again by right clicking on it,
+and let's say I'm going to do 1000.
+See how changing the value changes
+the width of the image on the page right away, and you get
+to see your modifications right away.
+So, this is a nice tool to try different values.
+If you're not happy with how your page is rendered,
+you can try different values
+here in the developer's tools.
+And once you're settled and happy with the results,
+you can copy those values to your code.
+So, I'm going to click this back to 400.
+There is also an option here to uncheck a style so that
+it deletes or it takes away from the effect,
+so it's basically ineffective here.
+I'm going to put it back.
+There is also a way to try new stuff,
+so let's try new styles.
+So let's say, for example,
+I want to make a background.
+I want to make a highlight on
+this module because it's really important.
+So I'm gonna go to it and I'm going to select "Elements".
+I'm going to select this element,
+brings me up to where it is in the code.
+I'm gonna try a background style
+on it and see how it looks like.
+And you see in Microsoft Edge developers tools,
+there is an IntelliSense here that really comes handy and
+helpful so that you don't need to memorize
+every single CSS property or style.
+So I'm going to use a background of
+yellow, maybe light yellow is better.
+So you see your styles,
+the styles get rendered on the page right away,
+and this is really cool.
+And I think I also want to apply a font color here.
+So, I'm going to change the color of this one to,
+how about red, or orange red?
+So you see how it's like your values
+get rendered on the page right away.
+Also, you can remove one of the properties,
+or keep them, or remove them both.
+And as you see here on this pane here,
+as you put a style into effect,
+it gets added to the tag.
+So this is another way to tell you,
+if you want to keep this style,
+you should change your HTML code to add
+this style attribute to your tag.
+That's it for this demo,
+and I'll see you in the next one.

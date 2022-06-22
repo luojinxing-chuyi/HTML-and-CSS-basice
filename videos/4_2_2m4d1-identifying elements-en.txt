@@ -1,0 +1,85 @@
+Hello and welcome to
+Module 4 of HTML5 and CSS Fundamentals Course.
+As you know, in this module we're going to cover
+parts for debugging your HTML page,
+identify where HTML elements are in your code,
+how they are rendered on the page
+if you need to fix something.
+And to start with that,
+we need to learn the tool that
+you are going to use to do that.
+Microsoft Edge, which is
+the browser we're using in this demo,
+we have developer tools which similarly come in most of
+the browsers and modern browsers now.
+And those developer tools are
+usually evoked or initiated by
+pressing F12 on your keyboard,
+or by going anywhere on your Web page,
+right click, and choose
+"Views Source", or "Inspect Element".
+Both of these options should bring up
+the developer's tools in your browser.
+So I'm going to say "Inspect Element",
+which brings up this part here in my browser,
+which is basically the developer's tools.
+And as you see here in Microsoft Edge,
+it's divided into tabs for Console,
+Debugger Network, Performance and others.
+For our course, we're only
+concerned with this tab here, the DOM Explorer,
+and as you may know,
+DOM stands for the Document Object Model,
+which is basically the building parts of
+your Web page which
+is basically your HTML elements and tags.
+The view in this tab is divided into two parts.
+The right part here is concerned with
+the styles of your elements,
+which come from the CSS properties
+and CSS values you're using on the page.
+There is Styles here and there is
+Computed Styles and Layout which we
+are going to cover later in
+this course and other modules and in this module as well.
+So now, for the DOM elements, as you may see,
+there is a lot of parts that get
+highlighted as I move my mouse over here,
+which is how you're going to
+identify your HTML parts of the page.
+So, these are two buttons here in this tab.
+So the first button here is to select element.
+So when you press on this one and
+you go hover over our
+"Select Any Element" on your page and hover over it,
+you'll see that this is considered a part.
+There is a tag for this.
+There is a tag for this, and
+there's a tag for this, and so on.
+So when you hover over them, they get highlighted.
+But if you want to see where it is in your HTML code,
+you get to click on it.
+So I want to investigate or see
+the HTML code that's responsible for
+this bullet point or list item here.
+So I'm going to click on it, so it
+brings me here to where that is.
+I see it's an anchor tag that's inside the list item.
+And this is a list item in an unordered list.
+So, as you may see here,
+as I move my mouse in the code also,
+the parts and the page get highlighted.
+So this is the other way round like if
+you're looking at code
+and you don't know where that is in the page,
+so you're just move your mouse
+or hover over those elements in the code, and
+they get highlighted on the page, and then you
+get to see where they are or how they are rendered.
+So, these are the two useful explorers
+or investigation points in
+your DOM Explorer that help you identify where
+your HTML elements are in
+the code, and how they are rendered on the Web page.
+That's it for this demo,
+and I will see you in the next one.

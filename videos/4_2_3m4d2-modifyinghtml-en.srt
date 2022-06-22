@@ -1,0 +1,456 @@
+0
+00:00:00,160 --> 00:00:02,945
+Welcome. In this demo,
+
+1
+00:00:02,945 --> 00:00:06,340
+I'm going to show how you can use the developers tools in
+
+2
+00:00:06,340 --> 00:00:10,690
+your browser to modify your HTML elements, and
+
+3
+00:00:10,690 --> 00:00:14,755
+their attribute values, as well as your CSS properties
+
+4
+00:00:14,755 --> 00:00:19,870
+and their values to make modifications to your Web page,
+
+5
+00:00:19,870 --> 00:00:23,585
+immediately see their effect on the page.
+
+6
+00:00:23,585 --> 00:00:26,110
+And when you become happy with the values you have
+
+7
+00:00:26,110 --> 00:00:27,820
+experimented with, and you
+
+8
+00:00:27,820 --> 00:00:29,470
+have reached the results you want,
+
+9
+00:00:29,470 --> 00:00:31,745
+you can take those values to your code,
+
+10
+00:00:31,745 --> 00:00:33,310
+save them and have the page
+
+11
+00:00:33,310 --> 00:00:36,485
+render the same way every time.
+
+12
+00:00:36,485 --> 00:00:39,010
+So, if you recall from
+
+13
+00:00:39,010 --> 00:00:41,020
+the previous lesson that the way to
+
+14
+00:00:41,020 --> 00:00:43,330
+bring up the developers tools of your browser
+
+15
+00:00:43,330 --> 00:00:48,475
+is to either press F12 in your keyboard, or use
+
+16
+00:00:48,475 --> 00:00:51,175
+the mouse to inspect any of
+
+17
+00:00:51,175 --> 00:00:54,820
+the elements or the sections on your Web page.
+
+18
+00:00:54,820 --> 00:00:57,160
+So I'm going to go with that approach
+
+19
+00:00:57,160 --> 00:00:59,650
+here, and right click anywhere on my page,
+
+20
+00:00:59,650 --> 00:01:02,080
+and it shows "Inspect Element",
+
+21
+00:01:02,080 --> 00:01:06,560
+which is not bring up the developer's tools for me.
+
+22
+00:01:06,560 --> 00:01:08,710
+I'm using Microsoft Edge
+
+23
+00:01:08,710 --> 00:01:11,070
+as my browser today in this demo.
+
+24
+00:01:11,070 --> 00:01:14,305
+And as you can see,
+
+25
+00:01:14,305 --> 00:01:17,540
+I did a right click on this list item here,
+
+26
+00:01:17,540 --> 00:01:21,175
+so it brought up the developers tools for me, and it was
+
+27
+00:01:21,175 --> 00:01:25,810
+highlighted on this particular element
+
+28
+00:01:25,810 --> 00:01:27,645
+I choose to inspect.
+
+29
+00:01:27,645 --> 00:01:30,820
+So, for this demo I'm thinking,
+
+30
+00:01:30,820 --> 00:01:32,410
+maybe I will change
+
+31
+00:01:32,410 --> 00:01:35,410
+this image here to show you how you can
+
+32
+00:01:35,410 --> 00:01:37,540
+modify your values in
+
+33
+00:01:37,540 --> 00:01:40,440
+your tags and see them right away on the Web page.
+
+34
+00:01:40,440 --> 00:01:43,855
+So I'm going to go to my image here,
+
+35
+00:01:43,855 --> 00:01:45,400
+and I'm thinking to use
+
+36
+00:01:45,400 --> 00:01:47,735
+another image other than this one.
+
+37
+00:01:47,735 --> 00:01:49,720
+So, to do a modification on the HTML tag,
+
+38
+00:01:49,720 --> 00:01:53,720
+you'll just go to the tag you would like to change,
+
+39
+00:01:53,720 --> 00:01:59,114
+double click on it so it brings you up in an edit mode.
+
+40
+00:01:59,114 --> 00:02:02,890
+I know that I have another image in this tag,
+
+41
+00:02:02,890 --> 00:02:05,968
+it just has another filename,
+
+42
+00:02:05,968 --> 00:02:09,610
+so I'm going to move this filename here, and use
+
+43
+00:02:09,610 --> 00:02:13,950
+the other image I know I have it here.
+
+44
+00:02:13,950 --> 00:02:17,520
+So, I do my modifications and then press "Enter".
+
+45
+00:02:17,520 --> 00:02:22,070
+And I should see the changes right away on the Web page.
+
+46
+00:02:22,070 --> 00:02:26,283
+So I see this seagull bird here,
+
+47
+00:02:26,283 --> 00:02:28,795
+but it doesn't really work
+
+48
+00:02:28,795 --> 00:02:31,438
+well for that context of my page so
+
+49
+00:02:31,438 --> 00:02:37,885
+I'm going to put it back to the right image here.
+
+50
+00:02:37,885 --> 00:02:42,150
+And this is how you can modify your HTML elements.
+
+51
+00:02:42,150 --> 00:02:44,060
+One more thing you can modify in
+
+52
+00:02:44,060 --> 00:02:48,250
+the developer's tools is the tyles, the CSS styles.
+
+53
+00:02:48,250 --> 00:02:51,145
+And there is a pane
+
+54
+00:02:51,145 --> 00:02:52,210
+for that here in
+
+55
+00:02:52,210 --> 00:02:54,435
+the developers tools, so on the right here,
+
+56
+00:02:54,435 --> 00:02:57,730
+this is the pane for your CSS values.
+
+57
+00:02:57,730 --> 00:03:01,070
+So I'm here on this image tag.
+
+58
+00:03:01,070 --> 00:03:03,895
+It's highlighted, so that means it is selected,
+
+59
+00:03:03,895 --> 00:03:06,435
+so I can change the width.
+
+60
+00:03:06,435 --> 00:03:07,670
+So as you see here,
+
+61
+00:03:07,670 --> 00:03:09,755
+it's set to 400 pixels.
+
+62
+00:03:09,755 --> 00:03:14,185
+I can change this value again by right clicking on it,
+
+63
+00:03:14,185 --> 00:03:18,315
+and let's say I'm going to do 1000.
+
+64
+00:03:18,315 --> 00:03:22,210
+See how changing the value changes
+
+65
+00:03:22,210 --> 00:03:25,810
+the width of the image on the page right away, and you get
+
+66
+00:03:25,810 --> 00:03:28,760
+to see your modifications right away.
+
+67
+00:03:28,760 --> 00:03:34,115
+So, this is a nice tool to try different values.
+
+68
+00:03:34,115 --> 00:03:36,370
+If you're not happy with how your page is rendered,
+
+69
+00:03:36,370 --> 00:03:37,990
+you can try different values
+
+70
+00:03:37,990 --> 00:03:39,595
+here in the developer's tools.
+
+71
+00:03:39,595 --> 00:03:43,240
+And once you're settled and happy with the results,
+
+72
+00:03:43,240 --> 00:03:46,835
+you can copy those values to your code.
+
+73
+00:03:46,835 --> 00:03:49,307
+So, I'm going to click this back to 400.
+
+74
+00:03:49,307 --> 00:03:54,705
+There is also an option here to uncheck a style so that
+
+75
+00:03:54,705 --> 00:04:00,950
+it deletes or it takes away from the effect,
+
+76
+00:04:00,950 --> 00:04:05,480
+so it's basically ineffective here.
+
+77
+00:04:05,480 --> 00:04:06,675
+I'm going to put it back.
+
+78
+00:04:06,675 --> 00:04:10,185
+There is also a way to try new stuff,
+
+79
+00:04:10,185 --> 00:04:12,800
+so let's try new styles.
+
+80
+00:04:12,800 --> 00:04:14,305
+So let's say, for example,
+
+81
+00:04:14,305 --> 00:04:16,450
+I want to make a background.
+
+82
+00:04:16,450 --> 00:04:18,220
+I want to make a highlight on
+
+83
+00:04:18,220 --> 00:04:20,435
+this module because it's really important.
+
+84
+00:04:20,435 --> 00:04:29,010
+So I'm gonna go to it and I'm going to select "Elements".
+
+85
+00:04:29,010 --> 00:04:31,268
+I'm going to select this element,
+
+86
+00:04:31,268 --> 00:04:33,285
+brings me up to where it is in the code.
+
+87
+00:04:33,285 --> 00:04:35,890
+I'm gonna try a background style
+
+88
+00:04:35,890 --> 00:04:37,700
+on it and see how it looks like.
+
+89
+00:04:37,700 --> 00:04:40,250
+And you see in Microsoft Edge developers tools,
+
+90
+00:04:40,250 --> 00:04:44,230
+there is an IntelliSense here that really comes handy and
+
+91
+00:04:44,230 --> 00:04:46,210
+helpful so that you don't need to memorize
+
+92
+00:04:46,210 --> 00:04:49,130
+every single CSS property or style.
+
+93
+00:04:49,130 --> 00:04:51,075
+So I'm going to use a background of
+
+94
+00:04:51,075 --> 00:04:53,640
+yellow, maybe light yellow is better.
+
+95
+00:04:53,640 --> 00:04:58,845
+So you see your styles,
+
+96
+00:04:58,845 --> 00:05:02,063
+the styles get rendered on the page right away,
+
+97
+00:05:02,063 --> 00:05:05,555
+and this is really cool.
+
+98
+00:05:05,555 --> 00:05:09,740
+And I think I also want to apply a font color here.
+
+99
+00:05:09,740 --> 00:05:15,000
+So, I'm going to change the color of this one to,
+
+100
+00:05:15,000 --> 00:05:20,675
+how about red, or orange red?
+
+101
+00:05:20,675 --> 00:05:23,295
+So you see how it's like your values
+
+102
+00:05:23,295 --> 00:05:26,490
+get rendered on the page right away.
+
+103
+00:05:26,490 --> 00:05:31,015
+Also, you can remove one of the properties,
+
+104
+00:05:31,015 --> 00:05:33,690
+or keep them, or remove them both.
+
+105
+00:05:33,690 --> 00:05:36,435
+And as you see here on this pane here,
+
+106
+00:05:36,435 --> 00:05:38,390
+as you put a style into effect,
+
+107
+00:05:38,390 --> 00:05:40,775
+it gets added to the tag.
+
+108
+00:05:40,775 --> 00:05:43,290
+So this is another way to tell you,
+
+109
+00:05:43,290 --> 00:05:46,395
+if you want to keep this style,
+
+110
+00:05:46,395 --> 00:05:49,470
+you should change your HTML code to add
+
+111
+00:05:49,470 --> 00:05:52,910
+this style attribute to your tag.
+
+112
+00:05:52,910 --> 00:05:54,695
+That's it for this demo,
+
+113
+00:05:54,695 --> 00:05:57,280
+and I'll see you in the next one.
+

@@ -1,0 +1,39 @@
+Okay, let's see the Box Model here in our Web page.
+So, I'm going to start the developers tools.
+I'm going to "Inspect Element" here.
+And for the Box Model,
+this comes in the "Styles" pane
+and should be in the "Layout" tab in Microsoft Edge.
+So now, we're looking at
+the Box Model for the body elements.
+So for the body of the HTML page,
+we can see there is a little bit of margin here.
+There is no border and there
+is no padding and the content of
+the body is taking this amount of space.
+So, I'm going to move on and focus on our list here.
+For the list here,
+you can see there is an offset,
+some margin as well,
+and there is some padding on the left and
+there is the content of the list.
+So I'm going to add a border for my list here.
+My border is going to be...
+I'm thinking 4 pixels solid style and green color.
+So now, I see this around my list here.
+So, if I go to check the Box Model for my list,
+I see that now I have a border of
+4 pixels on all sides.
+We can change that, actually.
+So let's make it a little bit thicker.
+So it's 10 pixels from the top.
+I can do the same for all sides of the border.
+And you see that there is no padding.
+I can add a little bit of padding, too,
+and see what happens.
+Margin also, we can like increase the margin or decrease
+the margin and see how that's going
+to like effect things on my page.
+So let's put it back.
+And that's it for this demo.
+See you next time.
